@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<div class="container">
+    <p><a href="{{ page.new-url }}">{{ page.new-url }}</a>に移動しました。</p>
+    <script>
+        setTimeout(function() {
+            location.href = '{{ page.new-url }}';
+        }, 100);
+    </script>
+    {{ content }}
+</div>
