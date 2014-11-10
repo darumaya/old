@@ -22,7 +22,6 @@ module.exports = function (grunt) {
             ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n' +
             ' */\n',
         // NOTE: This jqueryCheck code is duplicated in customizer.js; if making changes here, be sure to update the other copy too.
-        jqueryCheck: 'if (typeof jQuery === \'undefined\') { throw new Error(\'Bootstrap\\\'s JavaScript requires jQuery\') }\n\n',
 
         // Task configuration.
         less: {
@@ -63,9 +62,6 @@ module.exports = function (grunt) {
         },
 
         csscomb: {
-            options: {
-                config: 'less/.csscomb.json'
-            },
             dist: {
                 expand: true,
                 cwd: 'css/',
@@ -93,7 +89,7 @@ module.exports = function (grunt) {
 
         watch: {
             'dist-css': {
-                files: 'less/*.less',
+                files: 'src/less/*.less',
                 tasks: 'dist-css'
             }
         }
