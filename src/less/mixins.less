@@ -1,0 +1,43 @@
+.keyframes (@name: name; @fromRules: "{}"; @toRules: "{}") {
+    @-webkit-keyframes @name {
+        0% {
+            @fromRules();
+        }
+        100% {
+            @toRules();
+        }
+    }
+    @keyframes @name {
+        0% {
+            @fromRules();
+        }
+        100% {
+            @toRules();
+        }
+    }
+}
+
+.keyframes-three-rules (@name: name; @fromRules: "{}"; @midRules: "{}"; @stop: 50%; @toRules; "{}") {
+    @-webkit-keyframes @name {
+        0% {
+            @fromRules();
+        }
+        @{stop} {
+            @midRules();
+        }
+        100% {
+            @toRules();
+        }
+    }
+    @keyframes @name {
+        0% {
+            @fromRules();
+        }
+        @{stop} {
+            @midRules();
+        }
+        100% {
+            @toRules();
+        }
+    }
+}

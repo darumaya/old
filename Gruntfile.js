@@ -32,7 +32,7 @@ module.exports = function (grunt) {
                 },
                 files: [{
                         expand: true, // 展開を有効に
-                        cwd: 'less/',
+                        cwd: 'src/less/',
                         src: ['*.less', '!*.min.css', '!mixins.less', '!variables.less'],
                         dest: 'css/',
                         ext: ".css"
