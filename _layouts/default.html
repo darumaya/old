@@ -20,5 +20,42 @@
 {% include footer.html %}
 <script src="/js/jquery-1.11.1.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
+<script src="/js/Imager.js"></script>
+<script>
+    new Imager('div.img-xs', {
+        availableWidths: {
+            375: 'xs'
+        },
+        availablePixelRatios: [1, 2],
+        className: 'img-xs-replace'
+    });
+    new Imager('div.img-sm', {
+        availableWidths: {
+            375: 'xs',
+            768: 'sm'
+        },
+        availablePixelRatios: [1, 2],
+        className: 'img-sm-replace'
+    });
+    new Imager('div.img-md', {
+        availableWidths: {
+            375: 'xs',
+            768: 'sm',
+            992: 'md'
+        },
+        availablePixelRatios: [1, 2],
+        className: 'img-md-replace'
+    });
+    new Imager('div.img-lg', {
+        availableWidths: {
+            375: 'xs',
+            768: 'sm',
+            992: 'md',
+            1200: 'lg'
+        },
+        availablePixelRatios: [1, 2],
+        className: 'img-lg-replace'
+    });
+</script>
 </body>
 </html>
