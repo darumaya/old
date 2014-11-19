@@ -1,14 +1,81 @@
 ---
 layout: default
 ---
-<div class="jumbotron">
-    <div class="container">
-        <h1>{{ page.title }}</h1>
-        <p>{{ page.description }}</p>
-        <p><a href="{{ page.main-visual }}">{{ page.main-visual }}</a></p>
+<section class="section-jumbotron">
+    <div class="jumbotron">
+        <div class="container">
+            <div class="jumbotron-inner">
+                <h1>{{ page.title }}</h1>
+                <p>{{ page.description }}</p>
+            </div>
+        </div>
     </div>
-</div>
-<div class="container">
+    <style>
+        .jumbotron {
+            background-image: url({{ page.main_visual | replace: ".", "-xs."}});
+        }
+        @media
+        only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (   min--moz-device-pixel-ratio: 2),
+        only screen and (     -o-min-device-pixel-ratio: 2/1),
+        only screen and (        min-device-pixel-ratio: 2),
+        only screen and (                min-resolution: 192dpi),
+        only screen and (                min-resolution: 2dppx) {
+            .jumbotron {
+                background-image: url({{ page.main_visual | replace: ".", "-xs-2x."}});
+            }
+        }
+        @media (min-width: 768px) {
+            .jumbotron {
+                background-image: url({{ page.main_visual | replace: ".", "-sm."}});
+            }
+        }
+        @media
+        only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min-width: 768px) and (   min--moz-device-pixel-ratio: 2),
+        only screen and (min-width: 768px) and (     -o-min-device-pixel-ratio: 2/1),
+        only screen and (min-width: 768px) and (        min-device-pixel-ratio: 2),
+        only screen and (min-width: 768px) and (                min-resolution: 192dpi),
+        only screen and (min-width: 768px) and (                min-resolution: 2dppx) {
+            .jumbotron {
+                background-image: url({{ page.main_visual | replace: ".", "-sm-2x."}});
+            }
+        }
+        @media (min-width: 992px) {
+            .jumbotron {
+                background-image: url({{ page.main_visual | replace: ".", "-md."}});
+            }
+        }
+        @media
+        only screen and (min-width: 992px) and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min-width: 992px) and (   min--moz-device-pixel-ratio: 2),
+        only screen and (min-width: 992px) and (     -o-min-device-pixel-ratio: 2/1),
+        only screen and (min-width: 992px) and (        min-device-pixel-ratio: 2),
+        only screen and (min-width: 992px) and (                min-resolution: 192dpi),
+        only screen and (min-width: 992px) and (                min-resolution: 2dppx) {
+            .jumbotron {
+                background-image: url({{ page.main_visual | replace: ".", "-md-2x."}});
+            }
+        }
+        @media (min-width: 1200px) {
+            .jumbotron {
+                background-image: url({{ page.main_visual | replace: ".", "-lg."}});
+            }
+        }
+        @media
+        only screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min-width: 1200px) and (   min--moz-device-pixel-ratio: 2),
+        only screen and (min-width: 1200px) and (     -o-min-device-pixel-ratio: 2/1),
+        only screen and (min-width: 1200px) and (        min-device-pixel-ratio: 2),
+        only screen and (min-width: 1200px) and (                min-resolution: 192dpi),
+        only screen and (min-width: 1200px) and (                min-resolution: 2dppx) {
+            .jumbotron {
+                background-image: url({{ page.main_visual | replace: ".", "-lg-2x."}});
+            }
+        }
+    </style>
+</section>
+<section class="container">
     <ol class="breadcrumb">
         {% if page.category %}
         {% if page.category == page.title %}
@@ -23,11 +90,11 @@ layout: default
         <li class="active">Home</li>
         {% endif %}
     </ol>
-</div>
+</section>
 <div class="container">
     {{ content }}
 </div>
-<div class="container">
+<section class="container">
     <h2>下層ページ一覧</h2>
     <ul class="nav nav-pills">
         {% for child in site.pages %}
@@ -42,4 +109,4 @@ layout: default
         {% endif %}
         {% endfor %}
     </ul>
-</div>
+</section>
