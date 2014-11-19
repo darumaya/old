@@ -176,6 +176,24 @@
     }
 }
 
+.keyframes(swing, {
+    transform: rotateX(20deg);
+}, {
+    transform: rotateX(-20deg);
+});
+
+.keyframes-three-rules(highlight, {
+    .opacity(0.5);
+}, {
+    .opacity(0);
+}, 50%, {
+    .opacity(0);
+});
+
+//
+// footer
+//
+
 footer {
     color: darkgray;
     background-color: silver;
