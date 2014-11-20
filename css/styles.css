@@ -458,7 +458,7 @@ section h2
 {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-.section-araihari-steps .nav-arrows
+.nav-arrows
 {
     position: relative;
     left: 50%;
@@ -470,7 +470,7 @@ section h2
 
     list-style: none;
 }
-.section-araihari-steps .nav-arrows > li
+.nav-arrows > li
 {
     line-height: 1;
 
@@ -480,7 +480,7 @@ section h2
     display: block;
     float: left;
 }
-.section-araihari-steps .nav-arrows > li > a
+.nav-arrows > li > a
 {
     position: relative;
 
@@ -497,36 +497,32 @@ section h2
     -webkit-writing-mode: vertical-rl;
             writing-mode: vertical-rl;
 }
-.section-araihari-steps .nav-arrows > li > a:hover,
-.section-araihari-steps .nav-arrows > li > a:focus
+.nav-arrows > li > a:hover,
+.nav-arrows > li > a:focus
 {
     text-decoration: none;
 
     background-color: transparent;
 }
-.section-araihari-steps .nav-arrows > li > .glyphicon
+.nav-arrows > li > .glyphicon
 {
     display: block;
 
     width: 14px;
     padding: 45px 0;
 }
-.section-araihari-steps .nav-arrows > li + li
+.nav-arrows > li + li
 {
     margin-left: 5px;
 }
-.section-araihari-steps .nav-arrows > li.active > a,
-.section-araihari-steps .nav-arrows > li.active > a:hover,
-.section-araihari-steps .nav-arrows > li.active > a:focus
+.nav-arrows > li.active > a,
+.nav-arrows > li.active > a:hover,
+.nav-arrows > li.active > a:focus
 {
     color: #fff;
     background-color: #428bca;
 }
-.section-araihari-steps .panel
-{
-    clear: both;
-}
-.section-araihari-steps #carousel-araihari
+#carousel-araihari
 {
     width: 100%;
 }

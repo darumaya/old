@@ -50,70 +50,68 @@ section {
     }
 }
 
-.section-araihari-steps {
-    .nav-arrows {
-        margin-bottom: 15px;
-        padding-left: 0; // Override default ul/ol
-        list-style: none;
-        &:extend(.clearfix all);
+//
+// maintain/araihari.html
+//
+
+.nav-arrows {
+    margin-bottom: 15px;
+    padding-left: 0; // Override default ul/ol
+    list-style: none;
+    &:extend(.clearfix all);
+    position: relative;
+    left: 50%;
+    float: left;
+
+    > li {
         position: relative;
-        left: 50%;
+        left: -50%;
+        display: block;
         float: left;
+        line-height: 1;
 
-        > li {
+        // Links rendered as pills
+        > a {
             position: relative;
-            left: -50%;
             display: block;
-            float: left;
-            line-height: 1;
+            padding: 10px;
+            width: (@font-size-base + 10px * 2);
+            height: (@font-size-base * 6 + 10px * 2);
+            text-align: center;
 
-            // Links rendered as pills
-            > a {
-                position: relative;
-                display: block;
-                padding: 10px;
-                width: (@font-size-base + 10px * 2);
-                height: (@font-size-base * 6 + 10px * 2);
-                text-align: center;
+            -webkit-writing-mode: vertical-rl;
+            writing-mode: vertical-rl;
+            background-color: @nav-link-hover-bg;
 
-                -webkit-writing-mode: vertical-rl;
-                writing-mode: vertical-rl;
-                background-color: @nav-link-hover-bg;
-
-                &:hover,
-                &:focus {
-                    text-decoration: none;
-                    background-color: transparent;
-                }
+            &:hover,
+            &:focus {
+                text-decoration: none;
+                background-color: transparent;
             }
+        }
 
-            > .glyphicon {
-                width: @font-size-base;
-                display: block;
-                padding: (10px + @font-size-base * 2.5) 0;
-            }
+        > .glyphicon {
+            width: @font-size-base;
+            display: block;
+            padding: (10px + @font-size-base * 2.5) 0;
+        }
 
-            + li {
-                margin-left: 5px;
-            }
+        + li {
+            margin-left: 5px;
+        }
 
-            // Active state
-            &.active > a {
-                &,
-                &:hover,
-                &:focus {
-                    color: @nav-pills-active-link-hover-color;
-                    background-color: @nav-pills-active-link-hover-bg;
-                }
+        // Active state
+        &.active > a {
+            &,
+            &:hover,
+            &:focus {
+                color: @nav-pills-active-link-hover-color;
+                background-color: @nav-pills-active-link-hover-bg;
             }
         }
     }
+}
 
-    .panel {
-        clear: both;
-    }
-
-    #carousel-araihari {
-        width: 100%;
-    }
+#carousel-araihari {
+    width: 100%;
 }
