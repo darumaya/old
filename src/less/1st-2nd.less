@@ -44,9 +44,13 @@
 // main
 //
 
+
 section {
     h2 {
         font-family: @font-family-serif;
+        padding-bottom: ((@line-height-computed / 2) - 1);
+        margin: (@line-height-computed * 3) 0 @line-height-computed;
+        border-bottom: 1px solid @page-header-border-color;
     }
 }
 
@@ -72,6 +76,7 @@ section {
 
         // Links rendered as pills
         > a {
+            font-size: @font-size-base;
             position: relative;
             display: block;
             padding: 5px 0 5px 10px;
@@ -153,5 +158,20 @@ section {
     }
     .carousel-indicators {
         margin-bottom: 5px;
+    }
+}
+
+a.thumbnail {
+    .caption {
+        .transition(all .2s ease-in-out);
+    }
+
+    &:hover,
+    &:active {
+        text-decoration: none;
+
+        .caption {
+            color: @link-color ;
+        }
     }
 }

@@ -189,6 +189,9 @@
         if (this.lazyload) {
             this.registerScrollEvent();
 
+            this.scrolled = true;
+            self.scrollCheck();
+
             filterFn = function(element){
                 return self.isPlaceholder(element) === false;
             };
@@ -322,7 +325,7 @@
         }
 
         image.src = this.changeImageSrcToUseNewImageDimensions(image.getAttribute('data-src'), computedWidth);
-//        image.removeAttribute('width');
+        // image.removeAttribute('width');
         image.removeAttribute('height');
     };
 
