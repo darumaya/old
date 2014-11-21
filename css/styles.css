@@ -398,6 +398,10 @@
         filter: alpha(opacity=0);
     }
 }
+section
+{
+    font-size: 16px;
+}
 footer
 {
     margin-top: 40px;
@@ -457,6 +461,11 @@ footer
 section h2
 {
     font-family: Georgia, 'Times New Roman', Times, serif;
+
+    margin: 60px 0 20px;
+    padding-bottom: 9px;
+
+    border-bottom: 1px solid #eee;
 }
 .nav-arrows
 {
@@ -482,6 +491,8 @@ section h2
 }
 .nav-arrows > li > a
 {
+    font-size: 14px;
+
     position: relative;
 
     display: block;
@@ -575,4 +586,20 @@ section h2
 #carousel-araihari .carousel-indicators
 {
     margin-bottom: 5px;
+}
+a.thumbnail .caption
+{
+    -webkit-transition: all .2s ease-in-out;
+         -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+}
+a.thumbnail:hover,
+a.thumbnail:active
+{
+    text-decoration: none;
+}
+a.thumbnail:hover .caption,
+a.thumbnail:active .caption
+{
+    color: #428bca;
 }

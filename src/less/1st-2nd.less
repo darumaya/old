@@ -160,3 +160,18 @@ section {
         margin-bottom: 5px;
     }
 }
+
+a.thumbnail {
+    .caption {
+        .transition(all .2s ease-in-out);
+    }
+
+    &:hover,
+    &:active {
+        text-decoration: none;
+
+        .caption {
+            color: @link-color ;
+        }
+    }
+}
