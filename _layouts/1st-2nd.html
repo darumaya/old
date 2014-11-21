@@ -97,7 +97,8 @@ layout: default
 <section class="container">
     <h2>下層ページ一覧</h2>
     <ul class="nav nav-pills">
-        {% for child in site.pages %}
+        {% assign pages = site.pages | sort: 'order' %}
+        {% for child in pages %}
         {% if page.category == child.category %}
         {% if child.category != child.title %}
         {% if page.url == child.url %}
