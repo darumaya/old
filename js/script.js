@@ -8,7 +8,7 @@ $(window).on('load', function() {
             var $items = $item.parent().children('.item');
             var index = $items.index($item);
             $indicators.find('.active').removeClass('active');
-            var $nextIndicator = $indicators.children().eq(index);
+            var $nextIndicator = $indicators.find('[data-target]').eq(index).parent('li');
             $nextIndicator && $nextIndicator.addClass('active');
         });
     });
