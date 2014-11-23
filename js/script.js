@@ -12,6 +12,24 @@ $(window).on('load', function() {
             $nextIndicator && $nextIndicator.addClass('active');
         });
     });
+
+    $('.thumbnail').each(function() {
+        var $thumbnail = $(this);
+        if ($thumbnail.hasClass('equal-height')) {
+            return;
+        }
+        var $section = $thumbnail.parentsUntil('section').last();
+        var maxHeight = 0;
+        $section.find('.thumbnail').each(function() {
+            var height = $(this).height();
+            if (maxHeight < height) {
+                maxHeight = height;
+            }
+        });
+        $section.find('.thumbnail').each(function() {
+            $(this).height(maxHeight).addClass('equal-height');
+        });
+    });
 });
 new Imager('div.img-xs', {
     availableWidths: {
