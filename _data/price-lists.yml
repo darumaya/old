@@ -1,0 +1,32 @@
+"洗い張り":
+  - kimono:         "小紋"
+    regular_price:  7000
+    sale_price:     3500
+  - kimono:         "無地、紬"
+    regular_price:  8000
+    sale_price:     4000
+  - kimono:         "訪問着、喪服"
+    regular_price:  8000
+    sale_price:     4000
+  - kimono:         "特選、手間物"
+    regular_price:  12000
+    sale_price:     6000
+  - kimono:         "振袖、江戸褄"
+    regular_price:  12000
+    sale_price:     6000
+  - kimono:         "羽織、コート"
+    regular_price:  8000
+    sale_price:     4000
+  - kimono:         "長襦袢"
+    regular_price:  4000
+    sale_price:     2000
+"解き":
+  - kimono:         "きもの(袷)、長襦袢"
+    regular_price:  1500
+    sale_price:     1000
+  - kimono:         "コート"
+    regular_price:  3000
+    sale_price:     1500
+  - kimono:         "振袖、江戸褄"
+    regular_price:  6000
+    sale_price:     3000

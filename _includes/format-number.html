@@ -1,0 +1,1 @@
+{% capture digits %}{{ number }}{% endcapture %}{% assign digits = digits | split: '' %}{% for digit in digits %}{{ digit }}{% if forloop.rindex0 == 3 %},{% endif %}{% endfor %}

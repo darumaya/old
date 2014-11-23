@@ -8,8 +8,26 @@ $(window).on('load', function() {
             var $items = $item.parent().children('.item');
             var index = $items.index($item);
             $indicators.find('.active').removeClass('active');
-            var $nextIndicator = $indicators.children().eq(index);
+            var $nextIndicator = $indicators.find('[data-target]').eq(index).parent('li');
             $nextIndicator && $nextIndicator.addClass('active');
+        });
+    });
+
+    $('.thumbnail').each(function() {
+        var $thumbnail = $(this);
+        if ($thumbnail.hasClass('equal-height')) {
+            return;
+        }
+        var $section = $thumbnail.parentsUntil('section').last();
+        var maxHeight = 0;
+        $section.find('.thumbnail').each(function() {
+            var height = $(this).height();
+            if (maxHeight < height) {
+                maxHeight = height;
+            }
+        });
+        $section.find('.thumbnail').each(function() {
+            $(this).height(maxHeight).addClass('equal-height');
         });
     });
 });
