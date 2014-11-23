@@ -165,41 +165,21 @@ order: 10
         </thead>
 
         <tbody>
+
+        {% for item in site.data.price-lists.["洗い張り"] %}
         <tr>
-            <td>小紋</td>
-            <td>&yen;7,000</td>
-            <td>&yen;3,500</td>
+            <td>{{ item.kimono }}</td>
+            <td>
+                {% assign number = item.regular_price %}
+                &yen;{% include format-number.html %}
+            </td>
+            <td>
+                {% assign number = item.sale_price %}
+                &yen;{% include format-number.html %}
+            </td>
         </tr>
-        <tr>
-            <td>無地、紬</td>
-            <td>&yen;8,000</td>
-            <td>&yen;4,000</td>
-        </tr>
-        <tr>
-            <td>訪問着、喪服</td>
-            <td>&yen;8,000</td>
-            <td>&yen;4,000</td>
-        </tr>
-        <tr>
-            <td>特選、手間物</td>
-            <td>&yen;12,000</td>
-            <td>&yen;6,000</td>
-        </tr>
-        <tr>
-            <td>振袖、江戸褄</td>
-            <td>&yen;12,000</td>
-            <td>&yen;6,000</td>
-        </tr>
-        <tr>
-            <td>羽織、コート</td>
-            <td>&yen;8,000</td>
-            <td>&yen;4,000</td>
-        </tr>
-        <tr>
-            <td>長襦袢</td>
-            <td>&yen;4,000</td>
-            <td>&yen;2,000</td>
-        </tr>
+        {% endfor %}
+
         </tbody>
     </table>
 </section>
