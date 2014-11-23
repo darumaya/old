@@ -398,7 +398,7 @@
         filter: alpha(opacity=0);
     }
 }
-section
+main
 {
     font-size: 16px;
 }
@@ -552,15 +552,20 @@ section h2
 {
     border-color: transparent transparent transparent #428bca;
 }
-#carousel-araihari
+.carousel-outer-indicators
+{
+    overflow: hidden;
+}
+.carousel
 {
     clear: both;
 
     width: 100%;
 }
-#carousel-araihari .carousel-caption
+.carousel .carousel-caption
 {
     right: 0;
+    bottom: 10px;
     left: 0;
 
     padding-top: 0;
@@ -568,23 +573,36 @@ section h2
 
     background-color: rgba(0, 0, 0, .25);
 }
-#carousel-araihari .carousel-caption h1,
-#carousel-araihari .carousel-caption .h1,
-#carousel-araihari .carousel-caption h2,
-#carousel-araihari .carousel-caption .h2,
-#carousel-araihari .carousel-caption h3,
-#carousel-araihari .carousel-caption .h3,
-#carousel-araihari .carousel-caption h4,
-#carousel-araihari .carousel-caption .h4,
-#carousel-araihari .carousel-caption h5,
-#carousel-araihari .carousel-caption .h5,
-#carousel-araihari .carousel-caption h6,
-#carousel-araihari .carousel-caption .h6
+@media (min-width: 768px)
 {
+    .carousel .carousel-caption
+    {
+        bottom: 20px;
+    }
+}
+.carousel .carousel-caption h3,
+.carousel .carousel-caption .h3
+{
+    font-size: 18px;
+
     margin-top: 10px;
 }
-#carousel-araihari .carousel-indicators
+@media (min-width: 768px)
 {
+    .carousel .carousel-caption h3,
+  .carousel .carousel-caption .h3
+    {
+        font-size: 24px;
+    }
+}
+.carousel .carousel-caption p
+{
+    font-size: 14px;
+}
+.carousel .carousel-indicators
+{
+    font-size: 14px;
+
     margin-bottom: 5px;
 }
 a.thumbnail .caption
