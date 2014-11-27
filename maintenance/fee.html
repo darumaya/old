@@ -1,10 +1,219 @@
 ---
 title: 料金一覧
 description: きもののお手入れの料金一覧です
-main_visual: '/images/r1046195.768x318.hq.jpg'
+main_visual: '/images/fee-jumbotron-DSC05252.jpg'
 layout: 1st-2nd
 category: 'きもののお手入れ'
 order: 100
 ---
 <section>
+    <h2>洗い張りの料金</h2>
+    <p>解き、端縫い代を含んだ料金です。</p>
+    <p>特選とは本場大島や本結城など、手間物とは弱生地や色のにじみそうな生地です。</p>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>きものの種類</th>
+            <th>通常料金(目安)</th>
+            <th>感謝祭料金(目安)</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        {% for item in site.data.price-lists.["洗い張り"] %}
+        <tr>
+            <td>{{ item.kimono }}</td>
+            <td>
+                {% assign number = item.regular_price %}
+                &yen;{% include format-number.html %}
+            </td>
+            <td>
+                {% assign number = item.sale_price %}
+                &yen;{% include format-number.html %}
+            </td>
+        </tr>
+        {% endfor %}
+        <tr><td>撥水加工品</td><td>&yen;4,000増し</td><td>&yen;2,000増し</td></tr>
+        <tr><td>ミシン縫い品</td><td>&yen;4,000増し</td><td>&yen;2,000増し</td></tr>
+        </tbody>
+    </table>
+    <h2>洗い張りから仕立ての料金</h2>
+    <p>解き、端縫い代を含んだ料金です。</p>
+    <p>長襦袢の料金には半衿、居敷当て代が含まれています。</p>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>きものの種類</th>
+            <th>通常料金(目安)</th>
+            <th>感謝祭料金(目安)</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        {% for item in site.data.price-lists.["洗い張りから仕立て"] %}
+        <tr>
+            <td>{{ item.kimono }}</td>
+            <td>
+                {% assign number = item.regular_price %}
+                &yen;{% include format-number.html %}
+            </td>
+            <td>
+                {% assign number = item.sale_price %}
+                &yen;{% include format-number.html %}
+            </td>
+        </tr>
+        {% endfor %}
+        <tr><td>撥水加工品</td><td>&yen;4,000増し</td><td>&yen;2,000増し</td></tr>
+        <tr><td>ミシン縫い品</td><td>&yen;4,000増し</td><td>&yen;2,000増し</td></tr>
+
+        </tbody>
+    </table>
+    <h2>丸洗いとしみ抜きの料金</h2>
+    <p>丸洗いをして、共衿、袖口、裾など通常着て汚れる場所をしみ抜きした場合の料金です。</p>
+    <p>汚れの範囲や落ちにくさによって変わりますので、あくまで目安とお考えください。</p>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>きものの種類</th>
+            <th>通常料金(目安)</th>
+            <th>感謝祭料金(目安)</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        {% for item in site.data.price-lists.["丸洗いとしみ抜き"] %}
+        <tr>
+            <td>{{ item.kimono }}</td>
+            <td>
+                {% assign number = item.regular_price %}
+                &yen;{% include format-number.html %}
+            </td>
+            <td>
+                {% assign number = item.sale_price %}
+                &yen;{% include format-number.html %}
+            </td>
+        </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+    <h2>染めの料金</h2>
+    <p>反物の状態のきものを無地に染める料金です。</p>
+    <p>無地のきものの染め直し、柄を活かして染め直しは「きものの再生事例」をご覧ください。</p>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>きものの種類</th>
+            <th>通常料金(目安)</th>
+            <th>感謝祭料金(目安)</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        {% for item in site.data.price-lists.["染め"] %}
+        <tr>
+            <td>{{ item.kimono }}</td>
+            <td>
+                {% assign number = item.regular_price %}
+                &yen;{% include format-number.html %}
+            </td>
+            <td>
+                {% assign number = item.sale_price %}
+                &yen;{% include format-number.html %}
+            </td>
+        </tr>
+        {% endfor %}
+        <tr><td>染め抜き紋付</td><td>&yen;20,000増し</td><td>&yen;10,000増し</td></tr>
+        <tr><td>色抜き付</td><td>&yen;12,000増し</td><td>&yen;6,000増し</td></tr>
+        </tbody>
+    </table>
+    <h2>紋入れ</h2>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>きものの種類</th>
+            <th>通常料金(目安)</th>
+            <th>感謝祭料金(目安)</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        {% for item in site.data.price-lists.["紋入れ"] %}
+        <tr>
+            <td>{{ item.kimono }}</td>
+            <td>
+                {% assign number = item.regular_price %}
+                &yen;{% include format-number.html %}
+            </td>
+            <td>
+                {% assign number = item.sale_price %}
+                &yen;{% include format-number.html %}
+            </td>
+        </tr>
+        {% endfor %}
+        <tr><td>仕立て上がり品</td><td>&yen;6,000増し</td><td>&yen;3,000増し</td></tr>
+        <tr><td>色指定</td><td>&yen;6,000増し</td><td>&yen;3,000増し</td></tr>
+        </tbody>
+    </table>
+    <h2>湯のしの料金</h2>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>きものの種類</th>
+            <th>通常料金(目安)</th>
+            <th>感謝祭料金(目安)</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        {% for item in site.data.price-lists.["湯のし"] %}
+        <tr>
+            <td>{{ item.kimono }}</td>
+            <td>
+                {% assign number = item.regular_price %}
+                &yen;{% include format-number.html %}
+            </td>
+            <td>
+                {% assign number = item.sale_price %}
+                &yen;{% include format-number.html %}
+            </td>
+        </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+    <h2>本湯通しの料金</h2>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>きものの種類</th>
+            <th>通常料金(目安)</th>
+            <th>感謝祭料金(目安)</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        {% for item in site.data.price-lists.["本湯通し"] %}
+        <tr>
+            <td>{{ item.kimono }}</td>
+            <td>
+                {% assign number = item.regular_price %}
+                &yen;{% include format-number.html %}
+            </td>
+            <td>
+                {% assign number = item.sale_price %}
+                &yen;{% include format-number.html %}
+            </td>
+        </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
 </section>
