@@ -410,6 +410,90 @@ footer
     color: darkgray;
     background-color: silver;
 }
+section h2
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    margin: 60px 0 20px;
+    padding-bottom: 9px;
+
+    border-bottom: 1px solid #eee;
+}
+a.thumbnail .caption
+{
+    -webkit-transition: all .2s ease-in-out;
+         -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+}
+a.thumbnail:hover,
+a.thumbnail:active
+{
+    text-decoration: none;
+}
+a.thumbnail:hover .caption,
+a.thumbnail:active .caption
+{
+    color: #428bca;
+}
+.nav-card
+{
+    position: relative;
+    left: 50%;
+
+    float: left;
+
+    margin-bottom: 15px;
+    padding-left: 0;
+
+    list-style: none;
+}
+.nav-card > li
+{
+    line-height: 1;
+
+    position: relative;
+    left: -50%;
+
+    display: block;
+    float: left;
+}
+.nav-card > li > a
+{
+    font-size: 14px;
+
+    position: relative;
+
+    display: block;
+
+    width: 24px;
+    height: 94px;
+    padding: 5px 0 5px 10px;
+
+    text-align: center;
+
+    background-color: #eee;
+
+    -webkit-writing-mode: vertical-rl;
+            writing-mode: vertical-rl;
+}
+.nav-card > li > a:hover,
+.nav-card > li > a:focus
+{
+    text-decoration: none;
+
+    background-color: transparent;
+}
+.nav-card > li + li
+{
+    margin-left: 17px;
+}
+.nav-card > li.active > a,
+.nav-card > li.active > a:hover,
+.nav-card > li.active > a:focus
+{
+    color: #fff;
+    background-color: #428bca;
+}
 .section-jumbotron
 {
     margin-top: -70px;
@@ -457,15 +541,6 @@ footer
 .section-jumbotron > .jumbotron > .container > .jumbotron-inner h1
 {
     font-family: Georgia, 'Times New Roman', Times, serif;
-}
-section h2
-{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-
-    margin: 60px 0 20px;
-    padding-bottom: 9px;
-
-    border-bottom: 1px solid #eee;
 }
 .nav-arrows
 {
@@ -604,20 +679,4 @@ section h2
     font-size: 14px;
 
     margin-bottom: 5px;
-}
-a.thumbnail .caption
-{
-    -webkit-transition: all .2s ease-in-out;
-         -o-transition: all .2s ease-in-out;
-            transition: all .2s ease-in-out;
-}
-a.thumbnail:hover,
-a.thumbnail:active
-{
-    text-decoration: none;
-}
-a.thumbnail:hover .caption,
-a.thumbnail:active .caption
-{
-    color: #428bca;
 }

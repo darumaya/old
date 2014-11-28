@@ -1,0 +1,52 @@
+<div class="carousel-outer-indicators">
+    <ul class="nav nav-arrows">
+        {% assign name = page.name | remove: ".html" %}
+        {% for item in page.carousel %}
+        {% if forloop.first == true %}
+        <li class="active">
+        {% else %}
+        <li>
+        {% endif %}
+        <a href="#" data-target="#carousel-{{ name }}" data-slide-to="{{ forloop.index0 }}">{{ item.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+<div id="carousel-{{ name }}" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        {% for item in page.carousel %}
+        {% if forloop.first == true %}
+        <li data-target="#carousel-{{ name }}" data-slide-to="{{ forloop.index0 }}" class="active"></li>
+        {% else %}
+        <li data-target="#carousel-{{ name }}" data-slide-to="{{ forloop.index0 }}"></li>
+        {% endif %}
+        {% endfor %}
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        {% for item in page.carousel %}
+        {% if forloop.first == true %}
+        <div class="item active">
+        {% else %}
+        <div class="item">
+        {% endif %}
+            <div class="img-sm" data-width="720" data-src="{{ item.image }}" data-alt="{{ item.title }}"
+                 data-class="img-responsive img-rounded"></div>
+            <div class="carousel-caption">
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.description }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-{{ name }}" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-{{ name }}" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>
