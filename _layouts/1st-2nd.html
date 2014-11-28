@@ -23,8 +23,10 @@ layout: default
             <li>
             {% endif %}
                 <a href="{{ child.url }}">
-                    <div class="img-xs" data-src="{{ child.thumbnail }}" data-alt="{{ child.title }}">
-                    {{ child.title }}
+                    <img src="{{ child.thumbnail }}" alt="{{ child.title }}" class="img-responsive img-rounded">
+                    <div class="nav-card-label">
+                        {{ child.title }}
+                    </div>
                 </a>
             </li>
             {% endif %}

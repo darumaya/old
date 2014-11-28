@@ -441,7 +441,19 @@ section h2
     display: block;
     float: left;
 }
-.nav-card > li > a
+.nav-card > li > a:hover,
+.nav-card > li > a:focus
+{
+    text-decoration: none;
+
+    background-color: transparent;
+}
+.nav-card > li > a > img
+{
+    width: 40px;
+    height: 40px;
+}
+.nav-card > li > a > .nav-card-label
 {
     font-size: 14px;
 
@@ -449,9 +461,9 @@ section h2
 
     display: block;
 
-    width: 24px;
-    height: 94px;
-    padding: 5px 0 5px 10px;
+    width: 60px;
+    height: 90px;
+    padding: 5px 10px 5px 10px;
 
     text-align: center;
 
@@ -459,13 +471,6 @@ section h2
 
     -webkit-writing-mode: vertical-rl;
             writing-mode: vertical-rl;
-}
-.nav-card > li > a:hover,
-.nav-card > li > a:focus
-{
-    text-decoration: none;
-
-    background-color: transparent;
 }
 .nav-card > li + li
 {

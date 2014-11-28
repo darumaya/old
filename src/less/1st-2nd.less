@@ -33,22 +33,30 @@ section {
 
         // Links rendered as pills
         > a {
-            font-size: @font-size-base;
-            position: relative;
-            display: block;
-            padding: 5px 0 5px 10px;
-            width: (@font-size-base + 10px);
-            height: (@font-size-base * 6 + 5px * 2);
-            text-align: center;
-
-            -webkit-writing-mode: vertical-rl;
-            writing-mode: vertical-rl;
-            background-color: @nav-link-hover-bg;
 
             &:hover,
             &:focus {
                 text-decoration: none;
                 background-color: transparent;
+            }
+
+            > img {
+                width: 40px;
+                height: 40px;
+            }
+            
+            > .nav-card-label {
+                font-size: @font-size-base;
+                position: relative;
+                display: block;
+                padding: 5px 10px 5px 10px;
+                width: (40px + 10px * 2);
+                height: (80px + 5px * 2);
+                text-align: center;
+
+                -webkit-writing-mode: vertical-rl;
+                writing-mode: vertical-rl;
+                background-color: @nav-link-hover-bg;
             }
         }
 
