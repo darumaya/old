@@ -65,14 +65,8 @@ order: 50
         {% for item in site.data.price-lists.["紋入れ"] %}
         <tr>
             <td>{{ item.kimono }}</td>
-            <td>
-                {% assign number = item.regular_price %}
-                &yen;{% include format-number.html %}
-            </td>
-            <td>
-                {% assign number = item.sale_price %}
-                &yen;{% include format-number.html %}
-            </td>
+            <td>{{ item.regular_price }}</td>
+            <td>{{ item.sale_price }}</td>
         </tr>
         {% endfor %}
         <tr><td>仕立て上がり品</td><td>&yen;6,000増し</td><td>&yen;3,000増し</td></tr>
