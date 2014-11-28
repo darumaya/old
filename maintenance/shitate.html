@@ -146,8 +146,30 @@ order: 30
 </section>
 
 <section>
-    <h2>仕立ての料金</h2>
-</section>
+    <h2>洗い張りから仕立ての料金</h2>
+    <p>解き、端縫い代を含んだ料金です。</p>
+    <p>長襦袢の料金には半衿、居敷当て代が含まれています。</p>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>きものの種類</th>
+            <th>通常料金(目安)</th>
+            <th>感謝祭料金(目安)</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        {% for item in site.data.price-lists.["洗い張りから仕立て"] %}
+        <tr>
+            <td>{{ item.kimono }}</td>
+            <td>{{ item.regular_price }}</td>
+            <td>{{ item.sale_price }}</td>
+        </tr>
+        {% endfor %}
+
+        </tbody>
+    </table></section>
 
 <section>
     <h2>仕立て屋さん募集！</h2>

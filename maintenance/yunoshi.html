@@ -104,5 +104,48 @@ order: 60
 </section>
 
 <section>
-    <h2>湯のし・本湯通しの料金</h2>
+    <h2>湯のしの料金</h2>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>きものの種類</th>
+            <th>通常料金(目安)</th>
+            <th>感謝祭料金(目安)</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        {% for item in site.data.price-lists.["湯のし"] %}
+        <tr>
+            <td>{{ item.kimono }}</td>
+            <td>{{ item.regular_price }}</td>
+            <td>{{ item.sale_price }}</td>
+        </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+    <h2>本湯通しの料金</h2>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>きものの種類</th>
+            <th>通常料金(目安)</th>
+            <th>感謝祭料金(目安)</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        {% for item in site.data.price-lists.["本湯通し"] %}
+        <tr>
+            <td>{{ item.kimono }}</td>
+            <td>{{ item.regular_price }}</td>
+            <td>{{ item.sale_price }}</td>
+        </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
 </section>
