@@ -24,14 +24,8 @@ order: 100
         {% for item in site.data.price-lists.["洗い張り"] %}
         <tr>
             <td>{{ item.kimono }}</td>
-            <td>
-                {% assign number = item.regular_price %}
-                &yen;{% include format-number.html %}
-            </td>
-            <td>
-                {% assign number = item.sale_price %}
-                &yen;{% include format-number.html %}
-            </td>
+            <td>{{ item.regular_price }}</td>
+            <td>{{ item.sale_price }}</td>
         </tr>
         {% endfor %}
         <tr><td>撥水加工品</td><td>&yen;4,000増し</td><td>&yen;2,000増し</td></tr>
@@ -55,14 +49,8 @@ order: 100
         {% for item in site.data.price-lists.["洗い張りから仕立て"] %}
         <tr>
             <td>{{ item.kimono }}</td>
-            <td>
-                {% assign number = item.regular_price %}
-                &yen;{% include format-number.html %}
-            </td>
-            <td>
-                {% assign number = item.sale_price %}
-                &yen;{% include format-number.html %}
-            </td>
+            <td>{{ item.regular_price }}</td>
+            <td>{{ item.sale_price }}</td>
         </tr>
         {% endfor %}
         <tr><td>撥水加工品</td><td>&yen;4,000増し</td><td>&yen;2,000増し</td></tr>
@@ -87,14 +75,8 @@ order: 100
         {% for item in site.data.price-lists.["丸洗いとしみ抜き"] %}
         <tr>
             <td>{{ item.kimono }}</td>
-            <td>
-                {% assign number = item.regular_price %}
-                &yen;{% include format-number.html %}
-            </td>
-            <td>
-                {% assign number = item.sale_price %}
-                &yen;{% include format-number.html %}
-            </td>
+            <td>{{ item.regular_price }}</td>
+            <td>{{ item.sale_price }}</td>
         </tr>
         {% endfor %}
 
@@ -117,14 +99,8 @@ order: 100
         {% for item in site.data.price-lists.["染め"] %}
         <tr>
             <td>{{ item.kimono }}</td>
-            <td>
-                {% assign number = item.regular_price %}
-                &yen;{% include format-number.html %}
-            </td>
-            <td>
-                {% assign number = item.sale_price %}
-                &yen;{% include format-number.html %}
-            </td>
+            <td>{{ item.regular_price }}</td>
+            <td>{{ item.sale_price }}</td>
         </tr>
         {% endfor %}
         <tr><td>染め抜き紋付</td><td>&yen;20,000増し</td><td>&yen;10,000増し</td></tr>
@@ -146,14 +122,8 @@ order: 100
         {% for item in site.data.price-lists.["紋入れ"] %}
         <tr>
             <td>{{ item.kimono }}</td>
-            <td>
-                {% assign number = item.regular_price %}
-                &yen;{% include format-number.html %}
-            </td>
-            <td>
-                {% assign number = item.sale_price %}
-                &yen;{% include format-number.html %}
-            </td>
+            <td>{{ item.regular_price }}</td>
+            <td>{{ item.sale_price }}</td>
         </tr>
         {% endfor %}
         <tr><td>仕立て上がり品</td><td>&yen;6,000増し</td><td>&yen;3,000増し</td></tr>
@@ -175,14 +145,8 @@ order: 100
         {% for item in site.data.price-lists.["湯のし"] %}
         <tr>
             <td>{{ item.kimono }}</td>
-            <td>
-                {% assign number = item.regular_price %}
-                &yen;{% include format-number.html %}
-            </td>
-            <td>
-                {% assign number = item.sale_price %}
-                &yen;{% include format-number.html %}
-            </td>
+            <td>{{ item.regular_price }}</td>
+            <td>{{ item.sale_price }}</td>
         </tr>
         {% endfor %}
 
@@ -203,14 +167,8 @@ order: 100
         {% for item in site.data.price-lists.["本湯通し"] %}
         <tr>
             <td>{{ item.kimono }}</td>
-            <td>
-                {% assign number = item.regular_price %}
-                &yen;{% include format-number.html %}
-            </td>
-            <td>
-                {% assign number = item.sale_price %}
-                &yen;{% include format-number.html %}
-            </td>
+            <td>{{ item.regular_price }}</td>
+            <td>{{ item.sale_price }}</td>
         </tr>
         {% endfor %}
 

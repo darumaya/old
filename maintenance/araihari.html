@@ -173,14 +173,8 @@ order: 10
         {% for item in site.data.price-lists.["洗い張り"] %}
         <tr>
             <td>{{ item.kimono }}</td>
-            <td>
-                {% assign number = item.regular_price %}
-                &yen;{% include format-number.html %}
-            </td>
-            <td>
-                {% assign number = item.sale_price %}
-                &yen;{% include format-number.html %}
-            </td>
+            <td>{{ item.regular_price }}</td>
+            <td>{{ item.sale_price }}</td>
         </tr>
         {% endfor %}
         <tr><td>撥水加工品</td><td>&yen;4,000増し</td><td>&yen;2,000増し</td></tr>
@@ -204,14 +198,8 @@ order: 10
         {% for item in site.data.price-lists.["洗い張りから仕立て"] %}
         <tr>
             <td>{{ item.kimono }}</td>
-            <td>
-                {% assign number = item.regular_price %}
-                &yen;{% include format-number.html %}
-            </td>
-            <td>
-                {% assign number = item.sale_price %}
-                &yen;{% include format-number.html %}
-            </td>
+            <td>{{ item.regular_price }}</td>
+            <td>{{ item.sale_price }}</td>
         </tr>
         {% endfor %}
         <tr><td>撥水加工品</td><td>&yen;4,000増し</td><td>&yen;2,000増し</td></tr>
