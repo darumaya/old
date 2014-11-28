@@ -1,49 +1,6 @@
 //
-// jumbotron
-//
-
-.section-jumbotron {
-    background-color: @binroujizome;
-    margin-top: -70px;
-    padding-top: 40px;
-
-    > .jumbotron {
-        background-position: center center;
-        background-size: cover;
-
-        > .container {
-            .jumbotron-height(@screen-sm-min);
-
-            @media (min-width: @screen-md-min) {
-                .jumbotron-height(@screen-md-min);
-            }
-
-            @media (min-width: @screen-lg-min) {
-                .jumbotron-height(@screen-lg-min);
-            }
-
-            position: relative;
-
-            > .jumbotron-inner {
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                text-align: right;
-                color: @gray-lighter;
-                text-shadow: 0 0 2px #000, 0 0 2px #000;
-
-                h1 {
-                    font-family: @font-family-serif;
-                }
-            }
-        }
-    }
-}
-
-//
 // main
 //
-
 
 section {
     h2 {
@@ -55,10 +12,10 @@ section {
 }
 
 //
-// maintain/araihari.html
+// 同一カテゴリーのページ
 //
 
-.nav-arrows {
+.nav-card {
     margin-bottom: 15px;
     padding-left: 0; // Override default ul/ol
     list-style: none;
@@ -76,39 +33,30 @@ section {
 
         // Links rendered as pills
         > a {
-            font-size: @font-size-base;
-            position: relative;
-            display: block;
-            padding: 5px 0 5px 10px;
-            width: (@font-size-base + 10px);
-            height: (@font-size-base * 6 + 5px * 2);
-            text-align: center;
-
-            -webkit-writing-mode: vertical-rl;
-            writing-mode: vertical-rl;
-            background-color: @nav-link-hover-bg;
 
             &:hover,
             &:focus {
                 text-decoration: none;
                 background-color: transparent;
-
-                &:after {
-                    border-color: transparent transparent transparent transparent;
-                }
             }
 
-            &:after {
-                content: " ";
+            > img {
+                width: 40px;
+                height: 40px;
+            }
+            
+            > .nav-card-label {
+                font-size: @font-size-base;
+                position: relative;
                 display: block;
-                position: absolute;
-                top: 0;
-                right: (-(@font-size-base + 10px) / 2);
-                width: ((@font-size-base + 10px) / 2);
-                height: (@font-size-base * 6 + 5px * 2);
-                border-width: ((@font-size-base * 6 + 5px * 2) / 2) 0 ((@font-size-base * 6 + 5px * 2) / 2) ((@font-size-base + 10px) / 2);
-                border-style: solid;
-                border-color: transparent transparent transparent @nav-link-hover-bg;
+                padding: 5px 10px 5px 10px;
+                width: (40px + 10px * 2);
+                height: (80px + 5px * 2);
+                text-align: center;
+
+                -webkit-writing-mode: vertical-rl;
+                writing-mode: vertical-rl;
+                background-color: @nav-link-hover-bg;
             }
         }
 
@@ -124,50 +72,13 @@ section {
                 color: @nav-pills-active-link-hover-color;
                 background-color: @nav-pills-active-link-hover-bg;
             }
-
-            &:after {
-                border-color: transparent transparent transparent @nav-pills-active-link-hover-bg;
-            }
         }
     }
 }
 
-.carousel-outer-indicators {
-    overflow: hidden;
-}
-
-.carousel {
-    clear: both;
-    width: 100%;
-    .carousel-caption {
-        padding-top: 0;
-        padding-bottom: 20px;
-        bottom: 10px;
-        left: 0;
-        right: 0;
-        background-color: rgba(0,0,0,0.25);
-        @media (min-width: @screen-sm-min) {
-            bottom: 20px;
-        }
-
-        h3,
-        .h3 {
-            margin-top: 10px;
-            font-size: @font-size-h4;
-            @media (min-width: @screen-sm-min) {
-                font-size: @font-size-h3;
-            }
-        }
-
-        p {
-            font-size: @font-size-base;
-        }
-    }
-    .carousel-indicators {
-        font-size: @font-size-base;
-        margin-bottom: 5px;
-    }
-}
+//
+// 関連ページ
+//
 
 a.thumbnail {
     .caption {

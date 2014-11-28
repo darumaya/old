@@ -1,0 +1,74 @@
+<section class="section-jumbotron">
+    <div class="jumbotron">
+        <div class="container">
+            <div class="jumbotron-inner">
+                <h1>{{ page.title }}</h1>
+                <p>{{ page.description }}</p>
+            </div>
+        </div>
+    </div>
+    <style>
+        .jumbotron {
+            background-image: url({{ page.main_visual | replace: ".", "-xs."}});
+        }
+        @media
+        only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (   min--moz-device-pixel-ratio: 2),
+        only screen and (     -o-min-device-pixel-ratio: 2/1),
+        only screen and (        min-device-pixel-ratio: 2),
+        only screen and (                min-resolution: 192dpi),
+        only screen and (                min-resolution: 2dppx) {
+            .jumbotron {
+                background-image: url({{ page.main_visual | replace: ".", "-xs-2x."}});
+            }
+        }
+        @media (min-width: 768px) {
+            .jumbotron {
+                background-image: url({{ page.main_visual | replace: ".", "-sm."}});
+            }
+        }
+        @media
+        only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min-width: 768px) and (   min--moz-device-pixel-ratio: 2),
+        only screen and (min-width: 768px) and (     -o-min-device-pixel-ratio: 2/1),
+        only screen and (min-width: 768px) and (        min-device-pixel-ratio: 2),
+        only screen and (min-width: 768px) and (                min-resolution: 192dpi),
+        only screen and (min-width: 768px) and (                min-resolution: 2dppx) {
+            .jumbotron {
+                background-image: url({{ page.main_visual | replace: ".", "-sm-2x."}});
+            }
+        }
+        @media (min-width: 992px) {
+            .jumbotron {
+                background-image: url({{ page.main_visual | replace: ".", "-md."}});
+            }
+        }
+        @media
+        only screen and (min-width: 992px) and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min-width: 992px) and (   min--moz-device-pixel-ratio: 2),
+        only screen and (min-width: 992px) and (     -o-min-device-pixel-ratio: 2/1),
+        only screen and (min-width: 992px) and (        min-device-pixel-ratio: 2),
+        only screen and (min-width: 992px) and (                min-resolution: 192dpi),
+        only screen and (min-width: 992px) and (                min-resolution: 2dppx) {
+            .jumbotron {
+                background-image: url({{ page.main_visual | replace: ".", "-md-2x."}});
+            }
+        }
+        @media (min-width: 1200px) {
+            .jumbotron {
+                background-image: url({{ page.main_visual | replace: ".", "-lg."}});
+            }
+        }
+        @media
+        only screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min-width: 1200px) and (   min--moz-device-pixel-ratio: 2),
+        only screen and (min-width: 1200px) and (     -o-min-device-pixel-ratio: 2/1),
+        only screen and (min-width: 1200px) and (        min-device-pixel-ratio: 2),
+        only screen and (min-width: 1200px) and (                min-resolution: 192dpi),
+        only screen and (min-width: 1200px) and (                min-resolution: 2dppx) {
+            .jumbotron {
+                background-image: url({{ page.main_visual | replace: ".", "-lg-2x."}});
+            }
+        }
+    </style>
+</section>

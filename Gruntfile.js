@@ -27,7 +27,7 @@ module.exports = function (grunt) {
                 files: [{
                         expand: true, // 展開を有効に
                         cwd: 'src/less/',
-                        src: ['*.less', '!*.min.css', '!mixins.less', '!variables.less', '!common.less', '!home.less', '!1st-2nd.less'],
+                        src: ['styles.less'],
                         dest: 'css/',
                         ext: ".css"
                 }]
