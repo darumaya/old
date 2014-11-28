@@ -1,0 +1,41 @@
+//
+// jumbotron
+//
+
+.section-jumbotron {
+  background-color: @binroujizome;
+  margin-top: -70px;
+  padding-top: 40px;
+
+  > .jumbotron {
+    background-position: center center;
+    background-size: cover;
+
+    > .container {
+      .jumbotron-height(@screen-sm-min);
+
+      @media (min-width: @screen-md-min) {
+        .jumbotron-height(@screen-md-min);
+      }
+
+      @media (min-width: @screen-lg-min) {
+        .jumbotron-height(@screen-lg-min);
+      }
+
+      position: relative;
+
+      > .jumbotron-inner {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        text-align: right;
+        color: @gray-lighter;
+        text-shadow: 0 0 2px #000, 0 0 2px #000;
+
+        h1 {
+          font-family: @font-family-serif;
+        }
+      }
+    }
+  }
+}

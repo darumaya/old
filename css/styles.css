@@ -419,22 +419,6 @@ section h2
 
     border-bottom: 1px solid #eee;
 }
-a.thumbnail .caption
-{
-    -webkit-transition: all .2s ease-in-out;
-         -o-transition: all .2s ease-in-out;
-            transition: all .2s ease-in-out;
-}
-a.thumbnail:hover,
-a.thumbnail:active
-{
-    text-decoration: none;
-}
-a.thumbnail:hover .caption,
-a.thumbnail:active .caption
-{
-    color: #428bca;
-}
 .nav-card
 {
     position: relative;
@@ -493,6 +477,22 @@ a.thumbnail:active .caption
 {
     color: #fff;
     background-color: #428bca;
+}
+a.thumbnail .caption
+{
+    -webkit-transition: all .2s ease-in-out;
+         -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+}
+a.thumbnail:hover,
+a.thumbnail:active
+{
+    text-decoration: none;
+}
+a.thumbnail:hover .caption,
+a.thumbnail:active .caption
+{
+    color: #428bca;
 }
 .section-jumbotron
 {
