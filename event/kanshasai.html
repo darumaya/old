@@ -1,7 +1,7 @@
 ---
 title: お客様感謝祭
 description: きもののお手入れを特別価格でご提供
-main_visual: ''
+main_visual: '/images/kanshasai-jumbotron-DSC05278.jpg'
 layout: 1st-2nd
 category: '催事のご案内'
 order: 10
@@ -22,5 +22,190 @@ order: 10
     </ul>
 </section>
 <section>
-    <h2>きもののお手入れの割引料金</h2>
+    <section>
+        <h2>感謝祭割引料金</h2>
+        <p>きものによって仕事内容が異なる場合があるため、料金はあくまで目安とお考えください。</p>
+        <p>郵送によるご依頼の場合、送料・支払い手数料はお客様負担となりますので、あらかじめご了承ください。</p>
+    </section>
+    <section>
+        <h2>洗い張り</h2>
+        <p>解き、端縫い代を含んだ料金です。</p>
+        <p>特選とは本場大島や本結城など、手間物とは弱生地や色のにじみそうな生地です。</p>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>きものの種類</th>
+                <th>通常料金(目安)</th>
+                <th>感謝祭料金(目安)</th>
+            </tr>
+            </thead>
+
+            <tbody>
+
+            {% for item in site.data.price-lists.["洗い張り"] %}
+            <tr>
+                <td>{{ item.kimono }}</td>
+                <td>{{ item.regular_price }}</td>
+                <td>{{ item.sale_price }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+
+        </table>
+        <h2>洗い張りから仕立て</h2>
+        <p>解き、端縫い代を含んだ料金です。</p>
+        <p>長襦袢の料金には半衿、居敷当て代が含まれています。</p>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>きものの種類</th>
+                <th>通常料金(目安)</th>
+                <th>感謝祭料金(目安)</th>
+            </tr>
+            </thead>
+
+            <tbody>
+
+            {% for item in site.data.price-lists.["洗い張りから仕立て"] %}
+            <tr>
+                <td>{{ item.kimono }}</td>
+                <td>{{ item.regular_price }}</td>
+                <td>{{ item.sale_price }}</td>
+            </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+        <h2>丸洗いとしみ抜き</h2>
+        <p>丸洗いをして、共衿、袖口、裾など通常着て汚れる場所をしみ抜きした場合の料金です。</p>
+        <p>汚れの範囲や落ちにくさによって変わりますので、あくまで目安とお考えください。</p>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>きものの種類</th>
+                <th>通常料金(目安)</th>
+                <th>感謝祭料金(目安)</th>
+            </tr>
+            </thead>
+
+            <tbody>
+
+            {% for item in site.data.price-lists.["丸洗いとしみ抜き"] %}
+            <tr>
+                <td>{{ item.kimono }}</td>
+                <td>{{ item.regular_price }}</td>
+                <td>{{ item.sale_price }}</td>
+            </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+        <h2>染め</h2>
+        <p>反物の状態のきものを無地に染める料金です。</p>
+        <p>無地のきものの染め直し、柄を活かして染め直しは「きものの再生事例」をご覧ください。</p>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>きものの種類</th>
+                <th>通常料金(目安)</th>
+                <th>感謝祭料金(目安)</th>
+            </tr>
+            </thead>
+
+            <tbody>
+
+            {% for item in site.data.price-lists.["染め"] %}
+            <tr>
+                <td>{{ item.kimono }}</td>
+                <td>{{ item.regular_price }}</td>
+                <td>{{ item.sale_price }}</td>
+            </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+        <h2>紋入れ</h2>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>きものの種類</th>
+                <th>通常料金(目安)</th>
+                <th>感謝祭料金(目安)</th>
+            </tr>
+            </thead>
+
+            <tbody>
+
+            {% for item in site.data.price-lists.["紋入れ"] %}
+            <tr>
+                <td>{{ item.kimono }}</td>
+                <td>{{ item.regular_price }}</td>
+                <td>{{ item.sale_price }}</td>
+            </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+        <h2>湯のし</h2>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>きものの種類</th>
+                <th>通常料金(目安)</th>
+                <th>感謝祭料金(目安)</th>
+            </tr>
+            </thead>
+
+            <tbody>
+
+            {% for item in site.data.price-lists.["湯のし"] %}
+            <tr>
+                <td>{{ item.kimono }}</td>
+                <td>{{ item.regular_price }}</td>
+                <td>{{ item.sale_price }}</td>
+            </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+        <h2>本湯通し</h2>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>きものの種類</th>
+                <th>通常料金(目安)</th>
+                <th>感謝祭料金(目安)</th>
+            </tr>
+            </thead>
+
+            <tbody>
+
+            {% for item in site.data.price-lists.["本湯通し"] %}
+            <tr>
+                <td>{{ item.kimono }}</td>
+                <td>{{ item.regular_price }}</td>
+                <td>{{ item.sale_price }}</td>
+            </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+    </section>
+    <section>
+        <h2>郵送の際の支払い方法</h2>
+        <h3>銀行口座</h3>
+        <p>三井住友銀行</p>
+        <p>平塚支店(565)</p>
+        <p>普通　3360141</p>
+        <p>ヤギノブ</p>
+        <br>
+        <h3>代引き手数料</h3>
+        <p>10,000円未満・・・324円</p>
+        <p>10,000円以上30,000円未満・・・432円</p>
+        <p>30,000円以上100,000円未満・・・648円</p>
+        <p>100,000円以上300,000円未満・・・1080円</p>
+        <br>
+        <h3>送料・箱代</h3>
+        <p>枚数によりますが、1000円〜2000円</p>
+    </section>
 </section>
