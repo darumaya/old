@@ -15,53 +15,71 @@ section {
 // 同一カテゴリーのページ
 //
 
+@inner-width: (@container-sm - @grid-gutter-width);
+@card-number: 9;
+@card-border: 1px;
+@card-padding: 5px;
+@card-label-padding: 5px;
+@card-img-width: 60px;
+@card-margin: ((
+    @container-sm - @grid-gutter-width
+    - @card-border * @card-number * 2
+    - @card-padding * @card-number * 2
+    - @card-img-width * @card-number) / (@card-number - 1));
+
 .nav-card {
     margin-bottom: 15px;
     padding-left: 0; // Override default ul/ol
     list-style: none;
     &:extend(.clearfix all);
-    position: relative;
-    left: 50%;
-    float: left;
 
     > li {
-        position: relative;
-        left: -50%;
-        display: block;
         float: left;
         line-height: 1;
 
-        // Links rendered as pills
         > a {
+            display: block;
+            padding: @card-padding;
+            margin-bottom: 15px;
+            background-color: @thumbnail-bg;
+            border: 1px solid @thumbnail-border;
+            border-radius: @thumbnail-border-radius;
+            .transition(all .2s ease-in-out);
+            text-decoration: none;
 
             &:hover,
-            &:focus {
-                text-decoration: none;
+            &:active {
+                border-color: @link-color;
                 background-color: transparent;
+
+                > .nav-card-label {
+                    color: @link-color ;
+                }
             }
 
-            > img {
-                width: 40px;
-                height: 40px;
+            > .nav-card-img {
+                width: @card-img-width;
+                height: @card-img-width;
+                margin: 0 auto @card-padding;
             }
             
             > .nav-card-label {
                 font-size: @font-size-base;
-                position: relative;
-                display: block;
-                padding: 5px 10px 5px 10px;
-                width: (40px + 10px * 2);
-                height: (80px + 5px * 2);
+                color: @thumbnail-caption-color;
+                line-height: (@card-img-width - @card-label-padding * 2);
+                padding: @card-label-padding;
+                width: @card-img-width;
+                height: (@font-size-base * 8 + 5px * 2);
                 text-align: center;
-
                 -webkit-writing-mode: vertical-rl;
                 writing-mode: vertical-rl;
                 background-color: @nav-link-hover-bg;
+                .transition(all .2s ease-in-out);
             }
         }
 
         + li {
-            margin-left: (((@font-size-base + 10px) / 2) + 5px);
+            margin-left: @card-margin;
         }
 
         // Active state
