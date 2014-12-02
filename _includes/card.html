@@ -1,14 +1,3 @@
----
-layout: default
----
-{% include jumbotron.html %}
-
-{% include breadcrumbs.html %}
-
-<main class="container">
-    {{ content }}
-</main>
-
 <section class="container">
     <h2>下層ページ一覧</h2>
     <div>
@@ -19,9 +8,9 @@ layout: default
             {% if child.category != child.title %}
             {% if page.url == child.url %}
             <li class="active">
-            {% else %}
+                {% else %}
             <li>
-            {% endif %}
+                {% endif %}
                 <a href="{{ child.url }}">
                     <img src="{{ child.thumbnail }}" alt="{{ child.title }}" class="img-responsive nav-card-img">
                     <div class="nav-card-label">
