@@ -1,4 +1,5 @@
-//== Colors
+//
+// colors
 //
 
 @ebiiro: #640125;
@@ -7,11 +8,27 @@
 @color3: darken(#40b1cb, 5%);
 @color3-alt: lighten(#14414c, 20%);
 
-@binroujizome: #433d3c;
+// // defined by bootstrap
+//
+// @gray-darker:            lighten(#000, 13.5%); // #222
+// @gray-dark:              lighten(#000, 20%);   // #333
+// @gray:                   lighten(#000, 33.5%); // #555
+// @gray-light:             lighten(#000, 46.7%); // #777
+// @gray-lighter:           lighten(#000, 93.5%); // #eee
+//
+// @brand-primary:         #428bca;
+// @brand-success:         #5cb85c;
+// @brand-info:            #5bc0de;
+// @brand-warning:         #f0ad4e;
+// @brand-danger:          #d9534f;
+
+//
+// usage of colors
+//
 
 @body-bg: #fff;
-@text-color:  @gray-dark;
 
+@text-color:  @gray-dark;
 @link-color:  @color3;
 @link-hover-color:  @color3-alt;
 
@@ -21,15 +38,11 @@
 @component-hover-color:  #fff;
 @component-hover-bg: @color3-alt;
 
-//== Grid system
+//
+// typography
 //
 
-@noren-columns: 6;
-@araihari-step-columns: 11;
-
-@container-iphone6: 375px;
-
-//== Fonts
-//
+@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+@font-family-serif:       Georgia, "Times New Roman", Times, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "MS PMincho", serif;
 
 @font-size-less-large: ceil((@font-size-base * 1.14)); // ~16px;

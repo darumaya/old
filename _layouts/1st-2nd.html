@@ -9,35 +9,4 @@ layout: default
     {{ content }}
 </main>
 
-<section class="container">
-    <h2>下層ページ一覧</h2>
-    <div>
-        <ul class="nav nav-card">
-            {% assign pages = site.pages | sort: 'order' %}
-            {% for child in pages %}
-            {% if page.category == child.category %}
-            {% if child.category != child.title %}
-            {% if page.url == child.url %}
-            <li class="active">
-            {% else %}
-            <li>
-            {% endif %}
-                <a href="{{ child.url }}">
-                    <img src="{{ child.thumbnail }}" alt="{{ child.title }}" class="img-responsive nav-card-img">
-                    <div class="nav-card-label">
-                        <h4 class="visible-xs-block">{{ child.title }}</h4>
-                        <p class="visible-xs-block nav-card-snipet-1st">{{ child.snipet_1st }}{{ child.snipet_2nd }}</p>
-                        <h4 class="hidden-xs">{{ child.title | split: '' | join: '<br>' }}</h4>
-                        {% capture snipet_1st %}{{ child.snipet_1st }}{% endcapture %}
-                        <p class="hidden-xs nav-card-snipet-1st">{{ snipet_1st | split: ',' | join: '<br>' }}</p>
-                        {% capture snipet_2nd %}{{ child.snipet_2nd }}{% endcapture %}
-                        <p class="hidden-xs nav-card-snipet-2nd">{{ snipet_2nd | split: ',' | join: '<br>' }}</p>
-                    </div>
-                </a>
-            </li>
-            {% endif %}
-            {% endif %}
-            {% endfor %}
-        </ul>
-    </div>
-</section>
+{% include card.html %}
