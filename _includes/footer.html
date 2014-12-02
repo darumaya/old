@@ -1,5 +1,87 @@
 <footer>
     <div class="container">
-        <p>copyright</p>
+        <div class="row">
+            <div class="col-sm-4">
+                <h4>だるまや京染本店</h4>
+                <p>
+                    〒254-0042<br>
+                    神奈川県平塚市明石町5−7<br>
+                    JR東海道線「平塚駅」北口より徒歩7分
+                </p>
+                <p>
+                    <a href="tel:0463211411">0463-21-1411</a><br>
+                    9:00〜18:30(水曜定休日)
+                </p>
+                <p>
+                    <a href="/information/shop.html">
+                        <img class="map">
+                        大きな地図で見る
+                    </a>
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <h4>お問い合わせ</h4>
+                <p>
+                    <input type="text" class="form-control input-sm" id="inputName" placeholder="お名前（必須）">
+                </p>
+                <p>
+                    <input type="text" class="form-control input-sm" id="inputTel" placeholder="電話番号">
+                </p>
+                <p>
+                    <input type="email" class="form-control input-sm" id="inputEmail" placeholder="メールアドレス">
+                </p>
+                <p>
+                    <input type="text" class="form-control input-sm" id="inputAddress" placeholder="住所（ポストカード希望の方）">
+                </p>
+                <p>
+                    <textarea class="form-control input-sm" rows="5" placeholder="内容"></textarea>
+                </p>
+                <p class="text-center">
+                    <button type="button" class="btn btn-primary" style="padding-left: 32px; letter-spacing: 20px;">送信</button>
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <h4>メールマガジンを購読</h4>
+                <p>
+                    <input type="text" class="form-control input-sm" id="mailInputName" placeholder="お名前（必須）">
+                </p>
+                <p>
+                    <input type="email" class="form-control input-sm" id="mailInputEmail" placeholder="メールアドレス">
+                </p>
+                <p class="text-center">
+                    <label class="radio-inline">
+                        <input type="radio" checked name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        HTMLメール
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option1">
+                        テキストメール
+                    </label>
+                </p>
+                <p class="text-center">
+                    <button type="button" class="btn btn-primary" style="padding-left: 22px; letter-spacing: 10px;">申し込む</button>
+                </p>
+
+                <h4>Facebookページを購読</h4>
+                <div class="fb-like-box"
+                     data-href="https://www.facebook.com/FacebookDevelopers"
+                     data-width="360"
+                     data-height="250"
+                     data-colorscheme="light"
+                     data-show-faces="true"
+                     data-header="false"
+                     data-stream="false"
+                     data-show-border="false"></div>
+                <div id="fb-root"></div>
+                <script>(function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = "//connect.facebook.net/ja_KS/sdk.js#xfbml=1&appId=582225031817530&version=v2.0";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));</script>
+            </div>
+        </div>
+        <p class="copyright">Copyright &copy; 2014 Darumaya Kyozome Honten. All Rights Reserved.</p>
     </div>
 </footer>

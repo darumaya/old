@@ -425,10 +425,80 @@ a:focus
 footer
 {
     margin-top: 40px;
-    padding: 40px 0;
+    padding-top: 40px;
 
-    color: darkgray;
-    background-color: silver;
+    color: #eee;
+    background-color: #777;
+}
+footer a,
+footer a:hover,
+footer a:active
+{
+    color: white;
+}
+footer .map
+{
+    width: 220px;
+    height: 220px;
+
+    background-image: url('https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=220x220&scale=1&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284&sensor=false');
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)
+{
+    footer .map
+    {
+        background-image: url('https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=220x220&scale=2&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284&sensor=false');
+        -webkit-background-size: 220px 220px;
+                background-size: 220px 220px;
+    }
+}
+@media (min-width: 992px)
+{
+    footer .map
+    {
+        width: 292px;
+        height: 220px;
+
+        background-image: url('https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=292x220&scale=1&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284&sensor=false');
+    }
+}
+@media (min-width: 992px) and only screen and (-webkit-min-device-pixel-ratio: 2), (min-width: 992px) and only screen and (min--moz-device-pixel-ratio: 2), (min-width: 992px) and only screen and (-o-min-device-pixel-ratio: 2/1), (min-width: 992px) and only screen and (min-device-pixel-ratio: 2), (min-width: 992px) and only screen and (min-resolution: 192dpi), (min-width: 992px) and only screen and (min-resolution: 2dppx)
+{
+    footer .map
+    {
+        background-image: url('https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=292x220&scale=2&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284&sensor=false');
+        -webkit-background-size: 292px 222px;
+                background-size: 292px 222px;
+    }
+}
+@media (min-width: 1200px)
+{
+    footer .map
+    {
+        width: 360px;
+        height: 220px;
+
+        background-image: url('https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=360x220&scale=1&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284&sensor=false');
+    }
+}
+@media (min-width: 1200px) and only screen and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and only screen and (min--moz-device-pixel-ratio: 2), (min-width: 1200px) and only screen and (-o-min-device-pixel-ratio: 2/1), (min-width: 1200px) and only screen and (min-device-pixel-ratio: 2), (min-width: 1200px) and only screen and (min-resolution: 192dpi), (min-width: 1200px) and only screen and (min-resolution: 2dppx)
+{
+    footer .map
+    {
+        background-image: url('https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=360x220&scale=2&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284&sensor=false');
+        -webkit-background-size: 360px 220px;
+                background-size: 360px 220px;
+    }
+}
+footer .fb-like-box
+{
+    background-color: #eee;
+}
+footer .copyright
+{
+    margin: 20px 0;
+
+    text-align: center;
 }
 section h2
 {
