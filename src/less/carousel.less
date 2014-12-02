@@ -2,6 +2,14 @@
 // carousel
 //
 
+@nav-arrow-margin: 5px;
+@nav-arrow-padding-vertical: 10px;
+@nav-arrow-padding-horizontal: 10px;
+@nav-arrow-rectangle-width: (@font-size-base + @nav-arrow-padding-horizontal * 2);
+@nav-arrow-triangle-width: 10px;
+@nav-arrow-height: (@font-size-base * @nav-arrow-label-max-length + @nav-arrow-padding-vertical * 2);
+@nav-arrow-label-max-length: 6;
+
 .nav-arrows {
   margin-bottom: 15px;
   padding-left: 0; // Override default ul/ol
@@ -16,29 +24,27 @@
     left: -50%;
     display: block;
     float: left;
-    line-height: 1;
 
     // Links rendered as pills
     > a {
+      color: @link-color;
       font-size: @font-size-base;
       position: relative;
       display: block;
-      padding: 5px 0 5px 10px;
-      width: (@font-size-base + 10px);
-      height: (@font-size-base * 6 + 5px * 2);
-      text-align: center;
-
-      -webkit-writing-mode: vertical-rl;
-      writing-mode: vertical-rl;
-      background-color: @nav-link-hover-bg;
+      padding: @nav-arrow-padding-vertical @nav-arrow-padding-horizontal;
+      width: @nav-arrow-rectangle-width;
+      height: @nav-arrow-height;
+      background-color: @gray-lighter;
+      line-height: 1;
 
       &:hover,
       &:focus {
         text-decoration: none;
-        background-color: transparent;
+        color: @component-hover-color;
+        background-color: @component-hover-bg;
 
         &:after {
-          border-color: transparent transparent transparent transparent;
+          border-color: transparent transparent transparent @component-hover-bg;
         }
       }
 
@@ -47,17 +53,17 @@
         display: block;
         position: absolute;
         top: 0;
-        right: (-(@font-size-base + 10px) / 2);
-        width: ((@font-size-base + 10px) / 2);
-        height: (@font-size-base * 6 + 5px * 2);
-        border-width: ((@font-size-base * 6 + 5px * 2) / 2) 0 ((@font-size-base * 6 + 5px * 2) / 2) ((@font-size-base + 10px) / 2);
+        right: (-@nav-arrow-triangle-width);
+        width: @nav-arrow-triangle-width;
+        height: @nav-arrow-height;
+        border-width: (@nav-arrow-height / 2) 0 (@nav-arrow-height / 2) @nav-arrow-triangle-width;
         border-style: solid;
-        border-color: transparent transparent transparent @nav-link-hover-bg;
+        border-color: transparent transparent transparent @gray-lighter;
       }
     }
 
     + li {
-      margin-left: (((@font-size-base + 10px) / 2) + 5px);
+      margin-left: (@nav-arrow-triangle-width + @nav-arrow-margin);
     }
 
     // Active state
@@ -65,12 +71,12 @@
       &,
       &:hover,
       &:focus {
-        color: @nav-pills-active-link-hover-color;
-        background-color: @nav-pills-active-link-hover-bg;
+        color: @component-active-color;
+        background-color: @component-active-bg;
       }
 
       &:after {
-        border-color: transparent transparent transparent @nav-pills-active-link-hover-bg;
+        border-color: transparent transparent transparent @component-active-bg;
       }
     }
   }

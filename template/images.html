@@ -53,4 +53,12 @@ layout: default
         {{ html }}
     </p>
 
+    <h3>pixel rationのみに利用</h3>
+    {% capture html %}<div class="img-xs" data-width="100" data-src="/images/dummy-xs{pixel_ratio}.png" data-alt="dummy" data-class="img-responsive img-rounded"></div>{% endcapture %}
+<pre>
+{{ html | escape }}
+</pre>
+    <p>
+        {{ html }}
+    </p>
 </div>

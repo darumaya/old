@@ -12,31 +12,45 @@ $(window).on('load', function() {
             $nextIndicator && $nextIndicator.addClass('active');
         });
     });
+});
 
-    $('.thumbnail').each(function() {
-        var $thumbnail = $(this);
-        if ($thumbnail.hasClass('equal-height')) {
+$(document).on('ready', function() {
+    window.thumbnailsReplaced = 0;
+    window.$thumbnails = $('.thumbnail > img');
+    window.thumbnailsLength = $thumbnails.length;
+});
+function imagesReplacedHandler(images) {
+    $(images).each(function() {
+        if ($.inArray(this, $thumbnails) === -1) {
             return;
         }
-        var $section = $thumbnail.parentsUntil('section').last();
-        var maxHeight = 0;
-        $section.find('.thumbnail').each(function() {
-            var height = $(this).height();
-            if (maxHeight < height) {
-                maxHeight = height;
+        $(this).on('load', function() {
+            thumbnailsReplaced++;
+            if (thumbnailsReplaced < thumbnailsLength) {
+                return;
             }
-        });
-        $section.find('.thumbnail').each(function() {
-            $(this).height(maxHeight).addClass('equal-height');
+            var maxHeight = 0;
+            $thumbnails.each(function() {
+                $thumbnail = $(this);
+                var height = $thumbnail.parent().height();
+                if (maxHeight < height) {
+                    maxHeight = height;
+                }
+            });
+            $thumbnails.each(function() {
+                $(this).parent().height(maxHeight);
+            });
         });
     });
-});
+}
+
 new Imager('div.img-xs', {
     availableWidths: {
         375: 'xs'
     },
     availablePixelRatios: [1, 2],
-    className: 'img-xs-replace'
+    className: 'img-xs-replace',
+    onImagesReplaced: imagesReplacedHandler
 });
 new Imager('div.img-sm', {
     availableWidths: {
@@ -44,7 +58,8 @@ new Imager('div.img-sm', {
         720: 'sm'
     },
     availablePixelRatios: [1, 2],
-    className: 'img-sm-replace'
+    className: 'img-sm-replace',
+    onImagesReplaced: imagesReplacedHandler
 });
 new Imager('div.img-md', {
     availableWidths: {
@@ -53,7 +68,8 @@ new Imager('div.img-md', {
         940: 'md'
     },
     availablePixelRatios: [1, 2],
-    className: 'img-md-replace'
+    className: 'img-md-replace',
+    onImagesReplaced: imagesReplacedHandler
 });
 new Imager('div.img-lg', {
     availableWidths: {
@@ -63,5 +79,6 @@ new Imager('div.img-lg', {
         1140: 'lg'
     },
     availablePixelRatios: [1, 2],
-    className: 'img-lg-replace'
+    className: 'img-lg-replace',
+    onImagesReplaced: imagesReplacedHandler
 });

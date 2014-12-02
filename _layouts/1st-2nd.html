@@ -23,9 +23,15 @@ layout: default
             <li>
             {% endif %}
                 <a href="{{ child.url }}">
-                    <img src="{{ child.thumbnail }}" alt="{{ child.title }}" class="img-responsive img-rounded nav-card-img">
+                    <img src="{{ child.thumbnail }}" alt="{{ child.title }}" class="img-responsive nav-card-img">
                     <div class="nav-card-label">
-                        {{ child.title }}
+                        <h4 class="visible-xs-block">{{ child.title }}</h4>
+                        <p class="visible-xs-block nav-card-snipet-1st">{{ child.snipet_1st }}{{ child.snipet_2nd }}</p>
+                        <h4 class="hidden-xs">{{ child.title | split: '' | join: '<br>' }}</h4>
+                        {% capture snipet_1st %}{{ child.snipet_1st }}{% endcapture %}
+                        <p class="hidden-xs nav-card-snipet-1st">{{ snipet_1st | split: ',' | join: '<br>' }}</p>
+                        {% capture snipet_2nd %}{{ child.snipet_2nd }}{% endcapture %}
+                        <p class="hidden-xs nav-card-snipet-2nd">{{ snipet_2nd | split: ',' | join: '<br>' }}</p>
                     </div>
                 </a>
             </li>
