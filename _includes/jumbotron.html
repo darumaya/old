@@ -1,3 +1,4 @@
+{% capture imager_js_tag %}{% raw %}{width}{pixel_ratio}{% endraw %}{% endcapture %}
 <section class="section-jumbotron">
     <div class="jumbotron">
         <div class="container">
@@ -9,7 +10,7 @@
     </div>
     <style>
         .jumbotron {
-            background-image: url({{ page.main_visual | replace: ".", "-xs."}});
+            background-image: url({{ page.main_visual | replace: imager_js_tag, "xs" }});
         }
         @media
         only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -19,12 +20,12 @@
         only screen and (                min-resolution: 192dpi),
         only screen and (                min-resolution: 2dppx) {
             .jumbotron {
-                background-image: url({{ page.main_visual | replace: ".", "-xs-2x."}});
+                background-image: url({{ page.main_visual | replace: imager_js_tag, "xs-2x" }});
             }
         }
         @media (min-width: 768px) {
             .jumbotron {
-                background-image: url({{ page.main_visual | replace: ".", "-sm."}});
+                background-image: url({{ page.main_visual | replace: imager_js_tag, "sm" }});
             }
         }
         @media
@@ -35,12 +36,12 @@
         only screen and (min-width: 768px) and (                min-resolution: 192dpi),
         only screen and (min-width: 768px) and (                min-resolution: 2dppx) {
             .jumbotron {
-                background-image: url({{ page.main_visual | replace: ".", "-sm-2x."}});
+                background-image: url({{ page.main_visual | replace: imager_js_tag, "sm-2x" }});
             }
         }
         @media (min-width: 992px) {
             .jumbotron {
-                background-image: url({{ page.main_visual | replace: ".", "-md."}});
+                background-image: url({{ page.main_visual | replace: imager_js_tag, "md" }});
             }
         }
         @media
@@ -51,12 +52,12 @@
         only screen and (min-width: 992px) and (                min-resolution: 192dpi),
         only screen and (min-width: 992px) and (                min-resolution: 2dppx) {
             .jumbotron {
-                background-image: url({{ page.main_visual | replace: ".", "-md-2x."}});
+                background-image: url({{ page.main_visual | replace: imager_js_tag, "md-2x" }});
             }
         }
         @media (min-width: 1200px) {
             .jumbotron {
-                background-image: url({{ page.main_visual | replace: ".", "-lg."}});
+                background-image: url({{ page.main_visual | replace: imager_js_tag, "lg" }});
             }
         }
         @media
@@ -67,7 +68,7 @@
         only screen and (min-width: 1200px) and (                min-resolution: 192dpi),
         only screen and (min-width: 1200px) and (                min-resolution: 2dppx) {
             .jumbotron {
-                background-image: url({{ page.main_visual | replace: ".", "-lg-2x."}});
+                background-image: url({{ page.main_visual | replace: imager_js_tag, "lg-2x" }});
             }
         }
     </style>
