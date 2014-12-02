@@ -7,7 +7,7 @@
         {% else %}
         <li>
         {% endif %}
-        <a href="#" data-target="#carousel-{{ name }}" data-slide-to="{{ forloop.index0 }}">{{ item.title }}</a>
+        <a href="#" data-target="#carousel-{{ name }}" data-slide-to="{{ forloop.index0 }}">{{ item.title | split: '' | join: '<br>' }}</a>
         </li>
         {% endfor %}
     </ul>
