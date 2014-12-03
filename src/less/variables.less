@@ -4,10 +4,12 @@
 
 @ebiiro: #640125;
 @ebiiro-alt: #cb356d;
-@color2: #8c8541;
-@color2-alt: desaturate(@color2, 10%);
-@color3: darken(#40b1cb, 5%);
-@color3-alt: lighten(#14414c, 20%);
+@mustard: #8c8541;
+@mustard-dark: desaturate(@mustard, 10%);
+@aqua: #40b1cb;
+@aqua-light: darken(#40b1cb, 5%);
+@aqua-dark: lighten(#14414c, 20%);
+@white: #fff;
 
 // // defined by bootstrap
 //
@@ -27,17 +29,10 @@
 // usage of colors
 //
 
-@body-bg: #fff;
-
+@bg-color: @white;
 @text-color:  @gray-dark;
-@link-color:  @color3;
-@link-hover-color:  @color3-alt;
-
-@component-active-color:  #fff;
-@component-active-bg: @color3;
-
-@component-hover-color:  #fff;
-@component-hover-bg: @color3-alt;
+@link-color:  @aqua-light;
+@link-hover-color:  @aqua-dark;
 
 //
 // typography

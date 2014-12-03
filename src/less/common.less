@@ -5,7 +5,7 @@
 body {
     font-family: @font-family-sans-serif;
     color: @text-color;
-    background-color: @body-bg;
+    background-color: @bg-color;
 }
 
 main {
@@ -19,4 +19,12 @@ a {
     &:focus {
         color: @link-hover-color;
     }
+}
+
+//
+// button
+//
+
+.btn-aqua {
+    .button-variant(@bg-color; @link-color; darken(@link-color, 5%));
 }
