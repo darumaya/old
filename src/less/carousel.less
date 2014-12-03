@@ -40,11 +40,11 @@
       &:hover,
       &:focus {
         text-decoration: none;
-        color: @component-hover-color;
-        background-color: @component-hover-bg;
+        color: @bg-color;
+        background-color: @link-hover-color;
 
         &:after {
-          border-color: transparent transparent transparent @component-hover-bg;
+          border-color: transparent transparent transparent @link-hover-color;
         }
       }
 
@@ -71,12 +71,12 @@
       &,
       &:hover,
       &:focus {
-        color: @component-active-color;
-        background-color: @component-active-bg;
+        color: @bg-color;
+        background-color: @link-color;
       }
 
       &:after {
-        border-color: transparent transparent transparent @component-active-bg;
+        border-color: transparent transparent transparent @link-color;
       }
     }
   }
