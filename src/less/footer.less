@@ -9,43 +9,95 @@ footer {
   @footer-input-color-placeholder: #ccc;
 
   margin-top: 40px;
-  padding-top: 40px;
   background-color: @footer-bg-color;
   color: @footer-text-color;
+
   a,
   a:hover,
   a:active {
     color: @footer-link-color;
   }
+
+  h4 {
+    margin-top: 40px;
+  }
+
   .map {
-    width: 220px;
-    height: 220px;
-    .img-retina(
-    'https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=220x220&scale=1&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284&sensor=false',
-    'https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=220x220&scale=2&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284&sensor=false',
-    220px,
-    220px
-    );
-    @media (min-width: @screen-md-min) {
-      width: 292px;
+    @width-sm: (floor(@container-sm / 3 -  @grid-gutter-width));
+    @width-md: (floor(@container-md / 3 -  @grid-gutter-width));
+    @width-lg: (floor(@container-lg / 3 -  @grid-gutter-width));
+
+    @url-scheme: 'http://';
+    @url-domain: 'maps.googleapis.com';
+    @url-path: '/maps/api/staticmap';
+    @url-param-visible: '35.33159,139.348566|35.327912,139.350608';
+    @url-param-maptype: 'roadmap';
+    @url-param-markers: 'size:small|color:red|35.33159,139.348566';
+    @url-param-sensor: 'false';
+
+    @img-base: %('%s%s%s?visible=%S&maptype=%S&markers=%S&sensor=%S&',
+      @url-scheme, @url-domain, @url-path, @url-param-visible, @url-param-maptype, @url-param-markers,
+      @url-param-sensor);
+
+    @img-sm:    %('%s&size=%sx220&scale=%s', @img-base, unit(@width-sm), 1);
+    @img-sm-2x: %('%s&size=%sx220&scale=%s', @img-base, unit(@width-sm), 2);
+    @img-md:    %('%s&size=%sx220&scale=%s', @img-base, unit(@width-md), 1);
+    @img-md-2x: %('%s&size=%sx220&scale=%s', @img-base, unit(@width-md), 2);
+    @img-lg:    %('%s&size=%sx220&scale=%s', @img-base, unit(@width-lg), 1);
+    @img-lg-2x: %('%s&size=%sx220&scale=%s', @img-base, unit(@width-lg), 2);
+
+
+    @media only screen and (min-width: @screen-sm-min) {
+      dispay: inline-block;
+      width: @width-sm;
       height: 220px;
-      .img-retina(
-      'https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=292x220&scale=1&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284&sensor=false',
-      'https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=292x220&scale=2&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284&sensor=false',
-      292px,
-      222px
-      );
-    }
-    @media (min-width: @screen-lg-min) {
-      width: 360px;
+      background-image: url("@{img-sm}");
+
+      @media
+      (-webkit-min-device-pixel-ratio: 2),
+      (min--moz-device-pixel-ratio: 2),
+      (-o-min-device-pixel-ratio: 2/1),
+      (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url("@{img-sm-2x}");
+        background-size: @width-sm 220px;
+      }
+    };
+
+    @media only screen and (min-width: @screen-md-min) {
+      width: @width-md;
       height: 220px;
-      .img-retina(
-      'https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=360x220&scale=1&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284&sensor=false',
-      'https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=360x220&scale=2&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284&sensor=false',
-      360px,
-      220px
-      );
-    }
+      background-image: url("@{img-md}");
+
+      @media
+      (-webkit-min-device-pixel-ratio: 2),
+      (min--moz-device-pixel-ratio: 2),
+      (-o-min-device-pixel-ratio: 2/1),
+      (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url("@{img-md-2x}");
+        background-size: @width-md 220px;
+      }
+    };
+
+    @media only screen and (min-width: @screen-lg-min) {
+      width: @width-lg;
+      height: 220px;
+      background-image: url("@{img-lg}");
+
+      @media
+      (-webkit-min-device-pixel-ratio: 2),
+      (min--moz-device-pixel-ratio: 2),
+      (-o-min-device-pixel-ratio: 2/1),
+      (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url("@{img-lg-2x}");
+        background-size: @width-lg 220px;
+      }
+    };
   }
   .fb-like-box {
     background-color: @footer-text-color;
@@ -73,6 +125,6 @@ footer {
     }
   }
   .btn {
-    .button-variant(@footer-bg-color; @footer-text-color; darken(@footer-text-color, 5%));
+    .button-variant(@footer-bg-color, @footer-text-color, darken(@footer-text-color, 5%));
   }
 }
