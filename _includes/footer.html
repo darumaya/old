@@ -46,26 +46,31 @@
                 </form>
             </div>
             <div class="col-sm-4">
-                <h4>メールマガジンを購読</h4>
-                <p>
-                    <input type="text" class="form-control input-sm" id="mailInputName" placeholder="お名前（必須）">
-                </p>
-                <p>
-                    <input type="email" class="form-control input-sm" id="mailInputEmail" placeholder="メールアドレス">
-                </p>
-                <p class="text-center">
-                    <label class="radio-inline">
-                        <input type="radio" checked name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                        HTMLメール
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option1">
-                        テキストメール
-                    </label>
-                </p>
-                <p class="text-center">
-                    <button type="button" class="btn" style="padding-left: 22px; letter-spacing: 10px;">申し込む</button>
-                </p>
+                <form action="https://docs.google.com/forms/d/1lhEtsXJZrD_ZhHU1HNNoKjvyCM7psp-_ZieWIIQof_w/formResponse" method="post">
+                    <h4>メールマガジンを購読</h4>
+                    <p>
+                        <input type="text" class="form-control input-sm" name="entry.754037029" id="entry_754037029" placeholder="お名前（必須）" required>
+                    </p>
+                    <p>
+                        <input type="email" class="form-control input-sm" name="entry.962431846" id="entry_962431846" placeholder="メールアドレス（必須）" required>
+                    </p>
+                    <p class="text-center">
+                        <label class="radio-inline">
+                            <input type="radio" checked name="entry.1104681476" id="group_1104681476_1" value="HTMLメール">
+                            HTMLメール
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="entry.1104681476" id="group_1104681476_2" value="テキストメール">
+                            テキストメール
+                        </label>
+                    </p>
+                    <p class="text-center">
+                        <input type="hidden" name="draftResponse" value="[,,&quot;6067762280875059710&quot;] ">
+                        <input type="hidden" name="pageHistory" value="0">
+                        <input type="hidden" name="fbzx" value="6067762280875059710">
+                        <button type="submit" class="btn" style="padding-left: 22px; letter-spacing: 10px;" id="ss-submit" value="送信">申し込む</button>
+                    </p>
+                </form>
 
                 <h4>Facebookページを購読</h4>
                 <div class="fb-like-box"
