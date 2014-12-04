@@ -49,9 +49,9 @@
     > a {
       padding: 0;
       display: block;
-      background-color: @thumbnail-bg;
-      border: 1px solid @thumbnail-border;
-      border-radius: @thumbnail-border-radius;
+      background-color: @bg-color;
+      border: 1px solid @card-border-color;
+      border-radius: @border-radius-base;
       transition: border-color .2s ease-in-out;
       text-decoration: none;
       height: (@card-img-width-xs + @card-border * 2);
@@ -62,7 +62,7 @@
       &:hover,
       &:active {
         border-color: @link-color;
-        background-color: transparent;
+        background-color: @bg-color;
 
         > .nav-card-label {
           color: @link-color ;
@@ -92,7 +92,6 @@
       > .nav-card-label {
         position: relative;
         color: @text-color;
-        background-color: @bg-color;
         margin: 0 0 0 (@card-img-width-xs + 5px);
         transition: color .2s ease-in-out;
         > h4 {
@@ -196,7 +195,6 @@
       &:hover,
       &:focus {
         color: @link-hover-color;
-        background-color: @bg-color;
       }
     }
   }
