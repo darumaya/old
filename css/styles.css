@@ -22,6 +22,15 @@ a:focus
 {
     color: #29869d;
 }
+h4,
+h5,
+h6,
+.h4,
+.h5,
+.h6
+{
+    font-weight: 700;
+}
 .btn-aqua
 {
     color: #fff;
@@ -649,6 +658,10 @@ a.thumbnail .caption
          -o-transition: color .2s ease-in-out;
             transition: color .2s ease-in-out;
 }
+a.thumbnail .caption p
+{
+    font-size: 14px;
+}
 a.thumbnail:hover,
 a.thumbnail:active
 {
@@ -783,6 +796,8 @@ a.thumbnail:active .caption
 .nav-arrows > li.active > a:hover,
 .nav-arrows > li.active > a:focus
 {
+    cursor: default;
+
     color: #fff;
     background-color: #34a4be;
 }
@@ -888,7 +903,7 @@ a.thumbnail:active .caption
 .nav-card > li > a:active
 {
     border-color: #34a4be;
-    background-color: transparent;
+    background-color: #fff;
 }
 .nav-card > li > a:hover > .nav-card-label,
 .nav-card > li > a:active > .nav-card-label
@@ -940,7 +955,6 @@ a.thumbnail:active .caption
             transition: color .2s ease-in-out;
 
     color: #333;
-    background-color: #fff;
 }
 .nav-card > li > a > .nav-card-label > h4
 {
@@ -971,6 +985,8 @@ a.thumbnail:active .caption
 
         width: 18px;
         margin: 0;
+
+        text-align: center;
     }
     .nav-card > li > a > .nav-card-label > .nav-card-snipet-1st
     {
@@ -982,6 +998,8 @@ a.thumbnail:active .caption
 
         width: 14px;
         margin: 0;
+
+        text-align: center;
     }
     .nav-card > li > a > .nav-card-label > .nav-card-snipet-2nd
     {
@@ -993,6 +1011,8 @@ a.thumbnail:active .caption
 
         width: 14px;
         margin: 0;
+
+        text-align: center;
     }
 }
 @media (min-width: 992px)
@@ -1033,6 +1053,20 @@ a.thumbnail:active .caption
         right: 70px;
     }
 }
+.nav-card > li.active > a,
+.nav-card > li.active > a:hover,
+.nav-card > li.active > a:focus
+{
+    cursor: default;
+
+    border-color: #333;
+}
+.nav-card > li.active > a > .nav-card-label,
+.nav-card > li.active > a:hover > .nav-card-label,
+.nav-card > li.active > a:focus > .nav-card-label
+{
+    color: #333;
+}
 .nav-card > li + li
 {
     margin-top: 10px;
@@ -1064,5 +1098,4 @@ a.thumbnail:active .caption
 .nav-card > li.active > a:focus
 {
     color: #29869d;
-    background-color: #fff;
 }
