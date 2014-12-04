@@ -163,6 +163,19 @@
       }
     }
 
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        border-color: @text-color;
+        cursor: default;
+
+        > .nav-card-label {
+          color: @text-color;
+        }
+      }
+    }
+
     + li {
       margin-top: @card-margin-xs;
       @media (min-width: @screen-sm-min) {
