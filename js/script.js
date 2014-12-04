@@ -19,6 +19,7 @@ $(document).on('ready', function() {
     window.$thumbnails = $('.thumbnail > img');
     window.thumbnailsLength = $thumbnails.length;
 });
+
 function imagesReplacedHandler(images) {
     $(images).each(function() {
         if ($.inArray(this, $thumbnails) === -1) {
@@ -52,6 +53,7 @@ new Imager('div.img-xs', {
     className: 'img-xs-replace',
     onImagesReplaced: imagesReplacedHandler
 });
+
 new Imager('div.img-sm', {
     availableWidths: {
         375: 'xs',
@@ -61,6 +63,7 @@ new Imager('div.img-sm', {
     className: 'img-sm-replace',
     onImagesReplaced: imagesReplacedHandler
 });
+
 new Imager('div.img-md', {
     availableWidths: {
         375: 'xs',
@@ -71,6 +74,7 @@ new Imager('div.img-md', {
     className: 'img-md-replace',
     onImagesReplaced: imagesReplacedHandler
 });
+
 new Imager('div.img-lg', {
     availableWidths: {
         375: 'xs',
@@ -81,4 +85,60 @@ new Imager('div.img-lg', {
     availablePixelRatios: [1, 2],
     className: 'img-lg-replace',
     onImagesReplaced: imagesReplacedHandler
+});
+
+function isBreakpoint(alias) {
+    return $('.device-' + alias).is(':visible');
+}
+
+var waitForFinalEvent = (function() {
+    var timer = 0;
+    return function(callback, duration) {
+        timer && clearTimeout(timer);
+        timer = setTimeout(callback, duration);
+    }
+})();
+
+function getDevice() {
+    return isBreakpoint('xs') ? 'xs'
+        : isBreakpoint('sm') ? 'sm'
+        : isBreakpoint('md') ? 'md'
+        : isBreakpoint('lg') ? 'lg' : '';
+}
+
+var device = getDevice();
+
+$(window).resize(function() {
+    waitForFinalEvent(function() {
+        var newDevice = getDevice();
+        if (device === newDevice) {
+            return;
+        }
+        device = newDevice;
+        if (device) {
+            $(document).trigger({
+                type: 'breakpoint',
+                device: device
+            });
+        }
+    }, 300);
+});
+
+$('.fb-like-box').attr('data-width', getFbLikeBoxWidth());
+
+function getFbLikeBoxWidth () {
+    switch (device) {
+        case 'sm':
+            return 220;
+        case 'md':
+            return 293;
+        case 'lg':
+            return 360;
+    }
+}
+
+$(document).on('breakpoint', function(event) {
+    var width = getFbLikeBoxWidth();
+    $('.fb-like-box').attr('data-width', width);
+    $('.fb-like-box > span, .fb-like-box > span > iframe').css('width', width);
 });
