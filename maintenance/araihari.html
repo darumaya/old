@@ -45,6 +45,23 @@ carousel:
     - title: 仕上げ
       description: 仕上がった反物を板で巻いて平だたみにし、糸で綴じて洗い張り終了です。
       image: /images/araihari-shiage-DSC05025-{width}{pixel_ratio}.JPG
+related:
+    - title: 洗い張り体験できます！
+      description: 仕事場見学、洗い張り体験できます。
+      link: /
+      image: /images/dummy-{width}{pixel_ratio}.png
+    - title: 洗い張りの仕事風景
+      description: ブログ、Facebookページにて洗い張りの仕事風景を更新しています。
+      link: /
+      image: /images/dummy-{width}{pixel_ratio}.png
+    - title: 洗い張り体験できます！
+      description: 仕事場見学、洗い張り体験できます。
+      link: /
+      image: /images/dummy-{width}{pixel_ratio}.png
+    - title: 洗い張りの仕事風景
+      description: ブログ、Facebookページにて洗い張りの仕事風景を更新しています。
+      link: /
+      image: /images/dummy-{width}{pixel_ratio}.png
 ---
 <section>
     <h2>洗い張りとは</h2>
@@ -123,47 +140,16 @@ carousel:
 <section>
     <h2>関連のあるページ</h2>
     <div class="row">
+        {% for thumbnail in page.related %}
         <div class="col-xs-6 col-sm-4 col-md-3">
-            <a href="./" class="thumbnail">
-                <div class="img-xs" data-src="/images/dummy-{width}{pixel_ratio}.png" data-alt="洗い張り体験"></div>
+            <a href="{{ thumbnail.link }}" class="thumbnail">
+                <div class="img-xs" data-src="{{ thumbnail.image }}" data-alt="{{ thumbnail.title }}"></div>
                 <div class="caption">
-                    <h4>洗い張り体験できます！</h4>
-                    <p>仕事場見学、洗い張り体験できます。<br>
-                        ご希望の方は、お電話かお問い合わせフォームにて。<br>
-                        仕事場見学の様子はこちら</p>
+                    <h4>{{ thumbnail.title }}</h4>
+                    <p>{{ thumbnail.description }}</p>
                 </div>
             </a>
         </div>
-        <div class="col-xs-6 col-sm-4 col-md-3">
-            <a href="./" class="thumbnail">
-                <div class="img-xs" data-src="/images/dummy-{width}{pixel_ratio}.png" data-alt="洗い張りの仕事風景"></div>
-                <div class="caption">
-                    <h4>洗い張りの仕事風景</h4>
-                    <p>ブログ、Facebookページにて洗い張りの仕事風景を更新しています。<br>
-                        洗い張りの仕事風景はこちら</p>
-                </div>
-            </a>
-        </div>
-        <div class="col-xs-6 col-sm-4 col-md-3">
-            <a href="./" class="thumbnail">
-                <div class="img-xs" data-src="/images/dummy-{width}{pixel_ratio}.png" data-alt="洗い張り体験"></div>
-                <div class="caption">
-                    <h4>洗い張り体験できます！</h4>
-                    <p>仕事場見学、洗い張り体験できます。<br>
-                        ご希望の方は、お電話かお問い合わせフォームにて。<br>
-                        仕事場見学の様子はこちら</p>
-                </div>
-            </a>
-        </div>
-        <div class="col-xs-6 col-sm-4 col-md-3">
-            <a href="./" class="thumbnail">
-                <div class="img-xs" data-src="/images/dummy-{width}{pixel_ratio}.png" data-alt="洗い張りの仕事風景"></div>
-                <div class="caption">
-                    <h4>洗い張りの仕事風景</h4>
-                    <p>ブログ、Facebookページにて洗い張りの仕事風景を更新しています。<br>
-                        洗い張りの仕事風景はこちら</p>
-                </div>
-            </a>
-        </div>
+        {% endfor %}
     </div>
 </section>
