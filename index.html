@@ -1,7 +1,115 @@
 ---
-title: home
+title: だるまや京染本店
+description: だるまやは全員が洗い張り職人の呉服屋です。<br>きものの悩みをお持ちのお客様が毎年1,000人以上訪れています。<br><button class="btn btn-aqua">だるまやの紹介</button>
+main_visual: '/images/dummy-{width}{pixel_ratio}.png'
 layout: home
+questions:
+    - title: 郵送でも依頼できますか
+      link: /
+    - title: お手入れの料金を知りたい
+      link: /
+    - title: ニュースレターを受け取りたい
+      link: /
+    - title: お手入れ内容を詳しく知りたい
+      link: /
+    - title: きものの再生事例を見たい
+      link: /
+    - title: おすすめ商品を見たい
+      link: /
+    - title: きものにしみを付けてしまった
+      link: /
+    - title: きものを仕立て直したい
+      link: /
+    - title: 問い合わせしたい
+      link: /
+news:
+    - date: 12/1
+      title: 冬のお客さま感謝祭を掲載しました
+      link: /
+    - date: 11/30
+      title: 12月のおすすめを掲載しました
+      link: /
+    - date: 11/10
+      title: 11月12日は臨時休業します
+      link: /
+    - date: 11/5
+      title: 着こなしのご提案を更新しました
+      link: /
+    - date: 10/31
+      title: 11月のおすすめを掲載しました
+      link: /
 ---
-<h2>トップページ</h2>
-<h3>page</h3>
-<pre>{{ page }}</pre>
+<section>
+    <div class="row">
+        <div class="col-sm-4">
+            <h4>よくある質問</h4>
+            <div class="list-group">
+                {% for item in page.questions %}
+                <a href="{{ item.link }}" class="list-group-item">{{ item.title }}</a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <h4>更新情報</h4>
+            <div class="list-group">
+                {% for item in page.news %}
+                <a href="{{ item.link }}" class="list-group-item">
+                    <span class="badge">{{ item.date }}</span>
+                    {{ item.title }}
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <h4>ブログ「だるまや6代目奮闘記」</h4>
+            <div id="blogFeed" class="list-group">
+            </div>
+            <script>
+                function blogFeed(json) {
+                    console.log(json);
+                    for (var i = 0, iLength = json.feed.entry.length; i < iLength; i++) {
+                        var entryItem = json.feed.entry[i];
+                        var title = entryItem.title.$t;
+                        var date = new Date(entryItem.published.$t);
+                        var dateString = [date.getMonth() + 1, date.getDate()].join('/');
+                        for (var j = 0, jLength = entryItem.link.length; j < jLength; j++) {
+                            var linkItem = entryItem.link[j];
+                            if (linkItem.rel === 'alternate' && linkItem.type === 'text/html') {
+                                var url = linkItem.href;
+                            }
+                        }
+                        var $date = $('<span>', {
+                            class: 'badge',
+                            text: dateString
+                        });
+                        var $a = $('<a>', {
+                            class: 'list-group-item',
+                            href: url,
+                            text: title
+                        }).prepend($date).appendTo('#blogFeed');
+                    }
+                }
+            </script>
+            <script src="http://blog.darumaya-gofuku.jp/feeds/posts/summary?alt=json-in-script&callback=blogFeed&max-results=5" defer async></script>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="row">
+        <div class="col-sm-7">
+
+        </div>
+        <div class="col-sm-5">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+
+        </div>
+        <div class="col-sm-6">
+
+        </div>
+    </div>
+</section>
