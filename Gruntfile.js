@@ -135,6 +135,29 @@ module.exports = function (grunt) {
                     src: ['*.{jpg,JPG}'],
                     dest: 'images/'
                 }]
+            },
+            thumbnail: {
+                options: {
+                    sizes: [{
+                        name: '100',
+                        width: 100,
+                        height: 100,
+                        aspectRatio: false,
+                        quality: 80
+                    }, {
+                        name: '100-2x',
+                        width: 200,
+                        height: 200,
+                        aspectRatio: false,
+                        quality: 50
+                    }]
+                },
+                files: [{
+                    expand: true,
+                    cwd: 'src/images/',
+                    src: ['*-jumbotron-*.{jpg,JPG}'],
+                    dest: 'images/'
+                }]
             }
         }
 

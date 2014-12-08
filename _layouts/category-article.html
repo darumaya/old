@@ -9,4 +9,8 @@ layout: default
     {{ content }}
 </main>
 
-{% include card.html %}
+{% if page.related %}
+{% include banner-related.html %}
+{% endif %}
+
+{% include banner-vertical.html %}

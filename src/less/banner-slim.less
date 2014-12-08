@@ -1,0 +1,36 @@
+a.thumbnail.banner-slim {
+  position: relative;
+  transition: border-color .2s ease-in-out;
+
+  .caption {
+    color: @bg-color;
+    position: absolute;
+    bottom: @thumbnail-padding;
+    padding: 0;
+    right: @thumbnail-padding;
+    left: @thumbnail-padding;
+    transition: color .2s ease-in-out;
+    background-color: rgba(0,0,0,0.4);
+    text-align: center;
+
+    h3 {
+      margin-top: (@line-height-computed / 2);
+      margin-bottom: (@line-height-computed / 4);
+      font-family: @font-family-serif;
+    }
+
+    p {
+      margin-bottom: (@line-height-computed / 4);
+    }
+  }
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+    border-color: @link-color;
+
+    .caption {
+      color: @link-color ;
+    }
+  }
+}

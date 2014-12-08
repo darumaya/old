@@ -45,9 +45,23 @@ function imagesReplacedHandler(images) {
     });
 }
 
+new Imager('div.img-tn', {
+    availableWidths: [100],
+    availablePixelRatios: [1, 2],
+    className: 'img-tn-replace',
+    onImagesReplaced: imagesReplacedHandler
+});
+
 new Imager('div.img-xs', {
     availableWidths: {
-        375: 'xs'
+        157: 'xs',  // 750  / 12 * 3 - 30 = 157
+        212: 'xs',  // 970  / 12 * 3 - 30 = 212
+        220: 'xs',  // 750  / 12 * 4 - 30 = 220
+        262: 'xs',  // 1170 / 12 * 3 - 30 = 262
+        293: 'xs',  // 970  / 12 * 4 - 30 = 293
+        345: 'xs',  // 750  / 12 * 6 - 30 = 345
+        360: 'xs',  // 1170 / 12 * 4 - 30 = 360
+        375: 'xs'   // iPhone 6 = 375
     },
     availablePixelRatios: [1, 2],
     className: 'img-xs-replace',
@@ -56,8 +70,17 @@ new Imager('div.img-xs', {
 
 new Imager('div.img-sm', {
     availableWidths: {
-        375: 'xs',
-        720: 'sm'
+        157: 'xs',  // 750  / 12 * 3 - 30 = 157
+        212: 'xs',  // 970  / 12 * 3 - 30 = 212
+        220: 'xs',  // 750  / 12 * 4 - 30 = 220
+        262: 'xs',  // 1170 / 12 * 3 - 30 = 262
+        293: 'xs',  // 970  / 12 * 4 - 30 = 293
+        345: 'xs',  // 750  / 12 * 6 - 30 = 345
+        360: 'xs',  // 1170 / 12 * 4 - 30 = 360
+        375: 'xs',  // iPhone 6 = 375
+        455: 'sm',  // 970 / 12 * 6 - 30 = 455
+        555: 'sm',  // 1170 / 12 * 6 - 30 = 555
+        720: 'sm'   // sm = 720
     },
     availablePixelRatios: [1, 2],
     className: 'img-sm-replace',
@@ -66,9 +89,18 @@ new Imager('div.img-sm', {
 
 new Imager('div.img-md', {
     availableWidths: {
-        375: 'xs',
-        720: 'sm',
-        940: 'md'
+        157: 'xs',  // 750  / 12 * 3 - 30 = 157
+        212: 'xs',  // 970  / 12 * 3 - 30 = 212
+        220: 'xs',  // 750  / 12 * 4 - 30 = 220
+        262: 'xs',  // 1170 / 12 * 3 - 30 = 262
+        293: 'xs',  // 970  / 12 * 4 - 30 = 293
+        345: 'xs',  // 750  / 12 * 6 - 30 = 345
+        360: 'xs',  // 1170 / 12 * 4 - 30 = 360
+        375: 'xs',  // iPhone 6 = 375
+        455: 'sm',  // 970 / 12 * 6 - 30 = 455
+        555: 'sm',  // 1170 / 12 * 6 - 30 = 555
+        720: 'sm',  // sm = 720
+        940: 'md'   // md = 940
     },
     availablePixelRatios: [1, 2],
     className: 'img-md-replace',
@@ -77,10 +109,19 @@ new Imager('div.img-md', {
 
 new Imager('div.img-lg', {
     availableWidths: {
-        375: 'xs',
-        720: 'sm',
-        940: 'md',
-        1140: 'lg'
+        157: 'xs',  // 750  / 12 * 3 - 30 = 157
+        212: 'xs',  // 970  / 12 * 3 - 30 = 212
+        220: 'xs',  // 750  / 12 * 4 - 30 = 220
+        262: 'xs',  // 1170 / 12 * 3 - 30 = 262
+        293: 'xs',  // 970  / 12 * 4 - 30 = 293
+        345: 'xs',  // 750  / 12 * 6 - 30 = 345
+        360: 'xs',  // 1170 / 12 * 4 - 30 = 360
+        375: 'xs',  // iPhone 6 = 375
+        455: 'sm',  // 970 / 12 * 6 - 30 = 455
+        555: 'sm',  // 1170 / 12 * 6 - 30 = 555
+        720: 'sm',  // sm = 720
+        940: 'md',  // md = 940
+        1140: 'lg'  // lg = 1140
     },
     availablePixelRatios: [1, 2],
     className: 'img-lg-replace',
@@ -142,3 +183,20 @@ $(document).on('breakpoint', function(event) {
     $('.fb-like-box').attr('data-width', width);
     $('.fb-like-box > span, .fb-like-box > span > iframe').css('width', width);
 });
+
+(function() {
+    var CHO_ON = /(ー)/g;
+    var KOGAKI = /(ぁ|ぃ|ぅ|ぇ|ぉ|ゃ|ゅ|ょ|っ|ャ|ュ|ョ|ッ)/g;
+    var KUTOUTEN = /(、|。)/g;
+    $('.banner-vertical-label > .hidden-xs').each(function() {
+        var $this = $(this);
+        var text = $this.text();
+        var html = text;
+        html = html.replace(CHO_ON, '<span class="cho-on">$1</span>');
+        html = html.replace(KOGAKI, '<span class="kogaki">$1</span>');
+        html = html.replace(KUTOUTEN, '<span class="kutouten">$1</span>');
+        if (text !== html) {
+            $this.html(html);
+        }
+    });
+})();
