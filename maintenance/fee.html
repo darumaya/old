@@ -8,6 +8,11 @@ snipet_2nd: 料金一覧です
 layout: category-article
 category: 'きもののお手入れ'
 order: 100
+related:
+    - title: お客様感謝祭！
+      description: お手入れ料金が割引になるお客様感謝祭についてはこちら。
+      link: /event/kanshasai.html
+      image: /images/kanshasai-related-DSC05278-{width}{pixel_ratio}.JPG
 ---
 <section>
     <h2>料金について</h2>
@@ -195,5 +200,19 @@ order: 100
     <h3>送料・箱代</h3>
     <p>枚数によりますが、1000円〜2000円</p>
 </section>
-
-
+<section>
+    <h2>関連のあるページ</h2>
+    <div class="row">
+        {% for thumbnail in page.related %}
+        <div class="col-xs-6 col-sm-4 col-md-3">
+            <a href="{{ thumbnail.link }}" class="thumbnail">
+                <div class="img-xs" data-src="{{ thumbnail.image }}" data-alt="{{ thumbnail.title }}"></div>
+                <div class="caption">
+                    <h4>{{ thumbnail.title }}</h4>
+                    <p>{{ thumbnail.description }}</p>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
