@@ -45,6 +45,13 @@ function imagesReplacedHandler(images) {
     });
 }
 
+new Imager('div.img-tn', {
+    availableWidths: [100],
+    availablePixelRatios: [1, 2],
+    className: 'img-tn-replace',
+    onImagesReplaced: imagesReplacedHandler
+});
+
 new Imager('div.img-xs', {
     availableWidths: {
         157: 'xs',  // 750  / 12 * 3 - 30 = 157
