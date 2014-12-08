@@ -131,6 +131,11 @@ fieldset[disabled] .btn-aqua.active
 
     color: #eee;
 }
+.noren-top a:hover,
+.noren-top a:active
+{
+    text-decoration: none !important;
+}
 .noren-top .search
 {
     margin: 10px -15px 0 0;
@@ -479,7 +484,7 @@ fieldset[disabled] .btn-aqua.active
 }
 footer
 {
-    margin-top: 40px;
+    margin-top: 60px;
 
     color: #eee;
     background-color: #777;
@@ -645,34 +650,6 @@ section h2
     padding-bottom: 9px;
 
     border-bottom: 1px solid #eee;
-}
-a.thumbnail
-{
-    -webkit-transition: border-color .2s ease-in-out;
-         -o-transition: border-color .2s ease-in-out;
-            transition: border-color .2s ease-in-out;
-}
-a.thumbnail .caption
-{
-    -webkit-transition: color .2s ease-in-out;
-         -o-transition: color .2s ease-in-out;
-            transition: color .2s ease-in-out;
-}
-a.thumbnail .caption p
-{
-    font-size: 14px;
-}
-a.thumbnail:hover,
-a.thumbnail:active
-{
-    text-decoration: none;
-
-    border-color: #34a4be;
-}
-a.thumbnail:hover .caption,
-a.thumbnail:active .caption
-{
-    color: #34a4be;
 }
 .section-jumbotron
 {
@@ -858,25 +835,25 @@ a.thumbnail:active .caption
 
     margin-bottom: 5px;
 }
-.nav-card
+.banner-vertical
 {
     margin-bottom: 15px;
     padding-left: 0;
 
     list-style: none;
 }
-.nav-card > li
+.banner-vertical > li
 {
     line-height: 1;
 }
 @media (min-width: 768px)
 {
-    .nav-card > li
+    .banner-vertical > li
     {
         float: left;
     }
 }
-.nav-card > li > a
+.banner-vertical > li > a
 {
     display: block;
 
@@ -894,23 +871,24 @@ a.thumbnail:active .caption
 }
 @media (min-width: 768px)
 {
-    .nav-card > li > a
+    .banner-vertical > li > a
     {
         height: auto;
+        margin-bottom: 20px;
     }
 }
-.nav-card > li > a:hover,
-.nav-card > li > a:active
+.banner-vertical > li > a:hover,
+.banner-vertical > li > a:active
 {
     border-color: #34a4be;
     background-color: #fff;
 }
-.nav-card > li > a:hover > .nav-card-label,
-.nav-card > li > a:active > .nav-card-label
+.banner-vertical > li > a:hover > .banner-vertical-label,
+.banner-vertical > li > a:active > .banner-vertical-label
 {
     color: #34a4be;
 }
-.nav-card > li > a > .nav-card-img
+.banner-vertical > li > a > .banner-vertical-img
 {
     float: left;
 
@@ -919,7 +897,7 @@ a.thumbnail:active .caption
 }
 @media (min-width: 768px)
 {
-    .nav-card > li > a > .nav-card-img
+    .banner-vertical > li > a > .banner-vertical-img
     {
         float: none;
 
@@ -930,7 +908,7 @@ a.thumbnail:active .caption
 }
 @media (min-width: 992px)
 {
-    .nav-card > li > a > .nav-card-img
+    .banner-vertical > li > a > .banner-vertical-img
     {
         width: 75px;
         height: 75px;
@@ -938,13 +916,13 @@ a.thumbnail:active .caption
 }
 @media (min-width: 1200px)
 {
-    .nav-card > li > a > .nav-card-img
+    .banner-vertical > li > a > .banner-vertical-img
     {
         width: 100px;
         height: 100px;
     }
 }
-.nav-card > li > a > .nav-card-label
+.banner-vertical > li > a > .banner-vertical-label
 {
     position: relative;
 
@@ -956,7 +934,7 @@ a.thumbnail:active .caption
 
     color: #333;
 }
-.nav-card > li > a > .nav-card-label > h4
+.banner-vertical > li > a > .banner-vertical-label > h4
 {
     font-family: Georgia, 'Times New Roman', Times, 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho', serif;
     line-height: 1;
@@ -964,20 +942,43 @@ a.thumbnail:active .caption
     margin-top: 10px;
     margin-bottom: 7px;
 }
-.nav-card > li > a > .nav-card-label > .nav-card-snipet-1st,
-.nav-card > li > a > .nav-card-label > .nav-card-snipet-2nd
+.banner-vertical > li > a > .banner-vertical-label > .banner-vertical-snipet-1st,
+.banner-vertical > li > a > .banner-vertical-label > .banner-vertical-snipet-2nd
 {
     line-height: 1;
 }
+.banner-vertical > li > a > .banner-vertical-label .cho-on
+{
+    display: inline-block;
+
+    -webkit-transform: rotate(90deg) scale(1, -1);
+        -ms-transform: rotate(90deg) scale(1, -1);
+         -o-transform: rotate(90deg) scale(1, -1);
+            transform: rotate(90deg) scale(1, -1);
+}
+.banner-vertical > li > a > .banner-vertical-label .kogaki
+{
+    -webkit-transform: translateX(.2em);
+        -ms-transform: translateX(.2em);
+         -o-transform: translateX(.2em);
+            transform: translateX(.2em);
+}
+.banner-vertical > li > a > .banner-vertical-label .kutouten
+{
+    -webkit-transform: translate(.2em, -.5em);
+        -ms-transform: translate(.2em, -.5em);
+         -o-transform: translate(.2em, -.5em);
+            transform: translate(.2em, -.5em);
+}
 @media (min-width: 768px)
 {
-    .nav-card > li > a > .nav-card-label
+    .banner-vertical > li > a > .banner-vertical-label
     {
         width: 60px;
         height: 164px;
         margin: 0;
     }
-    .nav-card > li > a > .nav-card-label > h4
+    .banner-vertical > li > a > .banner-vertical-label > h4
     {
         position: absolute;
         top: 10px;
@@ -988,7 +989,7 @@ a.thumbnail:active .caption
 
         text-align: center;
     }
-    .nav-card > li > a > .nav-card-label > .nav-card-snipet-1st
+    .banner-vertical > li > a > .banner-vertical-label > .banner-vertical-snipet-1st
     {
         font-size: 14px;
 
@@ -1001,7 +1002,7 @@ a.thumbnail:active .caption
 
         text-align: center;
     }
-    .nav-card > li > a > .nav-card-label > .nav-card-snipet-2nd
+    .banner-vertical > li > a > .banner-vertical-label > .banner-vertical-snipet-2nd
     {
         font-size: 14px;
 
@@ -1017,63 +1018,63 @@ a.thumbnail:active .caption
 }
 @media (min-width: 992px)
 {
-    .nav-card > li > a > .nav-card-label
+    .banner-vertical > li > a > .banner-vertical-label
     {
         width: 75px;
     }
-    .nav-card > li > a > .nav-card-label > h4
+    .banner-vertical > li > a > .banner-vertical-label > h4
     {
         right: 7.66666666px;
     }
-    .nav-card > li > a > .nav-card-label > .nav-card-snipet-1st
+    .banner-vertical > li > a > .banner-vertical-label > .banner-vertical-snipet-1st
     {
         right: 33.33333333px;
     }
-    .nav-card > li > a > .nav-card-label > .nav-card-snipet-2nd
+    .banner-vertical > li > a > .banner-vertical-label > .banner-vertical-snipet-2nd
     {
         right: 53.33333334px;
     }
 }
 @media (min-width: 1200px)
 {
-    .nav-card > li > a > .nav-card-label
+    .banner-vertical > li > a > .banner-vertical-label
     {
         width: 100px;
     }
-    .nav-card > li > a > .nav-card-label > h4
+    .banner-vertical > li > a > .banner-vertical-label > h4
     {
         right: 16px;
     }
-    .nav-card > li > a > .nav-card-label > .nav-card-snipet-1st
+    .banner-vertical > li > a > .banner-vertical-label > .banner-vertical-snipet-1st
     {
         right: 50px;
     }
-    .nav-card > li > a > .nav-card-label > .nav-card-snipet-2nd
+    .banner-vertical > li > a > .banner-vertical-label > .banner-vertical-snipet-2nd
     {
         right: 70px;
     }
 }
-.nav-card > li.active > a,
-.nav-card > li.active > a:hover,
-.nav-card > li.active > a:focus
+.banner-vertical > li.active > a,
+.banner-vertical > li.active > a:hover,
+.banner-vertical > li.active > a:focus
 {
     cursor: default;
 
     border-color: #333;
 }
-.nav-card > li.active > a > .nav-card-label,
-.nav-card > li.active > a:hover > .nav-card-label,
-.nav-card > li.active > a:focus > .nav-card-label
+.banner-vertical > li.active > a > .banner-vertical-label,
+.banner-vertical > li.active > a:hover > .banner-vertical-label,
+.banner-vertical > li.active > a:focus > .banner-vertical-label
 {
     color: #333;
 }
-.nav-card > li + li
+.banner-vertical > li + li
 {
     margin-top: 10px;
 }
 @media (min-width: 768px)
 {
-    .nav-card > li + li
+    .banner-vertical > li + li
     {
         margin-top: 0;
         margin-left: 20.25px;
@@ -1081,21 +1082,93 @@ a.thumbnail:active .caption
 }
 @media (min-width: 992px)
 {
-    .nav-card > li + li
+    .banner-vertical > li + li
     {
         margin-left: 30.875px;
     }
 }
 @media (min-width: 1200px)
 {
-    .nav-card > li + li
+    .banner-vertical > li + li
     {
         margin-left: 27.75px;
     }
 }
-.nav-card > li.active > a,
-.nav-card > li.active > a:hover,
-.nav-card > li.active > a:focus
+.banner-vertical > li.active > a,
+.banner-vertical > li.active > a:hover,
+.banner-vertical > li.active > a:focus
 {
     color: #29869d;
+}
+a.thumbnail.banner-slim
+{
+    position: relative;
+
+    -webkit-transition: border-color .2s ease-in-out;
+         -o-transition: border-color .2s ease-in-out;
+            transition: border-color .2s ease-in-out;
+}
+a.thumbnail.banner-slim .caption
+{
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    left: 4px;
+
+    padding: 0;
+
+    -webkit-transition: color .2s ease-in-out;
+         -o-transition: color .2s ease-in-out;
+            transition: color .2s ease-in-out;
+    text-align: center;
+
+    color: #fff;
+    background-color: rgba(0, 0, 0, .4);
+}
+a.thumbnail.banner-slim .caption h3
+{
+    font-family: Georgia, 'Times New Roman', Times, 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho', serif;
+
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+a.thumbnail.banner-slim .caption p
+{
+    margin-bottom: 5px;
+}
+a.thumbnail.banner-slim:hover,
+a.thumbnail.banner-slim:active
+{
+    text-decoration: none;
+
+    border-color: #34a4be;
+}
+a.thumbnail.banner-slim:hover .caption,
+a.thumbnail.banner-slim:active .caption
+{
+    color: #34a4be;
+}
+a.thumbnail.banner-related
+{
+    -webkit-transition: border-color .2s ease-in-out;
+         -o-transition: border-color .2s ease-in-out;
+            transition: border-color .2s ease-in-out;
+}
+a.thumbnail.banner-related .caption
+{
+    -webkit-transition: color .2s ease-in-out;
+         -o-transition: color .2s ease-in-out;
+            transition: color .2s ease-in-out;
+}
+a.thumbnail.banner-related:hover,
+a.thumbnail.banner-related:active
+{
+    text-decoration: none;
+
+    border-color: #34a4be;
+}
+a.thumbnail.banner-related:hover .caption,
+a.thumbnail.banner-related:active .caption
+{
+    color: #34a4be;
 }
