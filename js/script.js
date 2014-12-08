@@ -142,3 +142,20 @@ $(document).on('breakpoint', function(event) {
     $('.fb-like-box').attr('data-width', width);
     $('.fb-like-box > span, .fb-like-box > span > iframe').css('width', width);
 });
+
+(function() {
+    var CHO_ON = /(ー)/g;
+    var KOGAKI = /(ぁ|ぃ|ぅ|ぇ|ぉ|ゃ|ゅ|ょ|っ|ャ|ュ|ョ|ッ)/g;
+    var KUTOUTEN = /(、|。)/g;
+    $('.banner-vertical-label > .hidden-xs').each(function() {
+        var $this = $(this);
+        var text = $this.text();
+        var html = text;
+        html = html.replace(CHO_ON, '<span class="cho-on">$1</span>');
+        html = html.replace(KOGAKI, '<span class="kogaki">$1</span>');
+        html = html.replace(KUTOUTEN, '<span class="kutouten">$1</span>');
+        if (text !== html) {
+            $this.html(html);
+        }
+    });
+})();
