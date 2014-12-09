@@ -4,7 +4,7 @@
         {% for item in page.related %}
         <div class="col-xs-6 col-sm-4 col-md-3">
             <a href="{{ item.link }}" class="thumbnail banner-related">
-                <div class="img-xs" data-src="{{ item.image }}" data-alt="{{ item.title }}"></div>
+                <img class="img-xs" data-src="{{ item.image }}" data-alt="{{ item.title }}">
                 <div class="caption">
                     <h4>{{ item.title }}</h4>
                     <p>{{ item.description }}</p>

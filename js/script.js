@@ -45,14 +45,14 @@ function imagesReplacedHandler(images) {
     });
 }
 
-new Imager('div.img-tn', {
+new Imager('.img-tn', {
     availableWidths: [100],
     availablePixelRatios: [1, 2],
     className: 'img-tn-replace',
     onImagesReplaced: imagesReplacedHandler
 });
 
-new Imager('div.img-xs', {
+new Imager('.img-xs', {
     availableWidths: {
         157: 'xs',  // 750  / 12 * 3 - 30 = 157
         212: 'xs',  // 970  / 12 * 3 - 30 = 212
@@ -68,7 +68,7 @@ new Imager('div.img-xs', {
     onImagesReplaced: imagesReplacedHandler
 });
 
-new Imager('div.img-sm', {
+new Imager('.img-sm', {
     availableWidths: {
         157: 'xs',  // 750  / 12 * 3 - 30 = 157
         212: 'xs',  // 970  / 12 * 3 - 30 = 212
@@ -87,7 +87,7 @@ new Imager('div.img-sm', {
     onImagesReplaced: imagesReplacedHandler
 });
 
-new Imager('div.img-md', {
+new Imager('.img-md', {
     availableWidths: {
         157: 'xs',  // 750  / 12 * 3 - 30 = 157
         212: 'xs',  // 970  / 12 * 3 - 30 = 212
@@ -107,7 +107,7 @@ new Imager('div.img-md', {
     onImagesReplaced: imagesReplacedHandler
 });
 
-new Imager('div.img-lg', {
+new Imager('.img-lg', {
     availableWidths: {
         157: 'xs',  // 750  / 12 * 3 - 30 = 157
         212: 'xs',  // 970  / 12 * 3 - 30 = 212
