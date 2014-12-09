@@ -206,7 +206,7 @@ related:
         {% for thumbnail in page.related %}
         <div class="col-xs-6 col-sm-4 col-md-3">
             <a href="{{ thumbnail.link }}" class="thumbnail">
-                <div class="img-xs" data-src="{{ thumbnail.image }}" data-alt="{{ thumbnail.title }}"></div>
+                <img class="img-xs" data-src="{{ thumbnail.image }}" data-alt="{{ thumbnail.title }}">
                 <div class="caption">
                     <h4>{{ thumbnail.title }}</h4>
                     <p>{{ thumbnail.description }}</p>
