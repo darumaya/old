@@ -2,6 +2,11 @@
 {
     text-shadow: 0 0 2px #000, 0 0 10px #000;
 }
+.box-shadow
+{
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+}
 body
 {
     font-family: 'Helvetica Neue', Helvetica, Arial, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
@@ -22,6 +27,10 @@ a:focus
 {
     color: #29869d;
 }
+a.img-link
+{
+    display: block;
+}
 h4,
 h5,
 h6,
@@ -30,6 +39,19 @@ h6,
 .h6
 {
     font-weight: 700;
+}
+img.img-tn,
+span.img-tn,
+img.img-xs,
+span.img-xs,
+img.img-sm,
+span.img-sm,
+img.img-md,
+span.img-md,
+img.img-lg,
+span.img-lg
+{
+    display: block;
 }
 .btn-aqua
 {
@@ -76,6 +98,10 @@ fieldset[disabled] .btn-aqua.active
 {
     color: #34a4be;
     background-color: #fff;
+}
+.badge
+{
+    background-color: #640125;
 }
 .noren-top
 {
@@ -642,6 +668,65 @@ footer .btn .badge
     color: #eee;
     background-color: #777;
 }
+.layout-home .youtube
+{
+    width: 375px;
+    height: 210px;
+}
+@media (min-width: 768px)
+{
+    .layout-home .youtube
+    {
+        width: 399px;
+        height: 224px;
+    }
+    .layout-home .same-as-youtube
+    {
+        overflow: hidden;
+
+        width: 274px;
+        height: 224px;
+    }
+    .layout-home .same-as-youtube img
+    {
+        position: relative;
+        top: -25px;
+    }
+}
+@media (min-width: 992px)
+{
+    .layout-home .youtube
+    {
+        width: 527px;
+        height: 296px;
+    }
+    .layout-home .same-as-youtube
+    {
+        width: 366px;
+        height: 296px;
+    }
+    .layout-home .same-as-youtube img
+    {
+        top: -35px;
+    }
+}
+@media (min-width: 1200px)
+{
+    .layout-home .youtube
+    {
+        width: 644px;
+        height: 362px;
+    }
+    .layout-home .same-as-youtube
+    {
+        width: 449px;
+        height: 362px;
+    }
+    .layout-home .same-as-youtube img
+    {
+        top: -44px;
+    }
+}
 section h2
 {
     font-family: Georgia, 'Times New Roman', Times, 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho', serif;
@@ -698,6 +783,12 @@ section h2
 .section-jumbotron > .jumbotron > .container > .jumbotron-inner h1
 {
     font-family: Georgia, 'Times New Roman', Times, 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho', serif;
+}
+.section-jumbotron > .jumbotron > .container > .jumbotron-inner a.btn
+{
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+    text-shadow: none;
 }
 .nav-arrows
 {
