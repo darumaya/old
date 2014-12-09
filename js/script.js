@@ -16,7 +16,7 @@ $(window).on('load', function() {
 
 $(document).on('ready', function() {
     window.thumbnailsReplaced = 0;
-    window.$thumbnails = $('.thumbnail > img');
+    window.$thumbnails = $('.banner-related > img');
     window.thumbnailsLength = $thumbnails.length;
 });
 
