@@ -12,7 +12,7 @@
             <li>
             {% endif %}
                 <a href="{{ item.url }}">
-                    <img class="img-tn" data-src="{% if item.thumbnail %}{{ item.thumbnail }}{% else %}{{ item.main_visual }}{% endif %}" data-alt="{{ item.title }}" class="img-responsive banner-vertical-img">
+                    <img class="img-tn" data-src="{% if item.thumbnail %}{{ item.thumbnail }}{% else %}{{ item.main_visual }}{% endif %}" data-alt="{{ item.title }}" data-class="img-responsive banner-vertical-img">
                     <div class="banner-vertical-label">
                         <h4 class="visible-xs-block">{{ item.title }}</h4>
                         <p class="visible-xs-block banner-vertical-snipet-1st">{{ item.snipet_1st }}{{ item.snipet_2nd }}</p>

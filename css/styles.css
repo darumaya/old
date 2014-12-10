@@ -1068,7 +1068,7 @@ section h2
 {
     float: left;
 
-    width: 60px;
+    width: 60px !important;
     height: 60px;
 }
 @media (min-width: 768px)
@@ -1077,7 +1077,7 @@ section h2
     {
         float: none;
 
-        width: 60px;
+        width: 60px !important;
         height: 60px;
         margin: 0 auto 0;
     }
@@ -1086,7 +1086,7 @@ section h2
 {
     .banner-vertical > li > a > .banner-vertical-img
     {
-        width: 75px;
+        width: 75px !important;
         height: 75px;
     }
 }
@@ -1094,7 +1094,7 @@ section h2
 {
     .banner-vertical > li > a > .banner-vertical-img
     {
-        width: 100px;
+        width: 100px !important;
         height: 100px;
     }
 }
