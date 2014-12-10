@@ -46,7 +46,11 @@ function imagesReplacedHandler(images) {
 }
 
 new Imager('.img-tn', {
-    availableWidths: [100],
+    availableWidths: {
+        60: 100,
+        75: 100,
+        100: 100
+    },
     availablePixelRatios: [1, 2],
     className: 'img-tn-replace',
     onImagesReplaced: imagesReplacedHandler
