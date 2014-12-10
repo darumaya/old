@@ -107,10 +107,35 @@ fieldset[disabled] .btn-aqua.active
 {
     background-color: #640125;
 }
+@media (min-width: 768px)
+{
+    .noren-top .navbar-brand
+    {
+        height: auto;
+        padding: 0;
+    }
+}
+.noren-top .navbar-toggle
+{
+    background-color: #960238;
+}
+.noren-top .navbar-toggle .icon-bar
+{
+    background-color: #fff;
+}
 .noren-top .logo
 {
-    margin-top: 15px;
-    margin-left: -15px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+@media (min-width: 768px)
+{
+    .noren-top .logo
+    {
+        margin-top: 15px;
+        margin-bottom: 10px;
+        margin-left: -15px;
+    }
 }
 .noren-top .logo > .symbol-mark
 {
@@ -120,36 +145,56 @@ fieldset[disabled] .btn-aqua.active
     height: 60px;
     margin-top: -5px;
 
-    background-image: url('../images/symbol-mark.png');
+    background-image: url('/images/symbol-mark.png');
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)
 {
     .noren-top .logo > .symbol-mark
     {
-        background-image: url('../images/symbol-mark@2x.png');
+        background-image: url('/images/symbol-mark@2x.png');
         -webkit-background-size: 60px 60px;
                 background-size: 60px 60px;
     }
 }
 .noren-top .logo > .logo-type
 {
-    width: 266px;
-    height: 25px;
-    margin-left: 75px;
+    width: 188px;
+    height: 18px;
 
-    background-image: url('../images/logo-type.png');
+    background-image: url('/images/logo-type-xs.png');
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)
 {
     .noren-top .logo > .logo-type
     {
-        background-image: url('../images/logo-type@2x.png');
+        background-image: url('/images/logo-type-xs@2x.png');
+        -webkit-background-size: 188px 18px;
+                background-size: 188px 18px;
+    }
+}
+@media (min-width: 768px)
+{
+    .noren-top .logo > .logo-type
+    {
+        width: 266px;
+        height: 25px;
+        margin-left: 75px;
+
+        background-image: url('/images/logo-type.png');
+    }
+}
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min--moz-device-pixel-ratio: 2), (min-width: 768px) and (-o-min-device-pixel-ratio: 2/1), (min-width: 768px) and (min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 192dpi), (min-width: 768px) and (min-resolution: 2dppx)
+{
+    .noren-top .logo > .logo-type
+    {
+        background-image: url('/images/logo-type@2x.png');
         -webkit-background-size: 266px 25px;
                 background-size: 266px 25px;
     }
 }
 .noren-top .tag-line
 {
+    font-size: 14px;
     line-height: 15px;
 
     margin-top: 5px;
@@ -168,84 +213,252 @@ fieldset[disabled] .btn-aqua.active
 }
 .noren-bottom
 {
-    overflow: hidden;
-
-    padding-bottom: 6px;
-
-    color: #eee;
+    background-color: #640125;
 }
-.noren-bottom > .container
+@media (min-width: 768px)
 {
-    position: relative;
+    .noren-bottom
+    {
+        overflow: hidden;
+
+        padding-bottom: 6px;
+
+        color: #eee;
+        background-color: inherit;
+    }
 }
-.noren-bottom > .container > .nav-noren-wrapper:before,
-.noren-bottom > .container > .nav-noren-wrapper:after
+@media (min-width: 768px)
 {
-    position: absolute;
-    top: 0;
-
-    display: block;
-
-    width: 10000px;
-    height: 40px;
-
-    content: ' ';
-
-    background: #640125;
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+    .noren-bottom > .container
+    {
+        position: relative;
+    }
 }
-.noren-bottom > .container > .nav-noren-wrapper:before
+.noren-bottom > .container > .nav-noren-wrapper.navbar-collapse
 {
-    left: -10001px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
 }
-.noren-bottom > .container > .nav-noren-wrapper:after
+@media (min-width: 768px)
 {
-    right: -10001px;
+    .noren-bottom > .container > .nav-noren-wrapper
+    {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    .noren-bottom > .container > .nav-noren-wrapper:before,
+  .noren-bottom > .container > .nav-noren-wrapper:after
+    {
+        position: absolute;
+        top: 0;
+
+        display: block;
+
+        width: 10000px;
+        height: 40px;
+
+        content: ' ';
+
+        background: #640125;
+        -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+                box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+    }
+    .noren-bottom > .container > .nav-noren-wrapper:before
+    {
+        left: -10001px;
+    }
+    .noren-bottom > .container > .nav-noren-wrapper:after
+    {
+        right: -10001px;
+    }
+    .noren-bottom > .container > .nav-noren-wrapper .nav-noren
+    {
+        margin-bottom: 0;
+        padding-left: 0;
+
+        list-style: none;
+    }
+    .noren-bottom > .container > .nav-noren-wrapper .nav-noren:before,
+  .noren-bottom > .container > .nav-noren-wrapper .nav-noren:after
+    {
+        display: table;
+
+        content: ' ';
+    }
+    .noren-bottom > .container > .nav-noren-wrapper .nav-noren:after
+    {
+        clear: both;
+    }
+    .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li
+    {
+        position: relative;
+
+        display: block;
+        float: left;
+
+        width: 125px;
+        min-height: 1px;
+        padding-right: 1px;
+        padding-left: 1px;
+
+        text-align: center;
+
+        -webkit-perspective: 400px;
+                perspective: 400px;
+    }
+    .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li > a
+    {
+        line-height: 1.42857143;
+
+        display: block;
+
+        padding: 10px 0;
+
+        -webkit-transition: -webkit-transform ease .5s;
+             -o-transition:      -o-transform ease .5s;
+                transition:         transform ease .5s;
+        -webkit-transform: rotateX(0deg);
+             -o-transform: rotateX(0deg);
+                transform: rotateX(0deg);
+        -webkit-transform-origin: 50% 0;
+            -ms-transform-origin: 50% 0;
+             -o-transform-origin: 50% 0;
+                transform-origin: 50% 0;
+        white-space: pre;
+
+        color: #eee;
+        background-color: #640125;
+        -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+                box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+    }
+    .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li > a:before,
+  .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li > a:after
+    {
+        position: absolute;
+        top: 0;
+        right: 1px;
+        bottom: 0;
+        left: 1px;
+
+        display: block;
+
+        width: auto;
+        height: auto;
+        margin: 0;
+
+        content: ' ';
+        -webkit-transition: opacity ease .5s;
+             -o-transition: opacity ease .5s;
+                transition: opacity ease .5s;
+        pointer-events: none;
+
+        opacity: 0;
+
+        filter: alpha(opacity=0);
+    }
+    .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li > a:before
+    {
+        background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, .1) 20%, rgba(255, 255, 255, .2));
+        background-image:      -o-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, .1) 20%, rgba(255, 255, 255, .2));
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(20%, rgba(255, 255, 255, .1)), to(rgba(255, 255, 255, .2)));
+        background-image:         linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, .1) 20%, rgba(255, 255, 255, .2));
+        background-repeat: no-repeat;
+
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#33ffffff', GradientType=0);
+    }
+    .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li > a:after
+    {
+        background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .1) 20%, rgba(0, 0, 0, .2));
+        background-image:      -o-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .1) 20%, rgba(0, 0, 0, .2));
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(20%, rgba(0, 0, 0, .1)), to(rgba(0, 0, 0, .2)));
+        background-image:         linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .1) 20%, rgba(0, 0, 0, .2));
+        background-repeat: no-repeat;
+
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#33000000', GradientType=0);
+    }
+    .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li > a:hover,
+  .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li > a:focus
+    {
+        -webkit-transform: rotateX(30deg);
+             -o-transform: rotateX(30deg);
+                transform: rotateX(30deg);
+        text-decoration: none;
+
+        color: #eee;
+    }
+    .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li > a:hover:before,
+  .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li > a:focus:before
+    {
+        opacity: 1;
+
+        filter: alpha(opacity=100);
+    }
+    .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li:hover
+    {
+        z-index: 100;
+    }
+    .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active
+    {
+        z-index: 50;
+    }
+    .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a,
+  .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:hover,
+  .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:focus
+    {
+        cursor: default;
+        -webkit-transition: none;
+             -o-transition: none;
+                transition: none;
+        -webkit-transform: none;
+            -ms-transform: none;
+             -o-transform: none;
+                transform: none;
+        -webkit-animation: swing ease-in-out 3s infinite alternate;
+             -o-animation: swing ease-in-out 3s infinite alternate;
+                animation: swing ease-in-out 3s infinite alternate;
+
+        color: #eee;
+    }
+    .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:before,
+  .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:hover:before,
+  .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:focus:before,
+  .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:after,
+  .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:hover:after,
+  .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:focus:after
+    {
+        -webkit-transition: none;
+             -o-transition: none;
+                transition: none;
+
+        opacity: 0;
+
+        filter: alpha(opacity=0);
+    }
+    .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:before,
+  .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:hover:before,
+  .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:focus:before
+    {
+        -webkit-animation: highlight ease-in-out 3s infinite alternate;
+             -o-animation: highlight ease-in-out 3s infinite alternate;
+                animation: highlight ease-in-out 3s infinite alternate;
+    }
+    .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:after,
+  .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:hover:after,
+  .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:focus:after
+    {
+        -webkit-animation: highlight ease-in-out 3s infinite alternate-reverse;
+             -o-animation: highlight ease-in-out 3s infinite alternate-reverse;
+                animation: highlight ease-in-out 3s infinite alternate-reverse;
+    }
 }
-.noren-bottom > .container > .nav-noren-wrapper .nav-noren
-{
-    margin-bottom: 0;
-    padding-left: 0;
-
-    list-style: none;
-}
-.noren-bottom > .container > .nav-noren-wrapper .nav-noren:before,
-.noren-bottom > .container > .nav-noren-wrapper .nav-noren:after
-{
-    display: table;
-
-    content: ' ';
-}
-.noren-bottom > .container > .nav-noren-wrapper .nav-noren:after
-{
-    clear: both;
-}
-.noren-bottom > .container > .nav-noren-wrapper .nav-noren > li
-{
-    position: relative;
-
-    display: block;
-    float: left;
-
-    width: 125px;
-    min-height: 1px;
-    padding-right: 1px;
-    padding-left: 1px;
-
-    text-align: center;
-
-    -webkit-perspective: 400px;
-            perspective: 400px;
-}
-@media (min-width: 992px)
+@media (min-width: 768px) and (min-width: 992px)
 {
     .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li
     {
         width: 162px;
     }
 }
-@media (min-width: 992px) and (max-width: 1199px)
+@media (min-width: 768px) and (min-width: 992px) and (max-width: 1199px)
 {
     .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li:nth-child(1),
   .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li:nth-child(2)
@@ -253,156 +466,12 @@ fieldset[disabled] .btn-aqua.active
         width: 161px;
     }
 }
-@media (min-width: 1200px)
+@media (min-width: 768px) and (min-width: 1200px)
 {
     .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li
     {
         width: 195px;
     }
-}
-.noren-bottom > .container > .nav-noren-wrapper .nav-noren > li > a
-{
-    line-height: 1.42857143;
-
-    display: block;
-
-    padding: 10px 0;
-
-    -webkit-transition: -webkit-transform ease .5s;
-         -o-transition:      -o-transform ease .5s;
-            transition:         transform ease .5s;
-    -webkit-transform: rotateX(0deg);
-         -o-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-    -webkit-transform-origin: 50% 0;
-        -ms-transform-origin: 50% 0;
-         -o-transform-origin: 50% 0;
-            transform-origin: 50% 0;
-    white-space: pre;
-
-    color: #eee;
-    background-color: #640125;
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
-}
-.noren-bottom > .container > .nav-noren-wrapper .nav-noren > li > a:before,
-.noren-bottom > .container > .nav-noren-wrapper .nav-noren > li > a:after
-{
-    position: absolute;
-    top: 0;
-    right: 1px;
-    bottom: 0;
-    left: 1px;
-
-    display: block;
-
-    width: auto;
-    height: auto;
-    margin: 0;
-
-    content: ' ';
-    -webkit-transition: opacity ease .5s;
-         -o-transition: opacity ease .5s;
-            transition: opacity ease .5s;
-    pointer-events: none;
-
-    opacity: 0;
-
-    filter: alpha(opacity=0);
-}
-.noren-bottom > .container > .nav-noren-wrapper .nav-noren > li > a:before
-{
-    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, .1) 20%, rgba(255, 255, 255, .2));
-    background-image:      -o-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, .1) 20%, rgba(255, 255, 255, .2));
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(20%, rgba(255, 255, 255, .1)), to(rgba(255, 255, 255, .2)));
-    background-image:         linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, .1) 20%, rgba(255, 255, 255, .2));
-    background-repeat: no-repeat;
-
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#33ffffff', GradientType=0);
-}
-.noren-bottom > .container > .nav-noren-wrapper .nav-noren > li > a:after
-{
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .1) 20%, rgba(0, 0, 0, .2));
-    background-image:      -o-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .1) 20%, rgba(0, 0, 0, .2));
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(20%, rgba(0, 0, 0, .1)), to(rgba(0, 0, 0, .2)));
-    background-image:         linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .1) 20%, rgba(0, 0, 0, .2));
-    background-repeat: no-repeat;
-
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#33000000', GradientType=0);
-}
-.noren-bottom > .container > .nav-noren-wrapper .nav-noren > li > a:hover,
-.noren-bottom > .container > .nav-noren-wrapper .nav-noren > li > a:focus
-{
-    -webkit-transform: rotateX(30deg);
-         -o-transform: rotateX(30deg);
-            transform: rotateX(30deg);
-    text-decoration: none;
-
-    color: #eee;
-}
-.noren-bottom > .container > .nav-noren-wrapper .nav-noren > li > a:hover:before,
-.noren-bottom > .container > .nav-noren-wrapper .nav-noren > li > a:focus:before
-{
-    opacity: 1;
-
-    filter: alpha(opacity=100);
-}
-.noren-bottom > .container > .nav-noren-wrapper .nav-noren > li:hover
-{
-    z-index: 100;
-}
-.noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active
-{
-    z-index: 50;
-}
-.noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a,
-.noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:hover,
-.noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:focus
-{
-    cursor: default;
-    -webkit-transition: none;
-         -o-transition: none;
-            transition: none;
-    -webkit-transform: none;
-        -ms-transform: none;
-         -o-transform: none;
-            transform: none;
-    -webkit-animation: swing ease-in-out 3s infinite alternate;
-         -o-animation: swing ease-in-out 3s infinite alternate;
-            animation: swing ease-in-out 3s infinite alternate;
-
-    color: #eee;
-}
-.noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:before,
-.noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:hover:before,
-.noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:focus:before,
-.noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:after,
-.noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:hover:after,
-.noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:focus:after
-{
-    -webkit-transition: none;
-         -o-transition: none;
-            transition: none;
-
-    opacity: 0;
-
-    filter: alpha(opacity=0);
-}
-.noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:before,
-.noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:hover:before,
-.noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:focus:before
-{
-    -webkit-animation: highlight ease-in-out 3s infinite alternate;
-         -o-animation: highlight ease-in-out 3s infinite alternate;
-            animation: highlight ease-in-out 3s infinite alternate;
-}
-.noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:after,
-.noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:hover:after,
-.noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:focus:after
-{
-    -webkit-animation: highlight ease-in-out 3s infinite alternate-reverse;
-         -o-animation: highlight ease-in-out 3s infinite alternate-reverse;
-            animation: highlight ease-in-out 3s infinite alternate-reverse;
 }
 @-webkit-keyframes swing
 {
@@ -783,6 +852,22 @@ section h2
 .section-jumbotron > .jumbotron > .container > .jumbotron-inner h1
 {
     font-family: Georgia, 'Times New Roman', Times, 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho', serif;
+    font-size: 24px;
+}
+.section-jumbotron > .jumbotron > .container > .jumbotron-inner p
+{
+    font-size: 14px;
+}
+@media (min-width: 768px)
+{
+    .section-jumbotron > .jumbotron > .container > .jumbotron-inner h1
+    {
+        font-size: 63px;
+    }
+    .section-jumbotron > .jumbotron > .container > .jumbotron-inner p
+    {
+        font-size: 21px;
+    }
 }
 .section-jumbotron > .jumbotron > .container > .jumbotron-inner a.btn
 {
