@@ -33,7 +33,20 @@
         .text-shadow;
 
         h1 {
+          font-size: @font-size-h3;
           font-family: @font-family-serif;
+        }
+        p {
+          font-size: @font-size-base;
+        }
+
+        @media (min-width: @screen-sm-min) {
+          h1 {
+            font-size: (@font-size-base * 4.5);
+          }
+          p {
+            font-size: @jumbotron-font-size;
+          }
         }
 
         a.btn {
