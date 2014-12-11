@@ -696,7 +696,7 @@ footer h4
                 background-size: 360px 220px;
     }
 }
-footer .fb-like-box
+footer .fb-like-box iframe
 {
     background-color: #eee;
 }
