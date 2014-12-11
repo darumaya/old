@@ -108,19 +108,3 @@ related:
         </tbody>
     </table>
 </section>
-<section>
-    <h2>関連のあるページ</h2>
-    <div class="row">
-        {% for thumbnail in page.related %}
-        <div class="col-xs-6 col-sm-4 col-md-3">
-            <a href="{{ thumbnail.link }}" class="thumbnail">
-                <img class="img-xs" data-src="{{ thumbnail.image }}" data-alt="{{ thumbnail.title }}">
-                <div class="caption">
-                    <h4>{{ thumbnail.title }}</h4>
-                    <p>{{ thumbnail.description }}</p>
-                </div>
-            </a>
-        </div>
-        {% endfor %}
-    </div>
-</section>
