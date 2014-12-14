@@ -51,7 +51,7 @@ module.exports = function (grunt) {
                 options: {
                     map: false
                 },
-                src: ['css/*.css', '!css/*.min.css', '!css/bootstrap.min.css']
+                src: ['css/styles.css']
             }
         },
 
@@ -59,7 +59,7 @@ module.exports = function (grunt) {
             dist: {
                 expand: true,
                 cwd: 'css/',
-                src: ['*.css', '!*.min.css', '!bootstrap.min.css'],
+                src: ['styles.css'],
                 dest: 'css/'
             }
         },
@@ -74,7 +74,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true, // 展開を有効に
                     cwd: 'css/',
-                    src: ['*.css', '!*.min.css'],
+                    src: ['styles.css'],
                     dest: 'css/',
                     ext: '.min.css'
                 }]
