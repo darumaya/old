@@ -780,18 +780,8 @@ footer .btn .badge
     color: #eee;
     background-color: #777;
 }
-.layout-home .youtube
-{
-    width: 375px;
-    height: 210px;
-}
 @media (min-width: 768px)
 {
-    .layout-home .youtube
-    {
-        width: 399px;
-        height: 224px;
-    }
     .layout-home .same-as-youtube
     {
         overflow: hidden;
@@ -807,11 +797,6 @@ footer .btn .badge
 }
 @media (min-width: 992px)
 {
-    .layout-home .youtube
-    {
-        width: 527px;
-        height: 296px;
-    }
     .layout-home .same-as-youtube
     {
         width: 366px;
@@ -824,11 +809,6 @@ footer .btn .badge
 }
 @media (min-width: 1200px)
 {
-    .layout-home .youtube
-    {
-        width: 644px;
-        height: 362px;
-    }
     .layout-home .same-as-youtube
     {
         width: 449px;
@@ -1010,6 +990,7 @@ section h2
     clear: both;
 
     width: 100%;
+    margin-bottom: 15px;
 }
 .carousel .carousel-caption
 {
