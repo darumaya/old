@@ -241,13 +241,7 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
       return this;
     },
     showYoutubeVideo: function(id) {
-      var aspectRatio, height, width;
-      aspectRatio = 560 / 315;
-      width = this.$element.data('width') || 560;
-      width = this.checkDimensions(width);
-      height = width / aspectRatio;
-      this.resize(width);
-      this.lightbox_body.html('<iframe width="' + width + '" height="' + height + '" src="//www.youtube.com/embed/' + id + '?badge=0&autoplay=1&html5=1" frameborder="0" allowfullscreen></iframe>');
+      this.lightbox_body.html('<div class="embed-responsive embed-responsive-16by9"><iframe src="//www.youtube.com/embed/' + id + '?autoplay=1&showinfo=0" frameborder="0" class="youtube embed-responsive-item" allowfullscreen></iframe></div>');
       this.options.onContentLoaded.call(this);
       if (this.modal_arrows) {
         return this.modal_arrows.css('display', 'none');
