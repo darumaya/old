@@ -14,11 +14,11 @@ $(window).on('load', function() {
     });
 });
 
-$(document).on('ready', function() {
+(function() {
     window.thumbnailsReplaced = 0;
     window.$thumbnails = $('.banner-related > img');
     window.thumbnailsLength = $thumbnails.length;
-});
+})();
 
 function imagesReplacedHandler(images) {
     $(images).each(function() {
