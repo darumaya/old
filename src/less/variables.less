@@ -1,13 +1,47 @@
-//== Colors
+//
+// colors
 //
 
 @ebiiro: #640125;
-@ebiiro-light: #7f2e4c;
-@binroujizome: #433d3c;
-@genjinezu: #888084;
+@ebiiro-light: desaturate(lighten(@ebiiro, 30%), 70%);
+@ebiiro-lighter: desaturate(lighten(@ebiiro, 50%), 70%);
+@ebiiro-alt: #cb356d;
+@mustard: #8c8541;
+@mustard-dark: desaturate(@mustard, 10%);
+@aqua: #40b1cb;
+@aqua-light: darken(#40b1cb, 5%);
+@aqua-dark: lighten(#14414c, 20%);
+@white: #fff;
 
-    //== Grid system
+// // defined by bootstrap
+//
+// @gray-darker:            lighten(#000, 13.5%); // #222
+// @gray-dark:              lighten(#000, 20%);   // #333
+// @gray:                   lighten(#000, 33.5%); // #555
+// @gray-light:             lighten(#000, 46.7%); // #777
+// @gray-lighter:           lighten(#000, 93.5%); // #eee
+//
+// @brand-primary:         #428bca;
+// @brand-success:         #5cb85c;
+// @brand-info:            #5bc0de;
+// @brand-warning:         #f0ad4e;
+// @brand-danger:          #d9534f;
+
+//
+// usage of colors
 //
 
-@noren-columns: 6;
-@araihari-step-columns: 11;
+@bg-color: @white;
+@text-color:  @gray-dark;
+@link-color:  @aqua-light;
+@link-hover-color:  @aqua-dark;
+@card-border-color: #ddd;
+
+//
+// typography
+//
+
+@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+@font-family-serif:       Georgia, "Times New Roman", Times, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+
+@font-size-less-large: ceil((@font-size-base * 1.14)); // ~16px;

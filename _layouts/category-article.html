@@ -1,0 +1,16 @@
+---
+layout: default
+---
+{% include jumbotron.html %}
+
+{% include breadcrumbs.html %}
+
+<main class="container layout-category-article">
+    {{ content }}
+</main>
+
+{% if page.related %}
+{% include banner-related.html %}
+{% endif %}
+
+{% include banner-vertical.html %}

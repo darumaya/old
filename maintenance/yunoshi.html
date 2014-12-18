@@ -1,0 +1,100 @@
+---
+title: 湯のし・本湯通し
+description: 仕立てる前の一手間で着心地が断然変わります！
+main_visual: '/images/yunoshi-jumbotron-DSC05148-DSC04423-{width}{pixel_ratio}.jpg'
+thumbnail: '/images/yunoshi-DSC04423-100-2x.jpg'
+snipet_1st: 仕立てる前の反物
+snipet_2nd: の幅を整えます
+layout: category-article
+category: 'きもののお手入れ'
+order: 60
+carousel:
+    - title: 事前確認
+      description: お客様からお預かりする際に本湯通しをするか、湯のしだけで良いか確認します。
+      image: /images/yunoshi-jizenkakunin-DSC05372-{width}{pixel_ratio}.JPG
+    - title: お湯に浸ける
+      description: 生地によって温度を調節したお湯に反物を浸けます。<br>生地によって浸ける時間も変わります。
+      image: /images/yunoshi-oyunitukeru-DSC05146-{width}{pixel_ratio}.JPG
+    - title: 畳み上げる
+      description: お湯に浸けた反物を畳み上げて脱水します。
+      image: /images/yunoshi-tatamiageru-DSC05148-{width}{pixel_ratio}.JPG
+    - title: 乾かす
+      description: 張り手にかけて反物を乾かします。
+      image: /images/yunoshi-kawakasu-DSC04107-{width}{pixel_ratio}.JPG
+    - title: 湯のし
+      description: テンタという機械を使って、蒸気を当てながら生地の巾を整えます。
+      image: /images/yunoshi-yunoshi-DSC04423-{width}{pixel_ratio}.JPG
+    - title: 仕上げ
+      description: 仕上がった反物を板で巻いて平だたみにし、糸で綴じます。
+      image: /images/yunoshi-shiage-DSC05020-{width}{pixel_ratio}.JPG
+---
+<section>
+    <h2>湯のしとは</h2>
+    <p>反物に蒸気を当てながら生地の巾を整えることを湯のしと言います。<br>
+        新しい反物を仕立てる前や、縮緬系のきものの洗い張りの最後の工程で行います。<br>
+        だるまやではテンタという専用の機械を使って湯のしを行っています。</p>
+    <h2>本湯通しとは</h2>
+    <p>反物をお湯につけ、糊やカビを落とすことを本湯通しと言います。<br>
+        本場大島やカビが生えてしまった紬を仕立てる前に行います。<br>
+        特に本場大島は本湯通しを行うことで生地の硬さが取れ、しなやかな風合いになります。</p>
+</section>
+<section>
+    <h2>本湯通しの手順</h2>
+    <div class="row">
+        <div class="col-xs-12 col-md-offset-1 col-md-9 col-lg-offset-2 col-lg-7">
+            {% include carousel.html %}
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>湯のし・本湯通しにかかる期間</h2>
+    <p>湯のし・本湯通しには通常10日から2週間ほどいただいています。</p>
+</section>
+
+<section>
+    <h2>湯のしの料金</h2>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>きものの種類</th>
+            <th>通常料金(目安)</th>
+            <th>感謝祭料金(目安)</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        {% for item in site.data.price-lists.["湯のし"] %}
+        <tr>
+            <td>{{ item.kimono }}</td>
+            <td>{{ item.regular_price }}</td>
+            <td>{{ item.sale_price }}</td>
+        </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+    <h2>本湯通しの料金</h2>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>きものの種類</th>
+            <th>通常料金(目安)</th>
+            <th>感謝祭料金(目安)</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        {% for item in site.data.price-lists.["本湯通し"] %}
+        <tr>
+            <td>{{ item.kimono }}</td>
+            <td>{{ item.regular_price }}</td>
+            <td>{{ item.sale_price }}</td>
+        </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+</section>

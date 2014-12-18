@@ -1,0 +1,44 @@
+//
+// home
+//
+
+.layout-home {
+  @media (min-width: @screen-sm-min) {
+    @col-7-width: (@container-sm * 7 / 12 - @grid-gutter-width - @thumbnail-padding * 2);
+    @col-7-height: (@col-7-width * 9 / 16);
+    @col-5-width: (@container-sm * 5 / 12 - @grid-gutter-width - @thumbnail-padding * 2);
+    .same-as-youtube {
+      width: (floor(@col-5-width));
+      height: (floor(@col-7-height));
+      overflow: hidden;
+      img {
+        position: relative;
+        top: (floor((@col-7-height - @col-5-width) / 2));
+      }
+    }
+  }
+  @media (min-width: @screen-md-min) {
+    @col-7-width: (@container-md * 7 / 12 - @grid-gutter-width - @thumbnail-padding * 2);
+    @col-7-height: (@col-7-width * 9 / 16);
+    @col-5-width: (@container-md * 5 / 12 - @grid-gutter-width - @thumbnail-padding * 2);
+    .same-as-youtube {
+      width: (floor(@col-5-width));
+      height: (floor(@col-7-height));
+      img {
+        top: (floor((@col-7-height - @col-5-width) / 2));
+      }
+    }
+  }
+  @media (min-width: @screen-lg-min) {
+    @col-7-width: (@container-lg * 7 / 12 - @grid-gutter-width - @thumbnail-padding * 2);
+    @col-7-height: (@col-7-width * 9 / 16);
+    @col-5-width: (@container-lg * 5 / 12 - @grid-gutter-width - @thumbnail-padding * 2);
+    .same-as-youtube {
+      width: (floor(@col-5-width));
+      height: (floor(@col-7-height));
+      img {
+        top: (floor((@col-7-height - @col-5-width) / 2));
+      }
+    }
+  }
+}

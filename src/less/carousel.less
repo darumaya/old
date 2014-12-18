@@ -1,0 +1,122 @@
+//
+// carousel
+//
+
+@nav-arrow-margin: 5px;
+@nav-arrow-padding-vertical: 10px;
+@nav-arrow-padding-horizontal: 10px;
+@nav-arrow-rectangle-width: (@font-size-base + @nav-arrow-padding-horizontal * 2);
+@nav-arrow-triangle-width: 10px;
+@nav-arrow-height: (@font-size-base * @nav-arrow-label-max-length + @nav-arrow-padding-vertical * 2);
+@nav-arrow-label-max-length: 6;
+
+.nav-arrows {
+  margin-bottom: 15px;
+  padding-left: 0; // Override default ul/ol
+  list-style: none;
+  &:extend(.clearfix all);
+  position: relative;
+  left: 50%;
+  float: left;
+
+  > li {
+    position: relative;
+    left: -50%;
+    display: block;
+    float: left;
+
+    // Links rendered as pills
+    > a {
+      color: @link-color;
+      font-size: @font-size-base;
+      position: relative;
+      display: block;
+      padding: @nav-arrow-padding-vertical @nav-arrow-padding-horizontal;
+      width: @nav-arrow-rectangle-width;
+      height: @nav-arrow-height;
+      background-color: @gray-lighter;
+      line-height: 1;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: @bg-color;
+        background-color: @link-hover-color;
+
+        &:after {
+          border-color: transparent transparent transparent @link-hover-color;
+        }
+      }
+
+      &:after {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: (-@nav-arrow-triangle-width);
+        width: @nav-arrow-triangle-width;
+        height: @nav-arrow-height;
+        border-width: (@nav-arrow-height / 2) 0 (@nav-arrow-height / 2) @nav-arrow-triangle-width;
+        border-style: solid;
+        border-color: transparent transparent transparent @gray-lighter;
+      }
+    }
+
+    + li {
+      margin-left: (@nav-arrow-triangle-width + @nav-arrow-margin);
+    }
+
+    // Active state
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @bg-color;
+        background-color: @link-color;
+        cursor: default;
+      }
+
+      &:after {
+        border-color: transparent transparent transparent @link-color;
+      }
+    }
+  }
+}
+
+.carousel-outer-indicators {
+  overflow: hidden;
+}
+
+.carousel {
+  clear: both;
+  width: 100%;
+  margin-bottom: 15px;
+  .carousel-caption {
+    padding-top: 0;
+    padding-bottom: 20px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.25);
+    @media (min-width: @screen-sm-min) {
+      bottom: 20px;
+    }
+
+    h3,
+    .h3 {
+      margin-top: 10px;
+      font-size: @font-size-h4;
+      @media (min-width: @screen-sm-min) {
+        font-size: @font-size-h3;
+      }
+    }
+
+    p {
+      font-size: @font-size-base;
+    }
+  }
+  .carousel-indicators {
+    font-size: @font-size-base;
+    margin-bottom: 5px;
+  }
+}

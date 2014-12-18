@@ -1,0 +1,108 @@
+---
+title: 染め
+description: 染め職人による無地染めのご紹介
+main_visual: '/images/some-jumbotron-DSC03951-{width}{pixel_ratio}.jpg'
+thumbnail: '/images/some-DSC03951-100-2x.jpg'
+snipet_1st: 反物を染めます
+snipet_2nd:
+layout: category-article
+category: 'きもののお手入れ'
+order: 40
+carousel:
+    - title: 事前確認
+      description: 染めを行う反物について、生地が丈夫か、希望の色に染まるかどうかを確認します。<br>きものの状態の場合は解いて端縫いをし、反物に戻します。
+      image: /images/some-jizenkakunin-DSC05380-{width}{pixel_ratio}.jpg
+    - title: 色抜き
+      description: 色抜きが必要な場合は、<br>反物を色抜き剤を入れたお湯の中に、色が抜けるまで浸します。
+      image: /images/some-ironuki-DSC05332-{width}{pixel_ratio}.JPG
+    - title: 下洗い
+      description: きものの汚れを落とします。<br>色抜きをした場合は、色抜き剤を落とさないと生地が染まらないため、特に丁寧に洗います。
+      image: /images/some-shitaarai-DSC05327-{width}{pixel_ratio}.JPG
+    - title: 乾かす
+      image: /images/some-kawakasu1-DSC05342-{width}{pixel_ratio}.JPG
+      description: 下洗いした反物を乾かします。
+    - title: 染料の調合
+      description: お客様の希望の色になるように染料を調整します。
+      image: /images/some-senryounochougou-DSC03951-{width}{pixel_ratio}.JPG
+    - title: 染める
+      description: 調合した染料で生地を染めていきます。
+      image: /images/some-someru-DSC03963-{width}{pixel_ratio}.JPG
+    - title: 色の確認
+      description: 染め上がってきたら、一部を乾かして色を確認します。<br>希望の色になっていない場合は、染料を調整しながらさらに染めていきます。
+      image: /images/some-ironokakunin-DSC03953-{width}{pixel_ratio}.JPG
+    - title: ゆすぐ
+      description: お客様の希望の色に染まった反物をよくゆすぎ、染料を落とします。
+      image: /images/some-yusugu-DSC03965-{width}{pixel_ratio}.JPG
+    - title: 乾かす
+      description: 染め上がった反物を乾かします。
+      image: /images/some-kawakasu2-DSC03980-{width}{pixel_ratio}.JPG
+    - title: のり入れ
+      description: 染め上がった反物に布のりを引き、生地に張りと艶を出します。
+      image: /images/some-noriire-DSC05039-{width}{pixel_ratio}.JPG
+    - title: 乾かす
+      description: 布のりを引いた反物を乾かします。
+      image: /images/some-kawakasu3-DSC04107-{width}{pixel_ratio}.JPG
+    - title: 湯のし
+      description: 布のりを引いた反物を湯のしをして生地の巾を整えます。
+      image: /images/some-yunoshi-DSC04153-{width}{pixel_ratio}.JPG
+    - title: 仕上げ
+      description: 湯のしをした反物を板で巻いて綴じて完了です。
+      image: /images/some-shiage-DSC05020-{width}{pixel_ratio}.JPG
+related:
+    - title: きものを染め直した事例紹介！
+      description: きものを染め直して蘇らせた事例の紹介です。
+      link: /revival/somenaoshi.html
+      image: /images/somenaoshi-related-P1050759-P1060581-{width}{pixel_ratio}.JPG
+    - title: きものを染め直してコートに仕立て！
+      description: きものを染め直してコートに仕立て直した事例紹介です。
+      link: /revival/tocoat.html
+      image: /images/tocoat-related-P1070151-{width}{pixel_ratio}.JPG
+---
+<section>
+    <h2>染めとは</h2>
+        <p>染めには無地染め、染め替えなどいくつか種類があります。<br>
+            このページでは主に無地染めについて記載しています。<br>
+            染め替えの事例については、きものの地色を替えるページをご覧ください。</p>
+</section>
+
+<section>
+    <h2>染めの手順</h2>
+    <div class="row">
+        <div class="col-xs-12 col-md-offset-1 col-md-9 col-lg-offset-2 col-lg-7">
+            {% include carousel.html %}
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>染めにかかる期間</h2>
+    <p>染めには通常2ヶ月から3ヶ月程度いただいています。<br>
+        着る予定が決まっている場合は、急ぎで仕上げることもできますのでご相談ください。</p>
+</section>
+
+<section>
+    <h2>染めの料金</h2>
+    <p>反物の状態のきものを無地に染める料金です。<br>
+        無地のきものの染め直し、柄を活かして染め直しは「きものの再生事例」をご覧ください。</p>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>きものの種類</th>
+            <th>通常料金(目安)</th>
+            <th>感謝祭料金(目安)</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        {% for item in site.data.price-lists.["染め"] %}
+        <tr>
+            <td>{{ item.kimono }}</td>
+            <td>{{ item.regular_price }}</td>
+            <td>{{ item.sale_price }}</td>
+        </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+</section>

@@ -16,12 +16,6 @@ module.exports = function (grunt) {
 
         // Metadata.
         pkg: grunt.file.readJSON('package.json'),
-        banner: '/*!\n' +
-            ' * Bootstrap v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
-            ' * Copyright 2011-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-            ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n' +
-            ' */\n',
-        // NOTE: This jqueryCheck code is duplicated in customizer.js; if making changes here, be sure to update the other copy too.
 
         // Task configuration.
         less: {
@@ -33,7 +27,7 @@ module.exports = function (grunt) {
                 files: [{
                         expand: true, // 展開を有効に
                         cwd: 'src/less/',
-                        src: ['*.less', '!*.min.css', '!mixins.less', '!variables.less'],
+                        src: ['styles.less'],
                         dest: 'css/',
                         ext: ".css"
                 }]
@@ -57,7 +51,7 @@ module.exports = function (grunt) {
                 options: {
                     map: false
                 },
-                src: ['css/*.css', '!css/*.min.css', '!css/bootstrap.min.css']
+                src: ['css/styles.css']
             }
         },
 
@@ -65,7 +59,7 @@ module.exports = function (grunt) {
             dist: {
                 expand: true,
                 cwd: 'css/',
-                src: ['*.css', '!*.min.css', '!bootstrap.min.css'],
+                src: ['styles.css'],
                 dest: 'css/'
             }
         },
@@ -80,7 +74,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true, // 展開を有効に
                     cwd: 'css/',
-                    src: ['*.css', '!*.min.css'],
+                    src: ['styles.css'],
                     dest: 'css/',
                     ext: '.min.css'
                 }]
@@ -91,6 +85,79 @@ module.exports = function (grunt) {
             'dist-css': {
                 files: 'src/less/*.less',
                 tasks: 'dist-css'
+            },
+            'dist-images': {
+                files: ['src/images/*.{jpg,JPG}'],
+                tasks: 'dist-images'
+            }
+        },
+
+        responsive_images: {
+            darumaya: {
+                options: {
+                    sizes: [{
+                        name: 'xs',
+                        width: 375,
+                        quality: 80
+                    }, {
+                        name: 'xs-2x',
+                        width: 750,
+                        quality: 30
+                    }, {
+                        name: 'sm',
+                        width: 720,
+                        quality: 80
+                    }, {
+                        name: 'sm-2x',
+                        width: 1440,
+                        quality: 30
+                    }, {
+                        name: 'md',
+                        width: 940,
+                        quality: 80
+                    }, {
+                        name: 'md-2x',
+                        width: 1880,
+                        quality: 30
+                    }, {
+                        name: 'lg',
+                        width: 1140,
+                        quality: 70
+                    }, {
+                        name: 'lg-2x',
+                        width: 2280,
+                        quality: 20
+                    }]
+                },
+                files: [{
+                    expand: true,
+                    cwd: 'src/images/',
+                    src: ['*.{jpg,JPG}'],
+                    dest: 'images/'
+                }]
+            },
+            thumbnail: {
+                options: {
+                    sizes: [{
+                        name: '100',
+                        width: 100,
+                        height: 100,
+                        aspectRatio: false,
+                        quality: 80
+                    }, {
+                        name: '100-2x',
+                        width: 200,
+                        height: 200,
+                        aspectRatio: false,
+                        quality: 50
+                    }]
+                },
+                files: [{
+                    expand: true,
+                    cwd: 'src/images/',
+                    src: ['*-jumbotron-*.{jpg,JPG}'],
+                    dest: 'images/'
+                }]
             }
         }
 
@@ -111,9 +178,11 @@ module.exports = function (grunt) {
     };
 
     // CSS distribution task.
-    grunt.registerTask('less-compile', 'less');
-    grunt.registerTask('dist-css', ['less-compile', 'autoprefixer', 'csscomb', 'cssmin']);
+    grunt.registerTask('dist-css', ['less', 'autoprefixer', 'csscomb', 'cssmin']);
+
+    // image resize task.
+    grunt.registerTask('dist-images', 'responsive_images');
 
     // Default task.
-    grunt.registerTask('default', 'dist-css');
+    grunt.registerTask('default', ['dist-css', 'dist-images']);
 };

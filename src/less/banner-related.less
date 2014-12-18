@@ -1,0 +1,21 @@
+//
+// 関連ページ
+//
+
+a.thumbnail.banner-related {
+  transition: border-color .2s ease-in-out;
+
+  .caption {
+    transition: color .2s ease-in-out;
+  }
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+    border-color: @link-color;
+
+    .caption {
+      color: @link-color ;
+    }
+  }
+}

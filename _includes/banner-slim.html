@@ -1,0 +1,24 @@
+<section class="container">
+    <div class="row">
+        {% assign pages = site.pages | sort: 'order' %}
+        {% for item in pages %}
+        {% if page.category == item.category %}
+        {% if item.category != item.title %}
+        <div class="col-sm-6">
+            {% if page.url == item.url %}
+            <a href="{{ item.url }}" class="active thumbnail banner-slim">
+            {% else %}
+            <a href="{{ item.url }}" class="thumbnail banner-slim">
+            {% endif %}
+                <img class="img-md" data-src="{{ item.main_visual }}" data-alt="{{ item.title }}">
+                <div class="caption">
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.snipet_1st }}{{ item.snipet_2nd }}</p>
+                </div>
+            </a>
+        </div>
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+    </div>
+</section>

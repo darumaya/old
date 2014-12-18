@@ -1,31 +1,35 @@
 <nav class="navbar navbar-static-top" role="navigation">
     <div class="noren-top">
         <div class="container">
-            <div class="row hidden-xs">
-                <div class="col-sm-9">
-                    <a href="../">
-                        <h1 class="logo">
-                            <div class="symbol-mark"></div>
-                            <div class="logo-type text-hide">だるまや京染本店</div>
-                        </h1>
-                        <p class="tag-line">伝統技術によるきもののお手入れと着こなしのご提案</p>
-                    </a>
-                </div>
-                <div class="col-sm-3">
-                    <div class="input-group search">
-                        <input type="text" class="form-control">
-                <span class="input-group-btn">
-                    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
-                </span>
-                    </div>
-                </div>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">
+                    <h1 class="logo">
+                        <div class="symbol-mark hidden-xs"></div>
+                        <div class="logo-type text-hide">だるまや京染本店</div>
+                    </h1>
+                    <p class="tag-line hidden-xs">伝統技術によるきもののお手入れと着こなしのご提案</p>
+                </a>
             </div>
+            <form class="navbar-form navbar-right hidden-xs" role="search">
+                <div class="input-group search">
+                    <input type="text" class="form-control">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                    </span>
+                </div>
+            </form>
         </div>
     </div>
     <div class="noren-bottom">
         <div class="container">
-            <div class="row hidden-xs nav-noren-wrapper">
-                <ul class="nav-noren">
+            <div class="collapse navbar-collapse nav-noren-wrapper" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav nav-noren">
                     {% if page.category == 'だるまやのご紹介' %}
                     <li class="active"><a href="/information/">だるまやのご紹介</a></li>
                     {% else %}
@@ -37,25 +41,22 @@
                     <li><a href="/maintenance/">きもののお手入れ</a></li>
                     {% endif %}
                     {% if page.category == 'きものの再生事例' %}
-                    <li class="active"><a href="/reuse/">きものの再生事例</a></li>
+                    <li class="active"><a href="/revival/">きものの再生事例</a></li>
                     {% else %}
-                    <li><a href="/reuse/">きものの再生事例</a></li>
+                    <li><a href="/revival/">きものの再生事例</a></li>
                     {% endif %}
-                    {% if page.category == '商品紹介' %}
-                    <li class="active"><a href="/coordinate/">商品紹介</a></li>
+                    {% if page.category == '着こなしのご提案' %}
+                    <li class="active"><a href="/coordinate/">着こなしのご提案</a></li>
                     {% else %}
-                    <li><a href="/coordinate/">商品紹介</a></li>
+                    <li><a href="/coordinate/">着こなしのご提案</a></li>
                     {% endif %}
-                    {% if page.category == '感謝祭のご案内' %}
-                    <li class="active"><a href="/sale/">感謝祭のご案内</a></li>
+                    {% if page.category == '催事のご案内' %}
+                    <li class="active"><a href="/event/">催事のご案内</a></li>
                     {% else %}
-                    <li><a href="/sale/">感謝祭のご案内</a></li>
+                    <li><a href="/event/">催事のご案内</a></li>
                     {% endif %}
                     <li><a href="http://blog.darumaya-gofuku.jp/">ブログ</a></li>
                 </ul>
-            </div>
-            <div class="row visible-xs">
-                <div class="col-xs-10 col-xs-offset-1">メニュー</div>
             </div>
         </div>
     </div>

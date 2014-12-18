@@ -1,0 +1,132 @@
+//
+// footer
+//
+
+footer {
+  @footer-text-color: @gray-lighter;
+  @footer-bg-color: @gray-light;
+  @footer-link-color: lighten(@link-color, 30%);
+  @footer-input-color-placeholder: #ccc;
+
+  margin-top: 60px;
+  background-color: @footer-bg-color;
+  color: @footer-text-color;
+
+  a,
+  a:hover,
+  a:active {
+    color: @footer-link-color;
+  }
+
+  h4 {
+    margin-top: 40px;
+  }
+
+  .map {
+    @width-sm: (floor(@container-sm / 3 -  @grid-gutter-width));
+    @width-md: (floor(@container-md / 3 -  @grid-gutter-width));
+    @width-lg: (floor(@container-lg / 3 -  @grid-gutter-width));
+
+    @url-scheme: 'http://';
+    @url-domain: 'maps.googleapis.com';
+    @url-path: '/maps/api/staticmap';
+    @url-param-visible: '35.33159,139.348566|35.327912,139.350608';
+    @url-param-maptype: 'roadmap';
+    @url-param-markers: 'size:small|color:red|35.33159,139.348566';
+    @url-param-sensor: 'false';
+
+    @img-base: %('%s%s%s?visible=%S&maptype=%S&markers=%S&sensor=%S&',
+      @url-scheme, @url-domain, @url-path, @url-param-visible, @url-param-maptype, @url-param-markers,
+      @url-param-sensor);
+
+    @img-sm:    %('%s&size=%sx220&scale=%s', @img-base, unit(@width-sm), 1);
+    @img-sm-2x: %('%s&size=%sx220&scale=%s', @img-base, unit(@width-sm), 2);
+    @img-md:    %('%s&size=%sx220&scale=%s', @img-base, unit(@width-md), 1);
+    @img-md-2x: %('%s&size=%sx220&scale=%s', @img-base, unit(@width-md), 2);
+    @img-lg:    %('%s&size=%sx220&scale=%s', @img-base, unit(@width-lg), 1);
+    @img-lg-2x: %('%s&size=%sx220&scale=%s', @img-base, unit(@width-lg), 2);
+
+
+    @media only screen and (min-width: @screen-sm-min) {
+      dispay: inline-block;
+      width: @width-sm;
+      height: 220px;
+      background-image: url("@{img-sm}");
+
+      @media
+      (-webkit-min-device-pixel-ratio: 2),
+      (min--moz-device-pixel-ratio: 2),
+      (-o-min-device-pixel-ratio: 2/1),
+      (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url("@{img-sm-2x}");
+        background-size: @width-sm 220px;
+      }
+    };
+
+    @media only screen and (min-width: @screen-md-min) {
+      width: @width-md;
+      height: 220px;
+      background-image: url("@{img-md}");
+
+      @media
+      (-webkit-min-device-pixel-ratio: 2),
+      (min--moz-device-pixel-ratio: 2),
+      (-o-min-device-pixel-ratio: 2/1),
+      (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url("@{img-md-2x}");
+        background-size: @width-md 220px;
+      }
+    };
+
+    @media only screen and (min-width: @screen-lg-min) {
+      width: @width-lg;
+      height: 220px;
+      background-image: url("@{img-lg}");
+
+      @media
+      (-webkit-min-device-pixel-ratio: 2),
+      (min--moz-device-pixel-ratio: 2),
+      (-o-min-device-pixel-ratio: 2/1),
+      (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url("@{img-lg-2x}");
+        background-size: @width-lg 220px;
+      }
+    };
+  }
+  .fb-like-box {
+    iframe {
+      background-color: @footer-text-color;
+    }
+  }
+  .copyright {
+    margin: 20px 0;
+    text-align: center;
+  }
+  .form-control {
+    color: @footer-text-color;
+    background-color: transparent;
+    border-color: @footer-text-color;
+    &::-moz-placeholder           { color: @footer-input-color-placeholder;   // Firefox
+      opacity: 1; } // See https://github.com/twbs/bootstrap/pull/11526
+    &:-ms-input-placeholder       { color: @footer-input-color-placeholder; } // Internet Explorer 10+
+    &::-webkit-input-placeholder  { color: @footer-input-color-placeholder; } // Safari and Chrome
+
+    @color-rgba: rgba(red(@footer-link-color), green(@footer-link-color), blue(@footer-link-color), .6);
+    &:focus {
+      color: @text-color;
+      background-color: @bg-color;
+      border-color: @footer-link-color;
+      outline: 0;
+      .box-shadow(~"inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px @{color-rgba}");
+    }
+  }
+  .btn {
+    .button-variant(@footer-bg-color, @footer-text-color, darken(@footer-text-color, 5%));
+  }
+}
