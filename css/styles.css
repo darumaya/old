@@ -1,6 +1,6 @@
 .text-shadow
 {
-    text-shadow: 0 0 2px #000, 0 0 10px #000;
+    text-shadow: 0 0 2px #000, 0 0 5px #000;
 }
 .box-shadow
 {
@@ -831,9 +831,17 @@ section h2
 .section-jumbotron
 {
     margin-top: -70px;
+    margin-bottom: 114px;
     padding-top: 40px;
 
     background-color: #29869d;
+}
+@media (min-width: 768px)
+{
+    .section-jumbotron
+    {
+        margin-bottom: 0;
+    }
 }
 .section-jumbotron > .jumbotron
 {
@@ -845,7 +853,14 @@ section h2
 {
     position: relative;
 
-    height: 211px;
+    height: 167px;
+}
+@media (min-width: 768px)
+{
+    .section-jumbotron > .jumbotron > .container
+    {
+        height: 211px;
+    }
 }
 @media (min-width: 992px)
 {
@@ -864,13 +879,35 @@ section h2
 .section-jumbotron > .jumbotron > .container > .jumbotron-inner
 {
     position: absolute;
+    top: 197px;
     right: 0;
-    bottom: 0;
+    left: 0;
 
-    text-align: right;
+    width: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
-    color: #eee;
-    text-shadow: 0 0 2px #000, 0 0 10px #000;
+    text-align: center;
+
+    color: #222;
+}
+@media (min-width: 768px)
+{
+    .section-jumbotron > .jumbotron > .container > .jumbotron-inner
+    {
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: auto;
+
+        padding-top: 0;
+        padding-bottom: 0;
+
+        text-align: right;
+
+        color: #eee;
+        text-shadow: 0 0 2px #000, 0 0 5px #000;
+    }
 }
 .section-jumbotron > .jumbotron > .container > .jumbotron-inner h1
 {
@@ -880,6 +917,8 @@ section h2
 .section-jumbotron > .jumbotron > .container > .jumbotron-inner p
 {
     font-size: 14px;
+
+    margin-bottom: 0;
 }
 @media (min-width: 768px)
 {
@@ -892,11 +931,14 @@ section h2
         font-size: 21px;
     }
 }
-.section-jumbotron > .jumbotron > .container > .jumbotron-inner a.btn
+@media (min-width: 768px)
 {
-    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
-            box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
-    text-shadow: none;
+    .section-jumbotron > .jumbotron > .container > .jumbotron-inner a.btn
+    {
+        -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+                box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+        text-shadow: none;
+    }
 }
 .nav-arrows
 {
@@ -1175,7 +1217,7 @@ section h2
     .banner-vertical > li > a > .banner-vertical-label
     {
         width: 60px;
-        height: 164px;
+        height: 200px;
         margin: 0;
     }
     .banner-vertical > li > a > .banner-vertical-label > h4
