@@ -1,9 +1,16 @@
 {% capture imager_js_tag %}{% raw %}{width}{pixel_ratio}{% endraw %}{% endcapture %}
 <section class="section-jumbotron">
+    {% if page.main_visual_position %}
+    <style>
+        .section-jumbotron > .jumbotron {
+            background-position: {{ page.main_visual_position }};
+        }
+    </style>
+    {% endif %}
     <div class="jumbotron">
         <div class="container">
             <div class="jumbotron-inner">
-                <h1>{{ page.title }}</h1>
+                {% if page.title != site.title %}<h1>{{ page.title }}</h1>{% endif %}
                 <p>{{ page.description }}</p>
             </div>
         </div>
