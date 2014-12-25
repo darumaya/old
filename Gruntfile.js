@@ -87,7 +87,7 @@ module.exports = function (grunt) {
                 tasks: 'dist-css'
             },
             'dist-images': {
-                files: ['src/images/*.{jpg,JPG}'],
+                files: ['src/images/**/*.{jpg,JPG}'],
                 tasks: 'dist-images'
             }
         },
