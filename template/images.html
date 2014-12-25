@@ -35,15 +35,6 @@ layout: default
         {{ html }}
     </p>
 
-    <h3>Large サイズ</h3>
-    {% capture html %}<img class="img-lg" data-src="/images/d/dummy-{width}{pixel_ratio}.png" data-alt="dummy" data-class="img-responsive img-rounded">{% endcapture %}
-<pre>
-{{ html | escape }}
-</pre>
-    <p>
-        {{ html }}
-    </p>
-
     <h3>data-width指定</h3>
     {% capture html %}<img class="img-xs" data-width="100" data-src="/images/d/dummy-{width}{pixel_ratio}.png" data-alt="dummy" data-class="img-responsive img-rounded">{% endcapture %}
 <pre>
@@ -104,7 +95,7 @@ layout: default
     <h3>1カラム</h3>
     <div class="row">
         <div class="col-sm-12">
-            <img class="img-lg" data-src="/images/d/dummy-{width}{pixel_ratio}.png" data-alt="dummy" data-class="img-responsive img-rounded">
+            <img class="img-md" data-src="/images/d/dummy-{width}{pixel_ratio}.png" data-alt="dummy" data-class="img-responsive img-rounded">
         </div>
     </div>
 </div>

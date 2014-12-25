@@ -91,7 +91,7 @@ new Imager('.img-sm', {
     onImagesReplaced: imagesReplacedHandler
 });
 
-new Imager('.img-md, .img-lg', {
+new Imager('.img-md', {
     availableWidths: {
         157: 'xs',  // 750  / 12 * 3 - 30 = 157
         212: 'xs',  // 970  / 12 * 3 - 30 = 212
@@ -108,6 +108,26 @@ new Imager('.img-md, .img-lg', {
     },
     availablePixelRatios: [1, 2],
     className: 'img-md-replace',
+    onImagesReplaced: imagesReplacedHandler
+});
+
+new Imager('.img-jt', {
+    availableWidths: {
+        157: 'i6',  // 750  / 12 * 3 - 30 = 157
+        212: 'i6',  // 970  / 12 * 3 - 30 = 212
+        220: 'i6',  // 750  / 12 * 4 - 30 = 220
+        262: 'i6',  // 1170 / 12 * 3 - 30 = 262
+        293: 'i6',  // 970  / 12 * 4 - 30 = 293
+        345: 'i6',  // 750  / 12 * 6 - 30 = 345
+        360: 'i6',  // 1170 / 12 * 4 - 30 = 360
+        375: 'i6',  // iPhone 6 = 375
+        455: 'xs',  // 970 / 12 * 6 - 30 = 455
+        555: 'xs',  // 1170 / 12 * 6 - 30 = 555
+        720: 'xs',  // sm = 720
+        940: 'xs'   // md = 940
+    },
+    availablePixelRatios: [1, 2],
+    className: 'img-jt-replace',
     onImagesReplaced: imagesReplacedHandler
 });
 
@@ -187,4 +207,8 @@ $(document).on('breakpoint', function(event) {
 $(document).on('click', '*[data-toggle="lightbox"]', function(event) {
     event.preventDefault();
     $(this).ekkoLightbox();
+});
+
+$(document).on('shown.bs.modal', '.ekko-lightbox', function(event) {
+    console.log(this);
 });
