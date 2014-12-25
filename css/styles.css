@@ -1055,7 +1055,7 @@ section h2
 .carousel .carousel-caption h3,
 .carousel .carousel-caption .h3
 {
-    font-size: 18px;
+    font-size: 14px;
 
     margin-top: 10px;
 }
@@ -1071,11 +1071,25 @@ section h2
 {
     font-size: 14px;
 }
+@media (max-width: 767px)
+{
+    .carousel .carousel-caption p
+    {
+        display: none !important;
+    }
+}
 .carousel .carousel-indicators
 {
-    font-size: 14px;
+    font-size: 12px;
 
     margin-bottom: 5px;
+}
+@media (min-width: 768px)
+{
+    .carousel .carousel-indicators
+    {
+        font-size: 14px;
+    }
 }
 .banner-vertical
 {

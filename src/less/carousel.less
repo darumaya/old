@@ -105,7 +105,7 @@
     h3,
     .h3 {
       margin-top: 10px;
-      font-size: @font-size-h4;
+      font-size: @font-size-h5;
       @media (min-width: @screen-sm-min) {
         font-size: @font-size-h3;
       }
@@ -113,10 +113,17 @@
 
     p {
       font-size: @font-size-base;
+
+      @media (max-width: @screen-xs-max) {
+        display: none !important;
+      }
     }
   }
   .carousel-indicators {
-    font-size: @font-size-base;
+    font-size: @font-size-small;
     margin-bottom: 5px;
+    @media (min-width: @screen-sm-min) {
+      font-size: @font-size-base;
+    }
   }
 }
