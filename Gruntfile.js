@@ -97,11 +97,11 @@ module.exports = function (grunt) {
                 options: {
                     sizes: [{
                         name: 'xs',
-                        width: 375,
+                        width: 414,
                         quality: 80
                     }, {
                         name: 'xs-2x',
-                        width: 750,
+                        width: 828,
                         quality: 30
                     }, {
                         name: 'sm',
@@ -119,20 +119,12 @@ module.exports = function (grunt) {
                         name: 'md-2x',
                         width: 1880,
                         quality: 30
-                    }, {
-                        name: 'lg',
-                        width: 1140,
-                        quality: 70
-                    }, {
-                        name: 'lg-2x',
-                        width: 2280,
-                        quality: 20
                     }]
                 },
                 files: [{
                     expand: true,
                     cwd: 'src/images/',
-                    src: ['**/*.jpg'],
+                    src: ['**/*.jpg', '!**/*-jumbotron-*.{jpg,JPG}'],
                     dest: 'images/'
                 }]
             },
@@ -140,11 +132,11 @@ module.exports = function (grunt) {
                 options: {
                     sizes: [{
                         name: 'xs',
-                        width: 375,
+                        width: 414,
                         quality: 80
                     }, {
                         name: 'xs-2x',
-                        width: 750,
+                        width: 828,
                         quality: 30
                     }, {
                         name: 'sm',
@@ -162,20 +154,12 @@ module.exports = function (grunt) {
                         name: 'md-2x',
                         width: 1880,
                         quality: 30
-                    }, {
-                        name: 'lg',
-                        width: 1140,
-                        quality: 70
-                    }, {
-                        name: 'lg-2x',
-                        width: 2280,
-                        quality: 20
                     }]
                 },
                 files: [{
                     expand: true,
                     cwd: 'src/images/',
-                    src: ['**/*.JPG'],
+                    src: ['**/*.JPG', '!**/*-jumbotron-*.{jpg,JPG}'],
                     dest: 'images/'
                 }]
             },            thumbnail: {
