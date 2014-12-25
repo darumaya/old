@@ -93,7 +93,7 @@ module.exports = function (grunt) {
         },
 
         responsive_images: {
-            darumaya: {
+            jpg: {
                 options: {
                     sizes: [{
                         name: 'xs',
@@ -132,11 +132,53 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: 'src/images/',
-                    src: ['*.{jpg,JPG}'],
+                    src: ['**/*.jpg'],
                     dest: 'images/'
                 }]
             },
-            thumbnail: {
+            JPG: {
+                options: {
+                    sizes: [{
+                        name: 'xs',
+                        width: 375,
+                        quality: 80
+                    }, {
+                        name: 'xs-2x',
+                        width: 750,
+                        quality: 30
+                    }, {
+                        name: 'sm',
+                        width: 720,
+                        quality: 80
+                    }, {
+                        name: 'sm-2x',
+                        width: 1440,
+                        quality: 30
+                    }, {
+                        name: 'md',
+                        width: 940,
+                        quality: 80
+                    }, {
+                        name: 'md-2x',
+                        width: 1880,
+                        quality: 30
+                    }, {
+                        name: 'lg',
+                        width: 1140,
+                        quality: 70
+                    }, {
+                        name: 'lg-2x',
+                        width: 2280,
+                        quality: 20
+                    }]
+                },
+                files: [{
+                    expand: true,
+                    cwd: 'src/images/',
+                    src: ['**/*.JPG'],
+                    dest: 'images/'
+                }]
+            },            thumbnail: {
                 options: {
                     sizes: [{
                         name: '100',
@@ -155,7 +197,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: 'src/images/',
-                    src: ['*-jumbotron-*.{jpg,JPG}'],
+                    src: ['**/*-jumbotron-*.{jpg,JPG}'],
                     dest: 'images/'
                 }]
             }
