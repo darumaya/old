@@ -163,7 +163,7 @@ module.exports = function (grunt) {
                     dest: 'images/'
                 }]
             },
-            thumbnail: {
+            jumbotron: {
                 options: {
                     sizes: [{
                         name: 'i6',
