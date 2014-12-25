@@ -91,7 +91,7 @@ new Imager('.img-sm', {
     onImagesReplaced: imagesReplacedHandler
 });
 
-new Imager('.img-md', {
+new Imager('.img-md, .img-lg', {
     availableWidths: {
         157: 'xs',  // 750  / 12 * 3 - 30 = 157
         212: 'xs',  // 970  / 12 * 3 - 30 = 212
@@ -108,27 +108,6 @@ new Imager('.img-md', {
     },
     availablePixelRatios: [1, 2],
     className: 'img-md-replace',
-    onImagesReplaced: imagesReplacedHandler
-});
-
-new Imager('.img-lg', {
-    availableWidths: {
-        157: 'xs',  // 750  / 12 * 3 - 30 = 157
-        212: 'xs',  // 970  / 12 * 3 - 30 = 212
-        220: 'xs',  // 750  / 12 * 4 - 30 = 220
-        262: 'xs',  // 1170 / 12 * 3 - 30 = 262
-        293: 'xs',  // 970  / 12 * 4 - 30 = 293
-        345: 'xs',  // 750  / 12 * 6 - 30 = 345
-        360: 'xs',  // 1170 / 12 * 4 - 30 = 360
-        375: 'xs',  // iPhone 6 = 375
-        455: 'sm',  // 970 / 12 * 6 - 30 = 455
-        555: 'sm',  // 1170 / 12 * 6 - 30 = 555
-        720: 'sm',  // sm = 720
-        940: 'md',  // md = 940
-        1140: 'lg'  // lg = 1140
-    },
-    availablePixelRatios: [1, 2],
-    className: 'img-lg-replace',
     onImagesReplaced: imagesReplacedHandler
 });
 
