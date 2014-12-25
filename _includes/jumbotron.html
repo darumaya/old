@@ -17,7 +17,7 @@
     </div>
     <style>
         .jumbotron {
-            background-image: url({{ page.main_visual | replace: imager_js_tag, "xs" }});
+            background-image: url({{ page.main_visual | replace: imager_js_tag, "i6" }});
         }
         @media
         only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -26,6 +26,22 @@
         only screen and (        min-device-pixel-ratio: 2),
         only screen and (                min-resolution: 192dpi),
         only screen and (                min-resolution: 2dppx) {
+            .jumbotron {
+                background-image: url({{ page.main_visual | replace: imager_js_tag, "i6-2x" }});
+            }
+        }
+        @media (min-width: 415px) {
+            .jumbotron {
+                background-image: url({{ page.main_visual | replace: imager_js_tag, "xs" }});
+            }
+        }
+        @media
+        only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min-width: 768px) and (   min--moz-device-pixel-ratio: 2),
+        only screen and (min-width: 768px) and (     -o-min-device-pixel-ratio: 2/1),
+        only screen and (min-width: 768px) and (        min-device-pixel-ratio: 2),
+        only screen and (min-width: 768px) and (                min-resolution: 192dpi),
+        only screen and (min-width: 768px) and (                min-resolution: 2dppx) {
             .jumbotron {
                 background-image: url({{ page.main_visual | replace: imager_js_tag, "xs-2x" }});
             }
@@ -43,7 +59,7 @@
         only screen and (min-width: 768px) and (                min-resolution: 192dpi),
         only screen and (min-width: 768px) and (                min-resolution: 2dppx) {
             .jumbotron {
-                background-image: url({{ page.main_visual | replace: imager_js_tag, "sm-2x" }});
+                background-image: url({{ page.main_visual | replace: imager_js_tag, "hd" }});
             }
         }
         @media (min-width: 992px) {
@@ -59,23 +75,12 @@
         only screen and (min-width: 992px) and (                min-resolution: 192dpi),
         only screen and (min-width: 992px) and (                min-resolution: 2dppx) {
             .jumbotron {
-                background-image: url({{ page.main_visual | replace: imager_js_tag, "md-2x" }});
+                background-image: url({{ page.main_visual | replace: imager_js_tag, "hd" }});
             }
         }
         @media (min-width: 1200px) {
             .jumbotron {
-                background-image: url({{ page.main_visual | replace: imager_js_tag, "lg" }});
-            }
-        }
-        @media
-        only screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2),
-        only screen and (min-width: 1200px) and (   min--moz-device-pixel-ratio: 2),
-        only screen and (min-width: 1200px) and (     -o-min-device-pixel-ratio: 2/1),
-        only screen and (min-width: 1200px) and (        min-device-pixel-ratio: 2),
-        only screen and (min-width: 1200px) and (                min-resolution: 192dpi),
-        only screen and (min-width: 1200px) and (                min-resolution: 2dppx) {
-            .jumbotron {
-                background-image: url({{ page.main_visual | replace: imager_js_tag, "lg-2x" }});
+                background-image: url({{ page.main_visual | replace: imager_js_tag, "hd" }});
             }
         }
     </style>
