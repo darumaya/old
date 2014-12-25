@@ -150,13 +150,13 @@ fieldset[disabled] .btn-aqua.active
     height: 60px;
     margin-top: -5px;
 
-    background-image: url('/images/symbol-mark.png');
+    background-image: url('/images/s/symbol-mark.png');
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)
 {
     .noren-top .logo > .symbol-mark
     {
-        background-image: url('/images/symbol-mark@2x.png');
+        background-image: url('/images/s/symbol-mark@2x.png');
         -webkit-background-size: 60px 60px;
                 background-size: 60px 60px;
     }
@@ -166,13 +166,13 @@ fieldset[disabled] .btn-aqua.active
     width: 188px;
     height: 18px;
 
-    background-image: url('/images/logo-type-xs.png');
+    background-image: url('/images/l/logo-type-xs.png');
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)
 {
     .noren-top .logo > .logo-type
     {
-        background-image: url('/images/logo-type-xs@2x.png');
+        background-image: url('/images/l/logo-type-xs@2x.png');
         -webkit-background-size: 188px 18px;
                 background-size: 188px 18px;
     }
@@ -185,14 +185,14 @@ fieldset[disabled] .btn-aqua.active
         height: 25px;
         margin-left: 75px;
 
-        background-image: url('/images/logo-type.png');
+        background-image: url('/images/l/logo-type.png');
     }
 }
 @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min--moz-device-pixel-ratio: 2), (min-width: 768px) and (-o-min-device-pixel-ratio: 2/1), (min-width: 768px) and (min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 192dpi), (min-width: 768px) and (min-resolution: 2dppx)
 {
     .noren-top .logo > .logo-type
     {
-        background-image: url('/images/logo-type@2x.png');
+        background-image: url('/images/l/logo-type@2x.png');
         -webkit-background-size: 266px 25px;
                 background-size: 266px 25px;
     }
