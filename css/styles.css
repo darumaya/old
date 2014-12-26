@@ -1406,7 +1406,7 @@ a.thumbnail.banner-slim .caption
     text-align: center;
 
     color: #fff;
-    background-color: rgba(0, 0, 0, .4);
+    background-color: rgba(0, 0, 0, .25);
 }
 a.thumbnail.banner-slim .caption h3
 {
