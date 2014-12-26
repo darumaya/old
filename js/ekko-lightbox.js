@@ -322,7 +322,7 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
           if (_this.modal_arrows) {
             _this.modal_arrows.css('display', 'block');
           }
-          _this.resize(img.width);
+          //_this.resize(img.width);
           return _this.options.onContentLoaded.call(_this);
         };
         img.onerror = function() {
