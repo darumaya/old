@@ -1426,3 +1426,8 @@ a.thumbnail.banner-related:active .caption
 {
     color: #34a4be;
 }
+.img-lightbox
+{
+    cursor: -webkit-zoom-in;
+    cursor:         zoom-in;
+}
