@@ -826,6 +826,35 @@ section h2
 
     border-bottom: 1px solid #eee;
 }
+.before .thumbnail,
+.after .thumbnail
+{
+    position: relative;
+}
+.before .thumbnail:after,
+.after .thumbnail:after
+{
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    left: 4px;
+
+    padding: 0;
+
+    text-align: center;
+
+    color: #fff;
+    background-color: black;
+    background-color: rgba(0, 0, 0, .25);
+}
+.before .thumbnail:after
+{
+    content: 'Before';
+}
+.after .thumbnail:after
+{
+    content: 'After';
+}
 .section-jumbotron
 {
     margin-top: -70px;
@@ -1377,7 +1406,7 @@ a.thumbnail.banner-slim .caption
     text-align: center;
 
     color: #fff;
-    background-color: rgba(0, 0, 0, .4);
+    background-color: rgba(0, 0, 0, .25);
 }
 a.thumbnail.banner-slim .caption h3
 {
@@ -1425,4 +1454,9 @@ a.thumbnail.banner-related:hover .caption,
 a.thumbnail.banner-related:active .caption
 {
     color: #34a4be;
+}
+.img-lightbox
+{
+    cursor: -webkit-zoom-in;
+    cursor:         zoom-in;
 }

@@ -206,9 +206,12 @@ $(document).on('breakpoint', function(event) {
 
 $(document).on('click', '*[data-toggle="lightbox"]', function(event) {
     event.preventDefault();
-    $(this).ekkoLightbox();
+    $(event.currentTarget).ekkoLightbox();
 });
 
-$(document).on('shown.bs.modal', '.ekko-lightbox', function(event) {
-    console.log(this);
+$(document).on('click', '.img-lightbox', function(event) {
+    var $target = $(event.currentTarget);
+    $target.ekkoLightbox({
+        remote: $target.attr('src').replace(/\-(xs|sm)/, '-md')
+    });
 });
