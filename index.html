@@ -78,8 +78,16 @@ news:
                                 .appendTo('#blogFeed');
                     }
                 }
+                (function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.defer = 'defer';
+                    js.async = 'async';
+                    js.src = "//blog.darumaya-gofuku.jp/feeds/posts/summary?alt=json-in-script&callback=blogFeed&max-results=5";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'getBlogFeed'));
             </script>
-            <script src="http://blog.darumaya-gofuku.jp/feeds/posts/summary?alt=json-in-script&callback=blogFeed&max-results=5" defer async></script>
         </div>
     </div>
 </section>
