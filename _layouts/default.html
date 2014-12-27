@@ -23,6 +23,7 @@
 <div class="device-sm visible-sm"></div>
 <div class="device-md visible-md"></div>
 <div class="device-lg visible-lg"></div>
+<div id="fb-root"></div>
 <script src="/js/jquery-1.11.1.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/Imager.js"></script>
@@ -35,6 +36,15 @@
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
     ga('create', 'UA-1119315-4', 'auto');
     ga('send', 'pageview');
+</script>
+<script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=582225031817530&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
 </script>
 </body>
 </html>
