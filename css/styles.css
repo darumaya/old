@@ -902,6 +902,8 @@ section h2
     background-position: center center;
     -webkit-background-size: cover cover;
             background-size: cover;
+
+    -ms-behavior: url(/css/backgroundsize.min.htc);
 }
 .section-jumbotron > .jumbotron > .container
 {
