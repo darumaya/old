@@ -57,31 +57,37 @@ news:
             </div>
             <script>
                 function blogFeed(json) {
-                    console.log(json);
-                    for (var i = 0, iLength = json.feed.entry.length; i < iLength; i++) {
+                    for (var i in json.feed.entry) {
                         var entryItem = json.feed.entry[i];
                         var title = entryItem.title.$t;
-                        var date = new Date(entryItem.published.$t);
-                        var dateString = [date.getMonth() + 1, date.getDate()].join('/');
-                        for (var j = 0, jLength = entryItem.link.length; j < jLength; j++) {
+                        var dateString = entryItem.published.$t.replace(/^\d{4}\-(\d{2})\-(\d{2}).*$/, '$1/$2');
+                        for (var j in entryItem.link) {
                             var linkItem = entryItem.link[j];
                             if (linkItem.rel === 'alternate' && linkItem.type === 'text/html') {
                                 var url = linkItem.href;
                             }
                         }
-                        var $date = $('<span>', {
-                            class: 'badge',
-                            text: dateString
-                        });
-                        var $a = $('<a>', {
-                            class: 'list-group-item',
-                            href: url,
-                            text: title
-                        }).prepend($date).appendTo('#blogFeed');
+                        var $date = $('<span>')
+                                .addClass('badge')
+                                .text(dateString);
+                        var $a = $('<a>')
+                                .addClass('list-group-item')
+                                .attr('href', url)
+                                .text(title)
+                                .prepend($date)
+                                .appendTo('#blogFeed');
                     }
                 }
+                (function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.defer = 'defer';
+                    js.async = 'async';
+                    js.src = "//blog.darumaya-gofuku.jp/feeds/posts/summary?alt=json-in-script&callback=blogFeed&max-results=5";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'getBlogFeed'));
             </script>
-            <script src="http://blog.darumaya-gofuku.jp/feeds/posts/summary?alt=json-in-script&callback=blogFeed&max-results=5" defer async></script>
         </div>
     </div>
 </section>

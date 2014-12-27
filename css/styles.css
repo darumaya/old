@@ -186,7 +186,7 @@ fieldset[disabled] .btn-aqua.active
         background-image: url('/images/l/logo-type.png');
     }
 }
-@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min--moz-device-pixel-ratio: 2), (min-width: 768px) and (-o-min-device-pixel-ratio: 2/1), (min-width: 768px) and (min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 192dpi), (min-width: 768px) and (min-resolution: 2dppx)
+@media only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 768px) and (min--moz-device-pixel-ratio: 2), only screen and (min-width: 768px) and (-o-min-device-pixel-ratio: 2/1), only screen and (min-width: 768px) and (min-device-pixel-ratio: 2), only screen and (min-width: 768px) and (min-resolution: 192dpi), only screen and (min-width: 768px) and (min-resolution: 2dppx)
 {
     .noren-top .logo > .logo-type
     {
@@ -830,10 +830,39 @@ section h2
 .after .thumbnail
 {
     position: relative;
+
+    max-width: 385px;
+}
+.before .thumbnail:before,
+.after .thumbnail:before
+{
+    font-family: 'Glyphicons Halflings';
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    padding: 0;
+
+    content: '\e015';
+    pointer-events: none;
+
+    color: #fff;
+    text-shadow: 0 0 2px #000, 0 0 5px #000;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 .before .thumbnail:after,
 .after .thumbnail:after
 {
+    font-family: Georgia, 'Times New Roman', Times, 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho', serif;
+    font-size: 24px;
+    font-weight: 500;
+
     position: absolute;
     right: 4px;
     bottom: 4px;
@@ -842,10 +871,10 @@ section h2
     padding: 0;
 
     text-align: center;
+    pointer-events: none;
 
     color: #fff;
-    background-color: black;
-    background-color: rgba(0, 0, 0, .25);
+    text-shadow: 0 0 2px #000, 0 0 5px #000;
 }
 .before .thumbnail:after
 {
@@ -875,6 +904,8 @@ section h2
     background-position: center center;
     -webkit-background-size: cover cover;
             background-size: cover;
+
+    -ms-behavior: url(/css/backgroundsize.min.htc);
 }
 .section-jumbotron > .jumbotron > .container
 {
@@ -1457,6 +1488,17 @@ a.thumbnail.banner-related:active .caption
 }
 .img-lightbox
 {
+    cursor: pointer;
     cursor: -webkit-zoom-in;
     cursor:         zoom-in;
+}
+.modal
+{
+    cursor: pointer;
+    cursor: -webkit-zoom-out;
+    cursor:         zoom-out;
+}
+.modal > .modal-dialog
+{
+    cursor: default;
 }
