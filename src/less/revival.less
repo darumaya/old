@@ -1,6 +1,22 @@
 .before, .after {
   .thumbnail {
     position: relative;
+    &:before {
+      content: "\e015";
+      font-family: 'Glyphicons Halflings';
+      font-style: normal;
+      font-weight: normal;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      color: @bg-color;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 0;
+      .text-shadow;
+      pointer-events: none;
+    }
     &:after {
       color: @bg-color;
       background-color: black;
