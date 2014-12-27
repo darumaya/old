@@ -830,6 +830,8 @@ section h2
 .after .thumbnail
 {
     position: relative;
+
+    max-width: 385px;
 }
 .before .thumbnail:before,
 .after .thumbnail:before
@@ -1486,11 +1488,13 @@ a.thumbnail.banner-related:active .caption
 }
 .img-lightbox
 {
+    cursor: pointer;
     cursor: -webkit-zoom-in;
     cursor:         zoom-in;
 }
 .modal
 {
+    cursor: pointer;
     cursor: -webkit-zoom-out;
     cursor:         zoom-out;
 }
