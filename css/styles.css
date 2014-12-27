@@ -1502,3 +1502,18 @@ a.thumbnail.banner-related:active .caption
 {
     cursor: default;
 }
+.ie-alert
+{
+    padding: 5px 0;
+
+    color: #fff;
+    background-color: #8c8541;
+}
+.ie-alert a,
+.ie-alert a:hover,
+.ie-alert a:active
+{
+    font-weight: 700;
+
+    color: #a4dae6;
+}
