@@ -1,5 +1,5 @@
 ---
 title: だるまやのご紹介
 layout: redirect
-new-url: 
+new-url: /information/index.html
 ---

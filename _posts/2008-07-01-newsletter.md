@@ -1,5 +1,5 @@
 ---
 title: ニュースレター
 layout: redirect
-new-url: 
+new-url: /information/newsletter.html
 ---

@@ -1,5 +1,5 @@
 ---
 title: 紋入れ
 layout: redirect
-new-url: 
+new-url: /maintenance/mon.html
 ---

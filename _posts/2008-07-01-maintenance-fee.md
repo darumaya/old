@@ -1,5 +1,5 @@
 ---
 title: 料金一覧
 layout: redirect
-new-url: 
+new-url: /maintenance/fee.html
 ---

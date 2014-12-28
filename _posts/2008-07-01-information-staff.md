@@ -1,5 +1,5 @@
 ---
 title: 働いている人
 layout: redirect
-new-url: 
+new-url: /information/staff.html
 ---
