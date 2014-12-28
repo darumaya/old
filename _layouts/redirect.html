@@ -2,11 +2,20 @@
 layout: default
 ---
 <div class="container">
+    {% if page.new-url %}
     <p><a href="{{ page.new-url }}">{{ page.new-url }}</a>に移動しました。</p>
     <script>
         setTimeout(function() {
             location.href = '{{ page.new-url }}';
         }, 100);
     </script>
+    {% else %}
+    <p>サイトをリニューアルしました。トップページに移動します。</p>
+    <script>
+        setTimeout(function() {
+            location.href = '/';
+        }, 1000);
+    </script>
+    {% endif %}
     {{ content }}
 </div>
