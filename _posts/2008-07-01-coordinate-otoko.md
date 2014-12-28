@@ -1,5 +1,5 @@
 ---
 title: 男のきもの
 layout: redirect
-new-url: 
+new-url: /coordinate/otoko.html
 ---

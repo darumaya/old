@@ -1,5 +1,5 @@
 ---
 title: こどものきもの
 layout: redirect
-new-url: 
+new-url: /coordinate/kodomo.html
 ---

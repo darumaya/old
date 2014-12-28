@@ -1,5 +1,5 @@
 ---
 title: きもののお手入れ
 layout: redirect
-new-url: 
+new-url: /maintenance/index.html
 ---

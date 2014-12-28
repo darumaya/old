@@ -1,5 +1,5 @@
 ---
 title: 歴史
 layout: redirect
-new-url: 
+new-url: /information/history.html
 ---

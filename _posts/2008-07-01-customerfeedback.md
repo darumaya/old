@@ -1,5 +1,5 @@
 ---
 title: お客様の声
 layout: redirect
-new-url: 
+new-url: /information/customerfeedback.html
 ---
