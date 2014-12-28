@@ -1,5 +1,5 @@
 ---
 title: ゆかた
 layout: redirect
-new-url: 
+new-url: /coordinate/yukata.html
 ---

@@ -1,5 +1,5 @@
 ---
 title: 今月のおすすめ！
 layout: redirect
-new-url: 
+new-url: /coordinate/osusume.html
 ---
