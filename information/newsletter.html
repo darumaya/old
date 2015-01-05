@@ -249,9 +249,7 @@ order: 50
                         $('#mce-'+resp.result+'-response').html(msg);
                     } else {
                         err_id = 'mce_tmp_error_msg';
-                        html = '<div id="'+err_id+'" style="'+err_style+'">
-                        '+msg+'</div>
-                        ';
+                        html = '<div id="'+err_id+'" style="'+err_style+'">'+msg+'</div>';
 
                         var input_id = '#mc_embed_signup';
                         var f = $(input_id);
