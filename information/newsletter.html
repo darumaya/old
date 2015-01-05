@@ -18,7 +18,46 @@ order: 50
     <p>以下のフォームにお名前、内容枠にお客様のご住所とポストカード希望の旨を記入して送信してください。<br>
         なお、メールアドレスもご記入いただくと、メールマガジンも併せて登録いたします。<br>
         ポストカードは店内でもお渡しできますので、遠慮無くお声がけくださいませ。</p>
-    <iframe src="https://docs.google.com/forms/d/1sxwcnopNXUuzeFkLgtXKbAx_sVb_kdvIoB0XpdOFB_4/viewform?embedded=true" width="640" height="720" frameborder="0" marginheight="0" marginwidth="0">読み込み中...</iframe>
+    <form action="https://docs.google.com/forms/d/1sxwcnopNXUuzeFkLgtXKbAx_sVb_kdvIoB0XpdOFB_4/formResponse" method="post">
+        <div class="row form-group">
+            <label for="entry_514625123" class="col-sm-3 control-label">お名前（必須）</label>
+            <div class="col-sm-9 col-lg-6">
+                <input type="text" class="form-control" name="entry.514625123" id="entry_514625123" placeholder="例：八木賢一" required>
+            </div>
+        </div>
+        <div class="row form-group">
+            <label for="entry_644890284" class="col-sm-3 control-label">電話番号</label>
+            <div class="col-sm-9 col-lg-6">
+                <input type="tel" class="form-control" name="entry.644890284" id="entry_644890284" pattern="[\d\+\-]+" placeholder="例：090-1234-5678 または +81-90-1234-5678">
+            </div>
+        </div>
+        <div class="row form-group">
+            <label for="entry_1144597065" class="col-sm-3 control-label">メールアドレス</label>
+            <div class="col-sm-9 col-lg-6">
+                <input type="email" class="form-control" name="entry.1144597065" id="entry_1144597065" placeholder="例：contact@darumaya-gofuku.jp">
+            </div>
+        </div>
+        <div class="row form-group">
+            <label for="entry_1865897516" class="col-sm-3 control-label">住所（必須）</label>
+            <div class="col-sm-9 col-lg-6">
+                <textarea class="form-control" name="entry.1865897516" id="entry_1865897516" rows="2" placeholder="例：〒254-0042 神奈川県平塚市明石町5−7" required></textarea>
+            </div>
+        </div>
+        <div class="row form-group">
+            <label for="entry_162745380" class="col-sm-3 control-label">内容（必須）</label>
+            <div class="col-sm-9">
+                <textarea class="form-control" name="entry.162745380" id="entry_162745380" rows="10" required></textarea>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-sm-offset-3 col-sm-9">
+                <input type="hidden" name="draftResponse" value="[,,&quot;-3893810174084285007&quot;] ">
+                <input type="hidden" name="pageHistory" value="0">
+                <input type="hidden" name="fbzx" value="-3893810174084285007">
+                <button type="submit" class="btn btn-aqua" id="ss-submit" style="padding-left: 32px; letter-spacing: 20px;">送信</button>
+            </div>
+        </div>
+    </form>
 </section>
 <section>
 <h2>メールマガジン</h2>
@@ -210,9 +249,7 @@ order: 50
                         $('#mce-'+resp.result+'-response').html(msg);
                     } else {
                         err_id = 'mce_tmp_error_msg';
-                        html = '<div id="'+err_id+'" style="'+err_style+'">
-                        '+msg+'</div>
-                        ';
+                        html = '<div id="'+err_id+'" style="'+err_style+'">'+msg+'</div>';
 
                         var input_id = '#mc_embed_signup';
                         var f = $(input_id);
