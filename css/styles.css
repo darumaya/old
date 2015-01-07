@@ -1517,3 +1517,18 @@ a.thumbnail.banner-related:active .caption
 
     color: #a4dae6;
 }
+main .map
+{
+    padding-bottom: 100%;
+
+    border: 0;
+}
+@media only screen and (min-width: 768px)
+{
+    main .map
+    {
+        width: 720px;
+        height: 540px;
+        padding-bottom: 0;
+    }
+}
