@@ -887,25 +887,26 @@ section h2
 .section-jumbotron
 {
     margin-top: -70px;
-    margin-bottom: 114px;
     padding-top: 40px;
 
     background-color: #29869d;
 }
-@media (min-width: 768px)
-{
-    .section-jumbotron
-    {
-        margin-bottom: 0;
-    }
-}
 .section-jumbotron > .jumbotron
 {
+    margin-bottom: 0;
+
     background-position: center center;
     -webkit-background-size: cover cover;
             background-size: cover;
 
     -ms-behavior: url(/css/backgroundsize.min.htc);
+}
+@media (min-width: 768px)
+{
+    .section-jumbotron > .jumbotron
+    {
+        margin-bottom: 30px;
+    }
 }
 .section-jumbotron > .jumbotron > .container
 {
@@ -937,35 +938,19 @@ section h2
 .section-jumbotron > .jumbotron > .container > .jumbotron-inner
 {
     position: absolute;
-    top: 197px;
+    top: auto;
     right: 0;
-    left: 0;
+    bottom: 0;
+    left: auto;
 
     width: auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
 
-    text-align: center;
+    text-align: right;
 
-    color: #222;
-}
-@media (min-width: 768px)
-{
-    .section-jumbotron > .jumbotron > .container > .jumbotron-inner
-    {
-        top: auto;
-        right: 0;
-        bottom: 0;
-        left: auto;
-
-        padding-top: 0;
-        padding-bottom: 0;
-
-        text-align: right;
-
-        color: #eee;
-        text-shadow: 0 0 2px #000, 0 0 5px #000;
-    }
+    color: #eee;
+    text-shadow: 0 0 2px #000, 0 0 5px #000;
 }
 .section-jumbotron > .jumbotron > .container > .jumbotron-inner h1
 {
@@ -997,6 +982,15 @@ section h2
                 box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
         text-shadow: none;
     }
+}
+.jumbotron-outer
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    text-align: center;
+
+    color: #222;
 }
 .nav-arrows
 {

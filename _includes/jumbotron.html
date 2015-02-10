@@ -11,7 +11,7 @@
         <div class="container">
             <div class="jumbotron-inner">
                 {% if page.title != site.title %}<h1>{{ page.title }}</h1>{% endif %}
-                <p>{{ page.description }}</p>
+                <p class="hidden-xs">{{ page.description }}</p>
             </div>
         </div>
     </div>
@@ -92,3 +92,6 @@
     </style>
     <![endif]-->
 </section>
+<div class="container">
+    <p class="jumbotron-outer visible-xs-block">{{ page.description }}</p>
+</div>
