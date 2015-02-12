@@ -215,3 +215,37 @@ $(document).on('click', '.img-lightbox', function(event) {
         remote: $target.attr('src').replace(/\-(xs|sm)/, '-md')
     });
 });
+
+$('#btnMap').on('click', function() {
+    launchMap('だるまや京染本店', 35.33159, 139.348566, '神奈川県 平塚市 明石町 5-7');
+});
+
+function launchMap(place, lat, lng, addr) {
+    place = encodeURIComponent(place);
+    addr = encodeURIComponent(addr);
+    var URL_GOOGLE = 'comgooglemaps://?q=' + place + '&center=' + lat + ',' + lng;
+    var URL_APPLE = 'http://maps.apple.com/?q=' + addr + '&ll=' + lat + ',' + lng;
+    var URL_WEB = 'https://maps.google.co.jp/maps?q=' + place + '&center=' + lat + ',' + lng;
+    var isIos = navigator.userAgent.search(/(iPad|iPhone|iPod)/i) !== -1;
+    var isAndroid = navigator.userAgent.search(/Android/i) !== -1;
+    if (isIos) {
+        var iframe = document.createElement('iframe');
+        iframe.src = URL_GOOGLE;
+        document.body.appendChild(iframe);
+        var time = (new Date()).getTime();
+        setTimeout(function() {
+            var now = (new Date()).getTime();
+            document.body.removeChild(iframe);
+            if ((now - time) > 400) {
+                return;
+            }
+            document.location = URL_APPLE;
+        }, 300);
+        return;
+    }
+    if (isAndroid) {
+        location.href = URL_GOOGLE;
+        return;
+    }
+    open(URL_WEB);
+};
