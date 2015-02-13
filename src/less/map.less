@@ -1,10 +1,8 @@
 main {
   .map {
-    @width-sm: (@container-sm - @grid-gutter-width);
-    border: 0;
-    padding-bottom: 100%; // 1:1
-
     @media only screen and (min-width: @screen-sm-min) {
+      @width-sm: (@container-sm - @grid-gutter-width);
+      border: 0;
       width: @width-sm;
       height: (@width-sm * 0.75);
       padding-bottom: 0;

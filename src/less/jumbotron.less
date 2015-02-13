@@ -6,13 +6,13 @@
   background-color: @link-hover-color;
   margin-top: -70px;
   padding-top: 40px;
-  margin-bottom: 114px;
-
-  @media (min-width: @screen-sm-min) {
-    margin-bottom: 0;
-  }
 
   > .jumbotron {
+    margin-bottom: 0;
+    @media (min-width: @screen-sm-min) {
+      margin-bottom: 30px;
+    }
+
     background-position: center center;
     background-size: cover;
     -ms-behavior: url(/css/backgroundsize.min.htc);
@@ -36,27 +36,16 @@
 
       > .jumbotron-inner {
         position: absolute;
-
-        top: (floor(568px * 0.4 - @jumbotron-padding));
-        left: 0;
+        top: auto;
         right: 0;
+        bottom: 0;
+        left: auto;
         width: auto;
-        text-align: center;
-        color: @gray-darker;
-        padding-top: 10px;
-        padding-bottom: 10px;
-
-        @media (min-width: @screen-sm-min) {
-          top: auto;
-          right: 0;
-          bottom: 0;
-          left: auto;
-          padding-top: 0px;
-          padding-bottom: 0px;
-          text-align: right;
-          color: @gray-lighter;
-          .text-shadow;
-        }
+        padding-top: 0px;
+        padding-bottom: 0px;
+        text-align: right;
+        color: @gray-lighter;
+        .text-shadow;
 
         h1 {
           font-size: @font-size-h3;
@@ -85,4 +74,11 @@
       }
     }
   }
+}
+
+.jumbotron-outer {
+  text-align: center;
+  color: @gray-darker;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
