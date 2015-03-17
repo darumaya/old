@@ -250,6 +250,4 @@ function launchMap(place, lat, lng, addr) {
     open(URL_WEB);
 };
 
-$('form').gaForm({
-    debug: true
-});
+$('form').gaForm();
