@@ -99,8 +99,8 @@
 
 "染め":
   - kimono:         "縮緬系"
-    regular_price:  "&yen;20,000"
-    sale_price:     "&yen;10,000"
+    regular_price:  "&yen;24,000"
+    sale_price:     "&yen;12,000"
   - kimono:         "紬系"
     regular_price:  "&yen;30,000"
     sale_price:     "&yen;15,000"
