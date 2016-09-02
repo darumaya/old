@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>{{ page.title }}{% if page.title != page.category %}{% if page.category %} - {{ page.category }}{% endif %}{% endif %}{% if page.title != site.title %} - {{ site.title }}{% endif %}</title>
+    <title>{{ page.title }}{% if page.title != page.category %}{% if page.category %} - {{ page.category }}{% endif %}{% endif %}{% if page.title != site.title[page.country] %} - {{ site.title[page.country] }}{% endif %}</title>
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/styles.min.css" rel="stylesheet">
     <link href="/css/ekko-lightbox.css" rel="stylesheet">
