@@ -1,0 +1,6 @@
+{% case page.country %}
+    {% when 'us' %}
+        {% include us/price-list.html %}
+    {% else %}
+        {% include jp/price-list.html %}
+{% endcase %}

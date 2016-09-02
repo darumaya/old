@@ -1,0 +1,18 @@
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>きものの種類</th>
+        <th>通常料金(目安)</th>
+        <th>感謝祭料金(目安)</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for item in site.data[page.country].price-lists.[include.menu] %}
+    <tr>
+        <td>{{ item.kimono }}</td>
+        <td>{{ item.regular_price }}</td>
+        <td>{{ item.sale_price }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>

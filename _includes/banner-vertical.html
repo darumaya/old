@@ -6,6 +6,7 @@
             {% for item in pages %}
             {% if page.category == item.category %}
             {% if item.category != item.title %}
+            {% if page.country == item.country %}
             {% if page.url == item.url %}
             <li class="active">
             {% else %}
@@ -25,6 +26,7 @@
                     </div>
                 </a>
             </li>
+            {% endif %}
             {% endif %}
             {% endif %}
             {% endfor %}

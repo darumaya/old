@@ -13,6 +13,7 @@ related:
       description: お手入れ料金が割引になるお客様感謝祭についてはこちら。
       link: /event/kanshasai.html
       image: /images/k/kanshasai-related-DSC05278-{width}{pixel_ratio}.JPG
+country: jp
 ---
 <section>
     <h2>料金について</h2>
@@ -32,165 +33,39 @@ related:
     <h2>洗い張りの料金</h2>
     <p>解き、端縫い代を含んだ料金です。裏地（胴裏、八掛、羽裏など）の洗い張り代も含みます。<br>
         特選とは本場大島や本結城など、手間物とは弱生地や色のにじみそうな生地です。</p>
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th>きものの種類</th>
-            <th>通常料金(目安)</th>
-            <th>感謝祭料金(目安)</th>
-        </tr>
-        </thead>
 
-        <tbody>
+    {% include price-list.html menu="洗い張り" %}
 
-        {% for item in site.data.price-lists.["洗い張り"] %}
-        <tr>
-            <td>{{ item.kimono }}</td>
-            <td>{{ item.regular_price }}</td>
-            <td>{{ item.sale_price }}</td>
-        </tr>
-        {% endfor %}
-        </tbody>
-
-    </table>
     <h2>洗い張りから仕立ての料金</h2>
     <p>解き、端縫い、洗い張り代を含んだ料金です。<br>
         長襦袢の料金には半衿、居敷当て代が含まれています。</p>
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th>きものの種類</th>
-            <th>通常料金(目安)</th>
-            <th>感謝祭料金(目安)</th>
-        </tr>
-        </thead>
 
-        <tbody>
+    {% include price-list.html menu="洗い張りから仕立て" %}
 
-        {% for item in site.data.price-lists.["洗い張りから仕立て"] %}
-        <tr>
-            <td>{{ item.kimono }}</td>
-            <td>{{ item.regular_price }}</td>
-            <td>{{ item.sale_price }}</td>
-        </tr>
-        {% endfor %}
-
-        </tbody>
-    </table>
     <h2>丸洗いとしみ抜きの料金</h2>
     <p>丸洗いをして、共衿、袖口、裾など通常着て汚れる場所をしみ抜きした場合の料金です。<br>
         汚れの範囲や落ちにくさによって変わりますので、あくまで目安とお考えください。</p>
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th>きものの種類</th>
-            <th>通常料金(目安)</th>
-            <th>感謝祭料金(目安)</th>
-        </tr>
-        </thead>
 
-        <tbody>
+    {% include price-list.html menu="丸洗いとしみ抜き" %}
 
-        {% for item in site.data.price-lists.["丸洗いとしみ抜き"] %}
-        <tr>
-            <td>{{ item.kimono }}</td>
-            <td>{{ item.regular_price }}</td>
-            <td>{{ item.sale_price }}</td>
-        </tr>
-        {% endfor %}
-
-        </tbody>
-    </table>
     <h2>染めの料金</h2>
     <p>反物の状態のきものを無地に染める料金です。<br>
         無地のきものの染め直し、柄を活かして染め直しは「きものの再生事例」をご覧ください。</p>
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th>きものの種類</th>
-            <th>通常料金(目安)</th>
-            <th>感謝祭料金(目安)</th>
-        </tr>
-        </thead>
 
-        <tbody>
+    {% include price-list.html menu="染め" %}
 
-        {% for item in site.data.price-lists.["染め"] %}
-        <tr>
-            <td>{{ item.kimono }}</td>
-            <td>{{ item.regular_price }}</td>
-            <td>{{ item.sale_price }}</td>
-        </tr>
-        {% endfor %}
-
-        </tbody>
-    </table>
     <h2>紋入れ</h2>
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th>きものの種類</th>
-            <th>通常料金(目安)</th>
-            <th>感謝祭料金(目安)</th>
-        </tr>
-        </thead>
 
-        <tbody>
+    {% include price-list.html menu="紋入れ" %}
 
-        {% for item in site.data.price-lists.["紋入れ"] %}
-        <tr>
-            <td>{{ item.kimono }}</td>
-            <td>{{ item.regular_price }}</td>
-            <td>{{ item.sale_price }}</td>
-        </tr>
-        {% endfor %}
-
-        </tbody>
-    </table>
     <h2>湯のしの料金</h2>
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th>きものの種類</th>
-            <th>通常料金(目安)</th>
-            <th>感謝祭料金(目安)</th>
-        </tr>
-        </thead>
 
-        <tbody>
+    {% include price-list.html menu="湯のし" %}
 
-        {% for item in site.data.price-lists.["湯のし"] %}
-        <tr>
-            <td>{{ item.kimono }}</td>
-            <td>{{ item.regular_price }}</td>
-            <td>{{ item.sale_price }}</td>
-        </tr>
-        {% endfor %}
-
-        </tbody>
-    </table>
     <h2>本湯通しの料金</h2>
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th>きものの種類</th>
-            <th>通常料金(目安)</th>
-            <th>感謝祭料金(目安)</th>
-        </tr>
-        </thead>
 
-        <tbody>
+    {% include price-list.html menu="本湯通し" %}
 
-        {% for item in site.data.price-lists.["本湯通し"] %}
-        <tr>
-            <td>{{ item.kimono }}</td>
-            <td>{{ item.regular_price }}</td>
-            <td>{{ item.sale_price }}</td>
-        </tr>
-        {% endfor %}
-
-        </tbody>
-    </table>
 </section>
 <section>
     <h2>郵送の際の支払い方法</h2>

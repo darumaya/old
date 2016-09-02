@@ -57,6 +57,7 @@ related:
       description: きものを染め直してコートに仕立て直した事例紹介です。
       link: /revival/tocoat.html
       image: /images/t/tocoat-related-P1070151-{width}{pixel_ratio}.jpg
+country: jp
 ---
 <section>
     <h2>染めとは</h2>
@@ -99,7 +100,7 @@ related:
 <section>
     <h2>染めの料金</h2>
     <p>反物の状態のきものを無地に染める料金です。<br>
-        無地のきものの染め直し、柄を活かして染め直しは<a href = "/revival/somenaoshi.html"「きものの染め直し」ページ</a>をご覧ください。</p>
+        無地のきものの染め直し、柄を活かして染め直しは<a href = "/revival/somenaoshi.html">「きものの染め直し」ページ</a>をご覧ください。</p>
     <table class="table table-striped">
         <thead>
         <tr>
@@ -109,16 +110,6 @@ related:
         </tr>
         </thead>
 
-        <tbody>
+    {% include price-list.html menu="染め" %}
 
-        {% for item in site.data.price-lists.["染め"] %}
-        <tr>
-            <td>{{ item.kimono }}</td>
-            <td>{{ item.regular_price }}</td>
-            <td>{{ item.sale_price }}</td>
-        </tr>
-        {% endfor %}
-
-        </tbody>
-    </table>
 </section>

@@ -35,7 +35,7 @@ carousel:
     - title: 検品
       description: 畳紙に入れながら、再度落ちていない汚れがないか確認します。<br>どうしても落ちない汚れもありますが、落ちそうな汚れであれば再度しみ抜きを行います。
       image: /images/s/shiminuki-kenpin-DSC06130-{width}{pixel_ratio}.JPG
-
+country: jp
 ---
 <section>
     <h2>丸洗い・しみ抜きとは</h2>
@@ -112,25 +112,7 @@ carousel:
     <h2>丸洗いとしみ抜きの料金</h2>
     <p>丸洗いをして、共衿、袖口、裾など通常着て汚れる場所をしみ抜きした場合の料金です。<br>
         汚れの範囲や落ちにくさによって変わりますので、あくまで目安とお考えください。</p>
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th>きものの種類</th>
-            <th>通常料金(目安)</th>
-            <th>感謝祭料金(目安)</th>
-        </tr>
-        </thead>
 
-        <tbody>
+    {% include price-list.html menu="丸洗いとしみ抜き" %}
 
-        {% for item in site.data.price-lists.["丸洗いとしみ抜き"] %}
-        <tr>
-            <td>{{ item.kimono }}</td>
-            <td>{{ item.regular_price }}</td>
-            <td>{{ item.sale_price }}</td>
-        </tr>
-        {% endfor %}
-
-        </tbody>
-    </table>
 </section>

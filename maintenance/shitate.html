@@ -54,6 +54,7 @@ related:
       description: きものや羽織を帯に仕立て直す事例紹介です。
       link: /revival/toobi.html
       image: /images/t/toobi-related-P1080636-{width}{pixel_ratio}.JPG
+country: jp
 ---
 <section>
     <h2>仕立てとは</h2>
@@ -108,27 +109,9 @@ related:
     <h2>洗い張りから仕立ての料金</h2>
     <p>解き、端縫い、洗い張り代を含んだ料金です。<br>
         長襦袢の料金には半衿、居敷当て代が含まれています。</p>
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th>きものの種類</th>
-            <th>通常料金(目安)</th>
-            <th>感謝祭料金(目安)</th>
-        </tr>
-        </thead>
 
-        <tbody>
+    {% include price-list.html menu="洗い張りから仕立て" %}
 
-        {% for item in site.data.price-lists.["洗い張りから仕立て"] %}
-        <tr>
-            <td>{{ item.kimono }}</td>
-            <td>{{ item.regular_price }}</td>
-            <td>{{ item.sale_price }}</td>
-        </tr>
-        {% endfor %}
-
-        </tbody>
-    </table>
 </section>
 
 <section>

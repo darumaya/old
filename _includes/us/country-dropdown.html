@@ -1,0 +1,13 @@
+<ul class="nav navbar-nav navbar-right">
+    <div class="btn-group">
+        <button type="button" class="btn btn-noren dropdown-toggle" data-toggle="dropdown">
+            English <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu dropdown-noren" role="menu">
+            <li><a href="{{ page.url || replace_first: 'us/', '' }}">日本語</a></li>
+            <li class="disabled"><a href="#">English ✔</a></li>
+            <li><a href="{{ page.url || replace_first: 'us/', 'ch/' }}">簡体字</a></li>
+            <li><a href="{{ page.url || replace_first: 'us/', 'tw/' }}">繁體字</a></li>
+        </ul>
+    </div>
+</ul>
