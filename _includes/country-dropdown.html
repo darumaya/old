@@ -1,6 +1,5 @@
-{% case page.country %}
-    {% when 'us' %}
-        {% include us/country-dropdown.html %}
-    {% else %}
-        {% include jp/country-dropdown.html %}
-{% endcase %}
+{% if page.country %}
+    {% include {{page.country}}/country-dropdown.html %}
+{% else %}
+    {% include jp/country-dropdown.html %}
+{% endif %}

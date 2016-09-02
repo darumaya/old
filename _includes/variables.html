@@ -1,1 +1,1 @@
-{% capture country_path %}{{ page.country }}{% case page.country %}{% when 'us' %}/{% when 'ch' %}/{% when 'tw' %}/{% endcase %}{% endcapture %}
+{% capture country_path %}{% if page.country %}{% if page.country != 'jp' %}{{ page.country }}/{% endif %}{% endif %}{% endcapture %}

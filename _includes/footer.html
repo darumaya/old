@@ -1,6 +1,5 @@
-{% case page.country %}
-    {% when 'us' %}
-        {% include us/footer.html %}
-    {% else %}
-        {% include jp/footer.html %}
-{% endcase %}
+{% if page.country %}
+    {% include {{page.country}}/footer.html %}
+{% else %}
+    {% include jp/footer.html %}
+{% endif %}

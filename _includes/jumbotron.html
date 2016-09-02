@@ -10,7 +10,7 @@
     <div class="jumbotron">
         <div class="container">
             <div class="jumbotron-inner">
-                {% if page.title != site.title %}<h1>{{ page.title }}</h1>{% endif %}
+                {% if page.title != site.title[page.country] %}<h1>{{ page.title }}</h1>{% endif %}
                 <p class="hidden-xs">{{ page.description }}</p>
             </div>
         </div>

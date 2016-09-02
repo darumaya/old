@@ -214,6 +214,85 @@ fieldset[disabled] .btn-aqua.active
 {
     margin: 10px -15px 0 0;
 }
+.noren-top .btn-noren
+{
+    margin-top: 15px;
+
+    color: #fff;
+    border-color: transparent;
+    background-color: #640125;
+}
+.noren-top .btn-noren:hover,
+.noren-top .btn-noren:focus,
+.noren-top .btn-noren:active,
+.noren-top .btn-noren.active,
+.open > .dropdown-toggle.noren-top .btn-noren
+{
+    color: #fff;
+    border-color: rgba(0, 0, 0, 0);
+    background-color: #320012;
+}
+.noren-top .btn-noren:active,
+.noren-top .btn-noren.active,
+.open > .dropdown-toggle.noren-top .btn-noren
+{
+    background-image: none;
+}
+.noren-top .btn-noren.disabled,
+.noren-top .btn-noren[disabled],
+fieldset[disabled] .noren-top .btn-noren,
+.noren-top .btn-noren.disabled:hover,
+.noren-top .btn-noren[disabled]:hover,
+fieldset[disabled] .noren-top .btn-noren:hover,
+.noren-top .btn-noren.disabled:focus,
+.noren-top .btn-noren[disabled]:focus,
+fieldset[disabled] .noren-top .btn-noren:focus,
+.noren-top .btn-noren.disabled:active,
+.noren-top .btn-noren[disabled]:active,
+fieldset[disabled] .noren-top .btn-noren:active,
+.noren-top .btn-noren.disabled.active,
+.noren-top .btn-noren[disabled].active,
+fieldset[disabled] .noren-top .btn-noren.active
+{
+    border-color: transparent;
+    background-color: #640125;
+}
+.noren-top .btn-noren .badge
+{
+    color: #640125;
+    background-color: #fff;
+}
+.noren-top .btn-noren:hover,
+.noren-top .btn-noren:focus,
+.noren-top .btn-noren:active,
+.noren-top .btn-noren.active,
+.open > .dropdown-toggle.noren-top .btn-noren
+{
+    border-color: transparent;
+    background-color: #4b011c;
+}
+.noren-top .dropdown-noren
+{
+    background-color: #4b011c;
+}
+.noren-top .dropdown-noren > li > a
+{
+    color: #fff;
+}
+.noren-top .dropdown-noren > li > a:hover,
+.noren-top .dropdown-noren > li > a:focus
+{
+    text-decoration: none;
+
+    background-color: #a35b75;
+}
+.noren-top .dropdown-menu > .disabled > a,
+.noren-top .dropdown-menu > .disabled > a:hover,
+.noren-top .dropdown-menu > .disabled > a:focus
+{
+    color: #eee;
+    background-color: transparent;
+}
 .noren-bottom
 {
     background-color: #640125;
@@ -777,6 +856,30 @@ footer .btn .badge
 {
     color: #eee;
     background-color: #777;
+}
+footer .btn-footer-contact
+{
+    padding-left: 14px;
+
+    letter-spacing: 2px;
+}
+.jp footer .btn-footer-contact
+{
+    padding-left: 32px;
+
+    letter-spacing: 20px;
+}
+footer .btn-footer-mailmagazine
+{
+    padding-left: 14px;
+
+    letter-spacing: 2px;
+}
+.jp footer .btn-footer-mailmagazine
+{
+    padding-left: 22px;
+
+    letter-spacing: 10px;
 }
 @media (min-width: 768px)
 {
