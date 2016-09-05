@@ -4,6 +4,7 @@
         {% for item in pages %}
         {% if page.category == item.category %}
         {% if item.category != item.title %}
+        {% if page.country == item.country %}
         <div class="col-sm-6">
             {% if page.url == item.url %}
             <a href="{{ item.url }}" class="active thumbnail banner-slim">
@@ -17,6 +18,7 @@
                 </div>
             </a>
         </div>
+        {% endif %}
         {% endif %}
         {% endif %}
         {% endfor %}

@@ -1,0 +1,5 @@
+{% if page.country %}
+    {% include {{page.country}}/price-list.html menu=include.menu %}
+{% else %}
+    {% include jp/price-list.html menu=include.menu %}
+{% endif %}
