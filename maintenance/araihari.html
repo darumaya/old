@@ -54,6 +54,7 @@ related:
       description: ブログ、Facebookページにて洗い張りの仕事風景を更新しています。
       link: http://blog.darumaya-gofuku.jp/search/label/%E6%B4%97%E3%81%84%E5%BC%B5%E3%82%8A
       image: /images/a/araihari-relatedblog-DSC04909-{width}{pixel_ratio}.JPG
+country: jp
 ---
 <section>
     <h2>洗い張りとは</h2>
@@ -116,49 +117,12 @@ related:
     <h2>洗い張りの料金</h2>
     <p>解き、端縫い代を含んだ料金です。裏地（胴裏、八掛、羽裏など）の洗い張り代も含みます。<br>
         特選とは本場大島や本結城など、手間物とは弱生地や色のにじみそうな生地です。</p>
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th>きものの種類</th>
-            <th>通常料金(目安)</th>
-            <th>感謝祭料金(目安)</th>
-        </tr>
-        </thead>
 
-        <tbody>
+    {% include price-list.html menu="洗い張り" %}
 
-        {% for item in site.data.price-lists.["洗い張り"] %}
-        <tr>
-            <td>{{ item.kimono }}</td>
-            <td>{{ item.regular_price }}</td>
-            <td>{{ item.sale_price }}</td>
-        </tr>
-        {% endfor %}
-
-        </tbody>
-    </table>
     <h2>洗い張りから仕立ての料金</h2>
     <p>解き、端縫い、洗い張り代を含んだ料金です。</p>
     <p>長襦袢の料金には半衿、居敷当て代が含まれています。</p>
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th>きものの種類</th>
-            <th>通常料金(目安)</th>
-            <th>感謝祭料金(目安)</th>
-        </tr>
-        </thead>
 
-        <tbody>
-
-        {% for item in site.data.price-lists.["洗い張りから仕立て"] %}
-        <tr>
-            <td>{{ item.kimono }}</td>
-            <td>{{ item.regular_price }}</td>
-            <td>{{ item.sale_price }}</td>
-        </tr>
-        {% endfor %}
-
-        </tbody>
-    </table>
+    {% include price-list.html menu="洗い張りから仕立て" %}
 </section>

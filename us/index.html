@@ -1,0 +1,159 @@
+---
+title: Darumaya Kyozome Honten[TBD]
+description: Darumaya is ...<br>We are ...<br><a href="/us/information/" class="btn btn-aqua">See more</a>[TBD]
+main_visual: '/images/t/top-jumbotron-DSC09861-{width}{pixel_ratio}.jpg'
+layout: home
+questions:
+    - title: How to order ...[TBD]
+      link: /us/information/requestmethod.html
+    - title: How much is ...[TBD]
+      link: /us/maintenance/fee.html
+    - title: How to ...[TBD]
+      link: /us/information/newsletter.html
+    - title: I ...[TBD]
+      link: /us/maintenance/shiminuki.html
+    - title: I ...[TBD]
+      link: /us/revival/shitatenaoshi.html
+    - title: Can I ...[TBD]
+      link: /us/information/contact.html
+news:
+    - date: 9/1
+      title: 今月はお客様感謝祭です！
+      link: /us/event/kanshasai.html
+    - date: 9/1
+      title: 今月のおすすめ商品は小紋です！
+      link: /us/coordinate/index.html
+    - date: 8/10
+      title: 振袖・留袖を更新しました！
+      link: /us/coordinate/furisode.html
+    - date: 8/2
+      title: 8月13日〜17日はお盆休みとなります。
+      link: /us/information/shop.html
+    - date: 8/2
+      title: トムラヨウコ着付け教室の情報を更新しました。
+      link: /us/event/tomurayoko.html
+    - date: 7/14
+      title: FAQページを新設しました！
+      link: /us/information/faq.html
+    - date: 7/11
+      title: ゆかたで居酒屋ジャック企画、大好評でした！
+      link: /us/event/kimonodeodekake.html
+    - date: 5/26
+      title: タウンニュースに掲載されました。
+      link: /us/information/media.html
+country: us
+---
+{% include variables.html %}
+<section>
+    <div class="row">
+        <div class="col-sm-4">
+            <h4>FAQ[TBD]</h4>
+            <div class="list-group">
+                {% for item in page.questions %}
+                <a href="{{ item.link }}" class="list-group-item">{{ item.title }}</a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <h4>Updated[TBD]</h4>
+            <div class="list-group">
+                {% for item in page.news %}
+                <a href="{{ item.link }}" class="list-group-item">
+                    <span class="badge">{{ item.date }}</span>
+                    {{ item.title }}
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <h4>Blog[TBD]</h4>
+            <div id="blogFeed" class="list-group">
+            </div>
+            <script>
+                function blogFeed(json) {
+                    for (var i in json.feed.entry) {
+                        var entryItem = json.feed.entry[i];
+                        var title = entryItem.title.$t;
+                        var dateString = entryItem.published.$t.replace(/^\d{4}\-(\d{2})\-(\d{2}).*$/, '$1/$2');
+                        for (var j in entryItem.link) {
+                            var linkItem = entryItem.link[j];
+                            if (linkItem.rel === 'alternate' && linkItem.type === 'text/html') {
+                                var url = linkItem.href;
+                            }
+                        }
+                        var $date = $('<span>')
+                                .addClass('badge')
+                                .text(dateString);
+                        var $a = $('<a>')
+                                .addClass('list-group-item')
+                                .attr('href', url)
+                                .text(title)
+                                .prepend($date)
+                                .appendTo('#blogFeed');
+                    }
+                }
+                (function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.defer = 'defer';
+                    js.async = 'async';
+                    js.src = "//blog.darumaya-gofuku.jp/feeds/posts/summary?alt=json-in-script&callback=blogFeed&max-results=5";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'getBlogFeed'));
+            </script>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="row">
+        <div class="col-sm-7">
+            <div class="thumbnail">
+                <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="//www.youtube.com/embed/LvcJZtYIbec?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe></div>
+                <div class="caption">
+                    <h3>だるまやの洗い張り[TBD]</h3>
+                    <p>伸子張りと天然布のりで仕上げる昔ながらの洗い張り。仕上がりが断然違います！[TBD]<br>
+                        しみ抜きや染め替えなど、その他のお手入れも職人が一枚一枚手作業で行っています。[TBD]</p>
+                    <p class="text-right"><a href="/{{ country_path }}maintenance/" class="btn btn-aqua">きもののお手入れをもっと見る[TBD]</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="thumbnail">
+                <a href="/{{ country_path }}event/" class="img-link same-as-youtube"><img class="img-sm" data-src="/images/t/top-kanshasai-DSC05278-{width}{pixel_ratio}.JPG" data-alt="催事のご案内"></a>
+                <div class="caption">
+                    <h3>催事のご案内[TBD]</h3>
+                    <p>9月1日から9月30日までお客様感謝祭です！<br>
+                        きもののお手入れはこの機会に是非お持ちください！[TBD]<br>
+                    </p>
+                    <p class="text-right"><a href="/{{ country_path }}event/" class="btn btn-aqua">催事のご案内をもっと見る[TBD]</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="thumbnail">
+                <a href="/{{ country_path }}revival/" class="img-link"><img class="img-sm" data-src="/images/t/top-somenaoshi-P1050759-P1060581-{width}{pixel_ratio}.jpg" data-alt="きものの再生事例"></a>
+                <div class="caption">
+                    <h3>きものの再生事例[TBD]
+                        <small>~無地のきものを染め替える~[TBD]</small></h3>
+                    <p>派手になってしまった無地のきものを、今のお客様にぴったりの色に染め替えます。他にもたくさんのきものの再生事例を紹介しています。[TBD]</p>
+                    <p class="text-right"><a href="/{{ country_path }}revival/" class="btn btn-aqua">きものの再生事例をもっと見る[TBD]</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="thumbnail">
+                <a href="/{{ country_path }}coordinate/" class="img-link"><img class="img-sm" data-src="/images/t/top-osusume-201609-DSC01954-{width}{pixel_ratio}.jpg" data-alt="今月のおすすめ商品"></a>
+                <div class="caption">
+                    <h3>今月のおすすめ商品[TBD]</h3>
+                    <p>今月のおすすめ商品は小紋です！！<br>
+                        お稽古事から普段使いまで幅広くお召しいただけます。[TBD]</p>
+                    <p class="text-right"><a href="/{{ country_path }}coordinate/" class="btn btn-aqua">着こなしのご提案をもっと見る[TBD]</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
