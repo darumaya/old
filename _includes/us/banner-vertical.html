@@ -10,7 +10,7 @@
         <div class="col-xs-12 col-sm-6 col-lg-4">
 
             {% if page.url == item.url %}
-            <span class="thumbnail banner-related active">
+            <span class="thumbnail banner-vertical-label-i18n active">
                 <img class="img-tn" data-src="{% if item.thumbnail %}{{ item.thumbnail }}{% else %}{{ item.main_visual }}{% endif %}" data-alt="{{ item.title }}" data-class="banner-vertical-img">
                 <div class="caption">
                     <h4>{{ item.title }}</h4>
@@ -19,7 +19,7 @@
                 </div>
             </span>
             {% else %}
-            <a href="{{ item.url }}" class="thumbnail banner-related">
+            <a href="{{ item.url }}" class="thumbnail banner-vertical-label-i18n">
                 <img class="img-tn" data-src="{% if item.thumbnail %}{{ item.thumbnail }}{% else %}{{ item.main_visual }}{% endif %}" data-alt="{{ item.title }}" data-class="banner-vertical-img">
                 <div class="caption">
                     <h4>{{ item.title }}</h4>

@@ -1511,9 +1511,14 @@ section h2
 {
     color: #29869d;
 }
-.banner-vertical-i18n h4
+.banner-vertical-i18n .banner-vertical-label-i18n
 {
-    lign-height: 1;
+    padding: 0;
+}
+.banner-vertical-i18n .caption
+{
+    height: 100px;
+    padding: 16px 0;
 }
 .banner-vertical-i18n .banner-vertical-img
 {
@@ -1521,6 +1526,7 @@ section h2
 
     width: 60px !important;
     height: 60px;
+    margin-right: 10px;
 }
 @media (min-width: 992px)
 {
@@ -1537,6 +1543,20 @@ section h2
         width: 100px !important;
         height: 100px;
     }
+}
+.banner-vertical-i18n h4
+{
+    font-size: 18px;
+
+    margin: 0 0 13px 0;
+
+    lign-height: 1 !important;
+}
+.banner-vertical-i18n p
+{
+    margin: 13px 0;
+
+    lign-height: 20px;
 }
 a.thumbnail.banner-slim
 {

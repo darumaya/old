@@ -218,24 +218,45 @@
 
 .banner-vertical-i18n {
 
+  // ---------------------------------
+  // --------+ <.banner-vertical-i18n>
+  //         |            ^
+  //         |           16
+  //         |            v
+  //         |        +---------------
+  //         |        |   ^
+  //         | <-10-> |   18  <h4>
+  //         |        |   v
+  //         |        +---------------
+  //         |            ^
+  // <-100-> |            13
+  //  <img>  |            v
+  //         |        +---------------
+  //    ^    |        |   ^
+  //   100   |        | 14/20
+  //    v    |        |   v   <p>
+  //         | <-10-> |   ^
+  //         |        | 14/20
+  //         |        |   v
+  //         |        +---------------
+  //         |            ^
+  //         |            13
+  //         |            v
+  // --------+
+  // -----------------------------
 
-  // lg
-  //     h4
-  //         height = font-size 18 * line-hight 1 = 18
-  //         mergin = 10 + 10
-  //     p
-  //         height = font-size 14 * line-height 1.42 = 20
-  //         margin = 10
-
-
-  h4 {
-    lign-height: 1;
+  .banner-vertical-label-i18n {
+    padding: 0;
   }
-
+  .caption {
+    padding: 16px 0;
+    height: 100px;
+  }
   .banner-vertical-img {
     width: 60px !important;
     height: 60px;
     float: left;
+    margin-right: 10px;
     @media (min-width: @screen-md-min) {
       width: 75px !important;
       height: 75px;
@@ -245,4 +266,14 @@
       height: 100px;
     }
   }
+  h4 {
+    margin: 0 0 13px 0;
+    font-size: 18px;
+    lign-height: 1 !important;
+  }
+  p {
+    margin: 13px 0;
+    lign-height: 20px;
+  }
+
 }
