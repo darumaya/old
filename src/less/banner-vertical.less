@@ -215,3 +215,34 @@
     }
   }
 }
+
+.banner-vertical-i18n {
+
+
+  // lg
+  //     h4
+  //         height = font-size 18 * line-hight 1 = 18
+  //         mergin = 10 + 10
+  //     p
+  //         height = font-size 14 * line-height 1.42 = 20
+  //         margin = 10
+
+
+  h4 {
+    lign-height: 1;
+  }
+
+  .banner-vertical-img {
+    width: 60px !important;
+    height: 60px;
+    float: left;
+    @media (min-width: @screen-md-min) {
+      width: 75px !important;
+      height: 75px;
+    }
+    @media (min-width: @screen-lg-min) {
+      width: 100px !important;
+      height: 100px;
+    }
+  }
+}

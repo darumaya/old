@@ -1,0 +1,35 @@
+<section class="container">
+    <h2>{{ page.category }}のページ</h2>
+    <div>
+        <ul class="banner-vertical">
+            {% assign pages = site.pages | sort: 'order' %}
+            {% for item in pages %}
+            {% if page.category == item.category %}
+            {% if item.category != item.title %}
+            {% if page.country == item.country %}
+            {% if page.url == item.url %}
+            <li class="active">
+                {% else %}
+            <li>
+                {% endif %}
+                <a href="{{ item.url }}">
+                    <img class="img-tn" data-src="{% if item.thumbnail %}{{ item.thumbnail }}{% else %}{{ item.main_visual }}{% endif %}" data-alt="{{ item.title }}" data-class="img-responsive banner-vertical-img">
+                    <div class="banner-vertical-label">
+                        <h4 class="visible-xs-block">{{ item.title }}</h4>
+                        <p class="visible-xs-block banner-vertical-snipet-1st">{{ item.snipet_1st }}<br>
+                            {{ item.snipet_2nd }}</p>
+                        <h4 class="hidden-xs">{{ item.title | split: '' | join: '<br>' }}</h4>
+                        {% capture snipet_1st %}{{ item.snipet_1st }}{% endcapture %}
+                        <p class="hidden-xs banner-vertical-snipet-1st">{{ snipet_1st | split: ',' | join: '<br>' }}</p>
+                        {% capture snipet_2nd %}{{ item.snipet_2nd }}{% endcapture %}
+                        <p class="hidden-xs banner-vertical-snipet-2nd">{{ snipet_2nd | split: ',' | join: '<br>' }}</p>
+                    </div>
+                </a>
+            </li>
+            {% endif %}
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+</section>

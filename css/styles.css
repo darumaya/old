@@ -1511,6 +1511,33 @@ section h2
 {
     color: #29869d;
 }
+.banner-vertical-i18n h4
+{
+    lign-height: 1;
+}
+.banner-vertical-i18n .banner-vertical-img
+{
+    float: left;
+
+    width: 60px !important;
+    height: 60px;
+}
+@media (min-width: 992px)
+{
+    .banner-vertical-i18n .banner-vertical-img
+    {
+        width: 75px !important;
+        height: 75px;
+    }
+}
+@media (min-width: 1200px)
+{
+    .banner-vertical-i18n .banner-vertical-img
+    {
+        width: 100px !important;
+        height: 100px;
+    }
+}
 a.thumbnail.banner-slim
 {
     position: relative;
