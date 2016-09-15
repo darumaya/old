@@ -1,7 +1,7 @@
 <section class="container">
     <h2>{{ page.category }}のページ</h2>
     <div>
-        <ul class="banner-vertical">
+        <ul class="banner-vertical-cjk">
             {% assign pages = site.pages | sort: 'order' %}
             {% for item in pages %}
             {% if page.category == item.category %}

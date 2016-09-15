@@ -1,6 +1,6 @@
 <section class="container">
     <h2>Pages about {{ page.category }}[TBD]</h2>
-    <div class="row banner-vertical-i18n">
+    <div class="row banner-vertical">
         {% assign pages = site.pages | sort: 'order' %}
         {% for item in pages %}
         {% if page.category == item.category %}
