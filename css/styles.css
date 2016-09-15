@@ -1541,7 +1541,8 @@ section h2
 {
     overflow: hidden;
 
-    height: 82px;
+    height: 62px;
+    margin-bottom: 10px;
     padding: 0;
 }
 @media (min-width: 768px)
@@ -1549,15 +1550,16 @@ section h2
     .banner-vertical .banner-vertical-label-i18n
     {
         height: 102px;
+        margin-bottom: 20px;
     }
 }
 .banner-vertical .banner-vertical-label-i18n > .banner-vertical-img
 {
     float: left;
 
-    width: 80px !important;
-    height: 80px;
-    margin-right: 10px;
+    width: 60px !important;
+    height: 60px;
+    margin-right: 5px;
 }
 @media (min-width: 768px)
 {
@@ -1565,6 +1567,7 @@ section h2
     {
         width: 100px !important;
         height: 100px;
+        margin-right: 10px;
     }
 }
 .banner-vertical .banner-vertical-label-i18n > .caption
@@ -1575,15 +1578,31 @@ section h2
 {
     font-size: 18px;
 
-    margin: 16px 10px 13px;
+    margin: 5px;
 
     lign-height: 1 !important;
 }
+@media (min-width: 768px)
+{
+    .banner-vertical .banner-vertical-label-i18n > .caption > h4
+    {
+        margin: 16px 10px 13px;
+    }
+}
 .banner-vertical .banner-vertical-label-i18n > .caption > p
 {
-    margin: 13px 10px;
+    margin: 5px;
 
-    lign-height: 20px;
+    lign-height: 14px;
+}
+@media (min-width: 768px)
+{
+    .banner-vertical .banner-vertical-label-i18n > .caption > p
+    {
+        margin: 13px 10px;
+
+        lign-height: 20px;
+    }
 }
 a.thumbnail.banner-slim
 {

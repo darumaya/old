@@ -23,8 +23,7 @@
                 <img class="img-tn" data-src="{% if item.thumbnail %}{{ item.thumbnail }}{% else %}{{ item.main_visual }}{% endif %}" data-alt="{{ item.title }}" data-class="banner-vertical-img">
                 <div class="caption">
                     <h4>{{ item.title }}</h4>
-                    <p>{{ item.snipet_1st }}
-                        {{ item.snipet_2nd }}</p>
+                    <p>{{ item.snipet_1st }}{{ item.snipet_2nd }}</p>
                 </div>
             </a>
             {% endif %}

@@ -1,7 +1,7 @@
 //
 // 同一カテゴリーのページ
 //
-
+// LG
 // ---------------------------------
 // --------+ <.banner-vertical-i18n>
 //         |            ^
@@ -27,8 +27,9 @@
 //         |            13
 //         |            v
 // --------+
-// -----------------------------
-
+// ---------------------------------
+//
+// XS
 // ---------------------------------
 // --------+ <.banner-vertical-i18n>
 //         |            ^
@@ -51,7 +52,37 @@
 //         |            13
 //         |            v
 // --------+
-// -----------------------------
+// ---------------------------------
+//
+// XS          ^
+//             10
+//             v
+// ---------------------------------
+// --------+ <.banner-vertical-i18n>
+//         |           ^
+//         |           5
+//         |           v
+//         |       +---------------
+//         |       |   ^
+//         | <-5-> |   18  <h4>
+//         |       |   v
+//         |       +---------------
+//         |           ^
+// <-60->  |           5
+//  <img>  |           v
+//         |       +---------------
+//    ^    |       |   ^
+//    60   |       | 14/14 <p>
+//    v    |       |   v
+//    ^    | <-5-> |   ^
+//    60   |       |(14/14)<p>
+//    v    |       |   v
+//         |       +---------------
+//         |           ^
+//         |          4~18
+//         |           v
+// --------+
+// ---------------------------------
 
 .banner-vertical {
 
@@ -76,21 +107,24 @@
     .banner-vertical-label-i18n {
       overflow: hidden;
       padding: 0;
-      height: 82px;
+      height: 62px;
+      margin-bottom: 10px;
 
       @media (min-width: @screen-sm-min) {
         height: 102px;
+        margin-bottom: 20px;
       }
 
       > .banner-vertical-img {
-      width: 80px !important;
-      height: 80px;
+      width: 60px !important;
+      height: 60px;
       float: left;
-      margin-right: 10px;
+      margin-right: 5px;
 
       @media (min-width: @screen-sm-min) {
         width: 100px !important;
         height: 100px;
+        margin-right: 10px;
       }
     }
 
@@ -98,14 +132,23 @@
       padding: 0;
 
       > h4 {
-        margin: 16px 10px 13px;
+        margin: 5px;
         font-size: 18px;
         lign-height: 1 !important;
+
+        @media (min-width: @screen-sm-min) {
+          margin: 16px 10px 13px;
+        }
       }
 
       > p {
-        margin: 13px 10px;
-        lign-height: 20px;
+        margin: 5px;
+        lign-height: 14px;
+
+        @media (min-width: @screen-sm-min) {
+          margin: 13px 10px;
+          lign-height: 20px;
+        }
       }
     }
   }
