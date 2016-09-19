@@ -1246,27 +1246,28 @@ section h2
         font-size: 14px;
     }
 }
-.banner-vertical
+.banner-vertical-cjk
 {
     margin-bottom: 15px;
     padding-left: 0;
 
     list-style: none;
 }
-.banner-vertical > li
+.banner-vertical-cjk > li
 {
     line-height: 1;
 }
 @media (min-width: 768px)
 {
-    .banner-vertical > li
+    .banner-vertical-cjk > li
     {
         float: left;
     }
 }
-.banner-vertical > li > a
+.banner-vertical-cjk > li > a
 {
     display: block;
+    overflow: hidden;
 
     height: 62px;
     padding: 0;
@@ -1282,24 +1283,24 @@ section h2
 }
 @media (min-width: 768px)
 {
-    .banner-vertical > li > a
+    .banner-vertical-cjk > li > a
     {
         height: auto;
         margin-bottom: 20px;
     }
 }
-.banner-vertical > li > a:hover,
-.banner-vertical > li > a:active
+.banner-vertical-cjk > li > a:hover,
+.banner-vertical-cjk > li > a:active
 {
     border-color: #34a4be;
     background-color: #fff;
 }
-.banner-vertical > li > a:hover > .banner-vertical-label,
-.banner-vertical > li > a:active > .banner-vertical-label
+.banner-vertical-cjk > li > a:hover > .banner-vertical-label,
+.banner-vertical-cjk > li > a:active > .banner-vertical-label
 {
     color: #34a4be;
 }
-.banner-vertical > li > a > .banner-vertical-img
+.banner-vertical-cjk > li > a > .banner-vertical-img
 {
     float: left;
 
@@ -1308,7 +1309,7 @@ section h2
 }
 @media (min-width: 768px)
 {
-    .banner-vertical > li > a > .banner-vertical-img
+    .banner-vertical-cjk > li > a > .banner-vertical-img
     {
         float: none;
 
@@ -1319,7 +1320,7 @@ section h2
 }
 @media (min-width: 992px)
 {
-    .banner-vertical > li > a > .banner-vertical-img
+    .banner-vertical-cjk > li > a > .banner-vertical-img
     {
         width: 75px !important;
         height: 75px;
@@ -1327,13 +1328,13 @@ section h2
 }
 @media (min-width: 1200px)
 {
-    .banner-vertical > li > a > .banner-vertical-img
+    .banner-vertical-cjk > li > a > .banner-vertical-img
     {
         width: 100px !important;
         height: 100px;
     }
 }
-.banner-vertical > li > a > .banner-vertical-label
+.banner-vertical-cjk > li > a > .banner-vertical-label
 {
     position: relative;
 
@@ -1345,20 +1346,19 @@ section h2
 
     color: #333;
 }
-.banner-vertical > li > a > .banner-vertical-label > h4
+.banner-vertical-cjk > li > a > .banner-vertical-label > h4
 {
-    font-family: Georgia, 'Times New Roman', Times, 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho', serif;
     line-height: 1;
 
     margin-top: 5px;
     margin-bottom: 5px;
 }
-.banner-vertical > li > a > .banner-vertical-label > .banner-vertical-snipet-1st,
-.banner-vertical > li > a > .banner-vertical-label > .banner-vertical-snipet-2nd
+.banner-vertical-cjk > li > a > .banner-vertical-label > .banner-vertical-snipet-1st,
+.banner-vertical-cjk > li > a > .banner-vertical-label > .banner-vertical-snipet-2nd
 {
     line-height: 1;
 }
-.banner-vertical > li > a > .banner-vertical-label .cho-on
+.banner-vertical-cjk > li > a > .banner-vertical-label .cho-on
 {
     display: inline-block;
 
@@ -1367,14 +1367,14 @@ section h2
          -o-transform: rotate(90deg) scale(1, -1);
             transform: rotate(90deg) scale(1, -1);
 }
-.banner-vertical > li > a > .banner-vertical-label .kogaki
+.banner-vertical-cjk > li > a > .banner-vertical-label .kogaki
 {
     -webkit-transform: translateX(.2em);
         -ms-transform: translateX(.2em);
          -o-transform: translateX(.2em);
             transform: translateX(.2em);
 }
-.banner-vertical > li > a > .banner-vertical-label .kutouten
+.banner-vertical-cjk > li > a > .banner-vertical-label .kutouten
 {
     -webkit-transform: translate(.2em, -.5em);
         -ms-transform: translate(.2em, -.5em);
@@ -1383,14 +1383,16 @@ section h2
 }
 @media (min-width: 768px)
 {
-    .banner-vertical > li > a > .banner-vertical-label
+    .banner-vertical-cjk > li > a > .banner-vertical-label
     {
         width: 60px;
         height: 200px;
         margin: 0;
     }
-    .banner-vertical > li > a > .banner-vertical-label > h4
+    .banner-vertical-cjk > li > a > .banner-vertical-label > h4
     {
+        font-family: Georgia, 'Times New Roman', Times, 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho', serif;
+
         position: absolute;
         top: 10px;
         right: 2.66666666px;
@@ -1400,7 +1402,7 @@ section h2
 
         text-align: center;
     }
-    .banner-vertical > li > a > .banner-vertical-label > .banner-vertical-snipet-1st
+    .banner-vertical-cjk > li > a > .banner-vertical-label > .banner-vertical-snipet-1st
     {
         font-size: 14px;
 
@@ -1413,7 +1415,7 @@ section h2
 
         text-align: center;
     }
-    .banner-vertical > li > a > .banner-vertical-label > .banner-vertical-snipet-2nd
+    .banner-vertical-cjk > li > a > .banner-vertical-label > .banner-vertical-snipet-2nd
     {
         font-size: 14px;
 
@@ -1429,63 +1431,63 @@ section h2
 }
 @media (min-width: 992px)
 {
-    .banner-vertical > li > a > .banner-vertical-label
+    .banner-vertical-cjk > li > a > .banner-vertical-label
     {
         width: 75px;
     }
-    .banner-vertical > li > a > .banner-vertical-label > h4
+    .banner-vertical-cjk > li > a > .banner-vertical-label > h4
     {
         right: 7.66666666px;
     }
-    .banner-vertical > li > a > .banner-vertical-label > .banner-vertical-snipet-1st
+    .banner-vertical-cjk > li > a > .banner-vertical-label > .banner-vertical-snipet-1st
     {
         right: 33.33333333px;
     }
-    .banner-vertical > li > a > .banner-vertical-label > .banner-vertical-snipet-2nd
+    .banner-vertical-cjk > li > a > .banner-vertical-label > .banner-vertical-snipet-2nd
     {
         right: 53.33333334px;
     }
 }
 @media (min-width: 1200px)
 {
-    .banner-vertical > li > a > .banner-vertical-label
+    .banner-vertical-cjk > li > a > .banner-vertical-label
     {
         width: 100px;
     }
-    .banner-vertical > li > a > .banner-vertical-label > h4
+    .banner-vertical-cjk > li > a > .banner-vertical-label > h4
     {
         right: 16px;
     }
-    .banner-vertical > li > a > .banner-vertical-label > .banner-vertical-snipet-1st
+    .banner-vertical-cjk > li > a > .banner-vertical-label > .banner-vertical-snipet-1st
     {
         right: 50px;
     }
-    .banner-vertical > li > a > .banner-vertical-label > .banner-vertical-snipet-2nd
+    .banner-vertical-cjk > li > a > .banner-vertical-label > .banner-vertical-snipet-2nd
     {
         right: 70px;
     }
 }
-.banner-vertical > li.active > a,
-.banner-vertical > li.active > a:hover,
-.banner-vertical > li.active > a:focus
+.banner-vertical-cjk > li.active > a,
+.banner-vertical-cjk > li.active > a:hover,
+.banner-vertical-cjk > li.active > a:focus
 {
     cursor: default;
 
     border-color: #333;
 }
-.banner-vertical > li.active > a > .banner-vertical-label,
-.banner-vertical > li.active > a:hover > .banner-vertical-label,
-.banner-vertical > li.active > a:focus > .banner-vertical-label
+.banner-vertical-cjk > li.active > a > .banner-vertical-label,
+.banner-vertical-cjk > li.active > a:hover > .banner-vertical-label,
+.banner-vertical-cjk > li.active > a:focus > .banner-vertical-label
 {
     color: #333;
 }
-.banner-vertical > li + li
+.banner-vertical-cjk > li + li
 {
     margin-top: 10px;
 }
 @media (min-width: 768px)
 {
-    .banner-vertical > li + li
+    .banner-vertical-cjk > li + li
     {
         margin-top: 0;
         margin-left: 20.25px;
@@ -1493,23 +1495,114 @@ section h2
 }
 @media (min-width: 992px)
 {
-    .banner-vertical > li + li
+    .banner-vertical-cjk > li + li
     {
         margin-left: 30.875px;
     }
 }
 @media (min-width: 1200px)
 {
-    .banner-vertical > li + li
+    .banner-vertical-cjk > li + li
     {
         margin-left: 27.75px;
     }
 }
-.banner-vertical > li.active > a,
-.banner-vertical > li.active > a:hover,
-.banner-vertical > li.active > a:focus
+.banner-vertical-cjk > li.active > a,
+.banner-vertical-cjk > li.active > a:hover,
+.banner-vertical-cjk > li.active > a:focus
 {
     color: #29869d;
+}
+.banner-vertical a.banner-vertical-label-i18n
+{
+    -webkit-transition: border-color .2s ease-in-out;
+         -o-transition: border-color .2s ease-in-out;
+            transition: border-color .2s ease-in-out;
+}
+.banner-vertical a.banner-vertical-label-i18n .caption
+{
+    -webkit-transition: color .2s ease-in-out;
+         -o-transition: color .2s ease-in-out;
+            transition: color .2s ease-in-out;
+}
+.banner-vertical a.banner-vertical-label-i18n:hover,
+.banner-vertical a.banner-vertical-label-i18n:active
+{
+    text-decoration: none;
+
+    border-color: #34a4be;
+}
+.banner-vertical a.banner-vertical-label-i18n:hover .caption,
+.banner-vertical a.banner-vertical-label-i18n:active .caption
+{
+    color: #34a4be;
+}
+.banner-vertical .banner-vertical-label-i18n
+{
+    overflow: hidden;
+
+    height: 62px;
+    margin-bottom: 10px;
+    padding: 0;
+}
+@media (min-width: 768px)
+{
+    .banner-vertical .banner-vertical-label-i18n
+    {
+        height: 102px;
+        margin-bottom: 20px;
+    }
+}
+.banner-vertical .banner-vertical-label-i18n > .banner-vertical-img
+{
+    float: left;
+
+    width: 60px !important;
+    height: 60px;
+    margin-right: 5px;
+}
+@media (min-width: 768px)
+{
+    .banner-vertical .banner-vertical-label-i18n > .banner-vertical-img
+    {
+        width: 100px !important;
+        height: 100px;
+        margin-right: 10px;
+    }
+}
+.banner-vertical .banner-vertical-label-i18n > .caption
+{
+    padding: 0;
+}
+.banner-vertical .banner-vertical-label-i18n > .caption > h4
+{
+    font-size: 18px;
+
+    margin: 5px;
+
+    lign-height: 1 !important;
+}
+@media (min-width: 768px)
+{
+    .banner-vertical .banner-vertical-label-i18n > .caption > h4
+    {
+        margin: 16px 10px 13px;
+    }
+}
+.banner-vertical .banner-vertical-label-i18n > .caption > p
+{
+    margin: 5px;
+
+    lign-height: 14px;
+}
+@media (min-width: 768px)
+{
+    .banner-vertical .banner-vertical-label-i18n > .caption > p
+    {
+        margin: 13px 10px;
+
+        lign-height: 20px;
+    }
 }
 a.thumbnail.banner-slim
 {

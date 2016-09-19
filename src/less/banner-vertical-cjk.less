@@ -1,0 +1,219 @@
+//
+// 同一カテゴリーのページ
+//
+
+.banner-vertical-cjk {
+  @card-number: 9;
+  @card-border: 1px;
+  @card-label-padding: 10px;
+  @card-label-max-length: 10;
+
+  @card-img-width-xs: 60px;
+  @card-margin-xs: 10px;
+
+  @card-img-width-sm: 60px;
+  @card-margin-sm: ((
+    @container-sm - @grid-gutter-width
+    - @card-border * @card-number * 2
+    - @card-img-width-sm * @card-number) / (@card-number - 1));
+
+  @card-img-width-md: 75px;
+  @card-margin-md: ((
+    @container-md - @grid-gutter-width
+    - @card-border * @card-number * 2
+    - @card-img-width-md * @card-number) / (@card-number - 1));
+
+  @card-img-width-lg: 100px;
+  @card-margin-lg: ((
+    @container-lg - @grid-gutter-width
+    - @card-border * @card-number * 2
+    - @card-img-width-lg * @card-number) / (@card-number - 1));
+
+  @card-label-total-width: (@font-size-h4 + @font-size-base * @line-height-base + @font-size-base);
+
+  &:extend(.nav all);
+
+  margin-bottom: 15px;
+  padding-left: 0; // Override default ul/ol
+  list-style: none;
+
+  @media (min-width: @screen-sm-min) {
+    &:extend(.clearfix all);
+  }
+
+  > li {
+    line-height: 1;
+
+    @media (min-width: @screen-sm-min) {
+      float: left;
+    }
+
+    > a {
+      padding: 0;
+      display: block;
+      background-color: @bg-color;
+      border: 1px solid @card-border-color;
+      border-radius: @border-radius-base;
+      transition: border-color .2s ease-in-out;
+      text-decoration: none;
+      height: (@card-img-width-xs + @card-border * 2);
+      overflow: hidden;
+      @media (min-width: @screen-sm-min) {
+        height: auto;
+        margin-bottom: 20px;
+      }
+
+      &:hover,
+      &:active {
+        border-color: @link-color;
+        background-color: @bg-color;
+
+        > .banner-vertical-label {
+          color: @link-color ;
+        }
+      }
+
+      > .banner-vertical-img {
+        width: @card-img-width-xs !important;
+        height: @card-img-width-xs;
+        float: left;
+
+        @media (min-width: @screen-sm-min) {
+          float: none;
+          margin: 0 auto 0;
+          width: @card-img-width-sm !important;
+          height: @card-img-width-sm;
+        }
+        @media (min-width: @screen-md-min) {
+          width: @card-img-width-md !important;
+          height: @card-img-width-md;
+        }
+        @media (min-width: @screen-lg-min) {
+          width: @card-img-width-lg !important;
+          height: @card-img-width-lg;
+        }
+      }
+
+      > .banner-vertical-label {
+        position: relative;
+        color: @text-color;
+        margin: 0 0 0 (@card-img-width-xs + 5px);
+        transition: color .2s ease-in-out;
+        > h4 {
+          line-height: 1;
+          margin-top: 5px;
+          margin-bottom: 5px;
+        }
+        > .banner-vertical-snipet-1st,
+        > .banner-vertical-snipet-2nd {
+          line-height: 1;
+        }
+
+        .cho-on {
+          display: inline-block;
+          transform: rotate(90deg) scale(1, -1);
+        }
+        .kogaki {
+          transform: translateX(0.2em);
+        }
+
+        .kutouten {
+          transform: translate(0.2em, -0.5em);
+        }
+
+        @media (min-width: @screen-sm-min) {
+          margin: 0;
+          width: @card-img-width-sm;
+          height: (@font-size-h4 * @card-label-max-length + @card-label-padding * 2);
+          > h4 {
+            position: absolute;
+            right: ((@card-img-width-sm - @card-label-total-width) / 3);
+            top: @card-label-padding;
+            width: @font-size-h4;
+            margin: 0;
+            text-align: center;
+            font-family: @font-family-serif;
+          }
+          > .banner-vertical-snipet-1st {
+            position: absolute;
+            right: ((@card-img-width-sm - @card-label-total-width) / 3 * 2 + @font-size-h4);
+            top: @card-label-padding;
+            font-size: @font-size-base;
+            width: @font-size-base;
+            margin: 0;
+            text-align: center;
+          }
+          > .banner-vertical-snipet-2nd {
+            position: absolute;
+            right: ((@card-img-width-sm - @card-label-total-width) / 3 * 2 + @font-size-h4 + @font-size-base * @line-height-base);
+            top: @card-label-padding;
+            font-size: @font-size-base;
+            width: @font-size-base;
+            margin: 0;
+            text-align: center;
+          }
+        }
+        @media (min-width: @screen-md-min) {
+          width: @card-img-width-md;
+          > h4 {
+            right: ((@card-img-width-md - @card-label-total-width) / 3);
+          }
+          > .banner-vertical-snipet-1st {
+            right: ((@card-img-width-md - @card-label-total-width) / 3 * 2 + @font-size-h4);
+          }
+          > .banner-vertical-snipet-2nd {
+            right: ((@card-img-width-md - @card-label-total-width) / 3 * 2 + @font-size-h4 + @font-size-base * @line-height-base);
+          }
+        }
+        @media (min-width: @screen-lg-min) {
+          width: @card-img-width-lg;
+          > h4 {
+            right: ((@card-img-width-lg - @card-label-total-width) / 3);
+          }
+          > .banner-vertical-snipet-1st {
+            right: ((@card-img-width-lg - @card-label-total-width) / 3 * 2 + @font-size-h4);
+          }
+          > .banner-vertical-snipet-2nd {
+            right: ((@card-img-width-lg - @card-label-total-width) / 3 * 2 + @font-size-h4 + @font-size-base * @line-height-base);
+          }
+        }
+      }
+    }
+
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        border-color: @text-color;
+        cursor: default;
+
+        > .banner-vertical-label {
+          color: @text-color;
+        }
+      }
+    }
+
+    + li {
+      margin-top: @card-margin-xs;
+      @media (min-width: @screen-sm-min) {
+        margin-top: 0;
+        margin-left: @card-margin-sm;
+      }
+      @media (min-width: @screen-md-min) {
+        margin-left: @card-margin-md;
+      }
+      @media (min-width: @screen-lg-min) {
+        margin-left: @card-margin-lg;
+      }
+    }
+
+    // Active state
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @link-hover-color;
+      }
+    }
+  }
+}

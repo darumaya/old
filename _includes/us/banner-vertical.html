@@ -1,0 +1,37 @@
+<section class="container">
+    <h2>Pages about {{ page.category }}[TBD]</h2>
+    <div class="row banner-vertical">
+        {% assign pages = site.pages | sort: 'order' %}
+        {% for item in pages %}
+        {% if page.category == item.category %}
+        {% if item.category != item.title %}
+        {% if page.country == item.country %}
+
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+
+            {% if page.url == item.url %}
+            <span class="thumbnail banner-vertical-label-i18n active">
+                <img class="img-tn" data-src="{% if item.thumbnail %}{{ item.thumbnail }}{% else %}{{ item.main_visual }}{% endif %}" data-alt="{{ item.title }}" data-class="banner-vertical-img">
+                <div class="caption">
+                    <h4>{{ item.title }}</h4>
+                    <p>{{ item.snipet_1st }}
+                        {{ item.snipet_2nd }}</p>
+                </div>
+            </span>
+            {% else %}
+            <a href="{{ item.url }}" class="thumbnail banner-vertical-label-i18n">
+                <img class="img-tn" data-src="{% if item.thumbnail %}{{ item.thumbnail }}{% else %}{{ item.main_visual }}{% endif %}" data-alt="{{ item.title }}" data-class="banner-vertical-img">
+                <div class="caption">
+                    <h4>{{ item.title }}</h4>
+                    <p>{{ item.snipet_1st }}{{ item.snipet_2nd }}</p>
+                </div>
+            </a>
+            {% endif %}
+        </div>
+
+        {% endif %}
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+    </div>
+</section>
