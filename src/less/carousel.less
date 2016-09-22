@@ -85,6 +85,52 @@
 
 .carousel-outer-indicators {
   overflow: hidden;
+  height: 465px;
+  @media (min-width: @screen-lg-min) {
+    height: 435px;
+  }
+  position: relative;
+  &:after {
+    content: " ";
+    #gradient > .vertical-three-colors(rgba(255, 255, 255, 0); rgba(255, 255, 255, 0.8); 70%; rgba(255, 255, 255, 1));
+    width: 100%;
+    height: 42px;
+    position: absolute;
+    bottom: 0;
+  }
+  > .nav-aqua {
+    > li {
+      > a {
+        &:hover {
+          background-color: @nav-link-hover-bg;
+        }
+        &:after {
+          content: "\e114";
+          font-family: 'Glyphicons Halflings';
+          font-style: normal;
+          font-weight: normal;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          color: @link-color;
+          position: absolute;
+          top: 10px;
+          right: 15px;
+          padding: 0;
+        }
+      }
+      &.active > a {
+        &,
+        &:hover,
+        &:focus {
+          color: @bg-color;
+          background-color: @link-color;
+          &:after {
+            color: @bg-color;
+          }
+        }
+      }
+    }
+  }
 }
 
 .carousel {
@@ -124,6 +170,14 @@
     margin-bottom: 5px;
     @media (min-width: @screen-sm-min) {
       font-size: @font-size-base;
+    }
+  }
+  .carousel-control {
+    &.left {
+      border-radius: @border-radius-base 0 0 @border-radius-base;
+    }
+    &.right {
+      border-radius: 0 @border-radius-base @border-radius-base 0;
     }
   }
 }

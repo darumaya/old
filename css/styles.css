@@ -1180,7 +1180,72 @@ section h2
 }
 .carousel-outer-indicators
 {
+    position: relative;
+
     overflow: hidden;
+
+    height: 465px;
+}
+@media (min-width: 1200px)
+{
+    .carousel-outer-indicators
+    {
+        height: 435px;
+    }
+}
+.carousel-outer-indicators:after
+{
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    height: 42px;
+
+    content: ' ';
+
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, .8) 70%, #fff);
+    background-image:      -o-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, .8) 70%, #fff);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(70%, rgba(255, 255, 255, .8)), to(#fff));
+    background-image:         linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, .8) 70%, #fff);
+    background-repeat: no-repeat;
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffffff', GradientType=0);
+}
+.carousel-outer-indicators > .nav-aqua > li > a:hover
+{
+    background-color: #eee;
+}
+.carousel-outer-indicators > .nav-aqua > li > a:after
+{
+    font-family: 'Glyphicons Halflings';
+    font-weight: normal;
+    font-style: normal;
+
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    padding: 0;
+
+    content: '\e114';
+
+    color: #34a4be;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.carousel-outer-indicators > .nav-aqua > li.active > a,
+.carousel-outer-indicators > .nav-aqua > li.active > a:hover,
+.carousel-outer-indicators > .nav-aqua > li.active > a:focus
+{
+    color: #fff;
+    background-color: #34a4be;
+}
+.carousel-outer-indicators > .nav-aqua > li.active > a:after,
+.carousel-outer-indicators > .nav-aqua > li.active > a:hover:after,
+.carousel-outer-indicators > .nav-aqua > li.active > a:focus:after
+{
+    color: #fff;
 }
 .carousel
 {
@@ -1245,6 +1310,14 @@ section h2
     {
         font-size: 14px;
     }
+}
+.carousel .carousel-control.left
+{
+    border-radius: 4px 0 0 4px;
+}
+.carousel .carousel-control.right
+{
+    border-radius: 0 4px 4px 0;
 }
 .banner-vertical-cjk
 {
