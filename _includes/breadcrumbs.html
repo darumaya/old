@@ -1,16 +1,16 @@
 <section class="container">
     <ol class="breadcrumb">
         {% if page.category %}
-        {% if page.category == page.title %}
-        <li><a href="/">Home</a></li>
-        <li class="active">{{ page.category }}</li>
+            {% if page.category == page.title %}
+                <li><a href="/">Home</a></li>
+                <li class="active">{{ page.category }}</li>
+            {% else %}
+                <li><a href="/">Home</a></li>
+                <li><a href="./">{{ page.category }}</a></li>
+                <li class="active">{{ page.title }}</li>
+            {% endif %}
         {% else %}
-        <li><a href="/">Home</a></li>
-        <li><a href="./">{{ page.category }}</a></li>
-        <li class="active">{{ page.title }}</li>
-        {% endif %}
-        {% else %}
-        <li class="active">Home</li>
+            <li class="active">Home</li>
         {% endif %}
     </ol>
 </section>
