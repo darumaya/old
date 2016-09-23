@@ -1,0 +1,5 @@
+{% if page.country %}
+    {% include {{page.country}}/form-mailmagazine-footer.html %}
+{% else %}
+    {% include jp/form-mailmagazine-footer.html %}
+{% endif %}
