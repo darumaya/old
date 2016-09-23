@@ -1,39 +1,55 @@
 <!-- Begin MailChimp Signup Form -->
-<link href="http://cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css"></link>
-<style type="text/css">
+<!-- link href="http://cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css"></link-->
+<!--style type="text/css">
     #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
     /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
        We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 </style>
-<br />
+<br /-->
 <div id="mc_embed_signup">
     <form action="http://darumaya-gofuku.us7.list-manage.com/subscribe/post?u=1eaeb7238811aa37c02cbd99c&amp;id=40ffff309c" class="validate" id="mc-embedded-subscribe-form" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank" data-category="メルマガ" data-action="催事のご案内">
-        <h2>
-            だるまや京染本店メルマガ</h2>
-        <div class="mc-field-group">
-            <label for="mce-EMAIL">メールアドレス </label>
-            <input class="required email" id="mce-EMAIL" name="EMAIL" type="email" value="" />
-        </div>
-        <div class="mc-field-group">
-            <label for="mce-FNAME">氏名 </label>
-            <input class="required" id="mce-FNAME" name="FNAME" type="text" value="" />
-        </div>
-        <div class="mc-field-group input-group">
-            <strong>メールフォーマット </strong>
-            <br />
-            <ul>
-                <li><input id="mce-EMAILTYPE-0" name="EMAILTYPE" type="radio" value="html" />HTML（画像付き）</li>
-                <li><input id="mce-EMAILTYPE-1" name="EMAILTYPE" type="radio" value="text" />テキスト（文章のみ）</li>
-            </ul>
-        </div>
-        <div class="clear" id="mce-responses">
-            <div class="response" id="mce-error-response" style="display: none;">
-            </div>
-            <div class="response" id="mce-success-response" style="display: none;">
+        <div class="row form-group">
+            <label for="mce-EMAIL" class="col-sm-3 control-label">メールアドレス（必須）[TBD]</label>
+            <div class="col-sm-9 col-lg-6">
+                <input type="email" class="form-control" name="EMAIL" id="mce-EMAIL" placeholder="例：contact@darumaya-gofuku.jp[TBD]" required />
             </div>
         </div>
-        <div class="clear">
-            <input class="button" id="mc-embedded-subscribe" name="subscribe" type="submit" value="登録" /></div>
+        <div class="row form-group">
+            <label for="mce-FNAME" class="col-sm-3 control-label">お名前（必須）[TBD]</label>
+            <div class="col-sm-9 col-lg-6">
+                <input class="form-control" id="mce-FNAME" name="FNAME" type="text" placeholder="例：八木賢一[TBD]" required />
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-sm-3 control-label"><label>メール形式（必須）[TBD]</label></div>
+            <div class="col-sm-9 col-lg-6">
+                <div class="radio" style="margin-top: 0;">
+                    <label>
+                        <input id="mce-EMAILTYPE-0" name="EMAILTYPE" type="radio" value="html" checked />
+                        HTML（画像付き）[TBD]
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input id="mce-EMAILTYPE-1" name="EMAILTYPE" type="radio" value="text" />
+                        テキスト（文章のみ）[TBD]
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-9" id="mce-responses">
+                <div class="alert alert-danger" id="mce-error-response" style="display: none;">
+                </div>
+                <div class="alert alert-success" id="mce-success-response" style="display: none;">
+                </div>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-sm-offset-4 col-sm-8 col-md-offset-3 col-md-9">
+                <input class="btn btn-aqua" id="mc-embedded-subscribe" name="subscribe" type="submit" value="Subscribe[TBD]" style="padding-left: 14px; letter-spacing: 2px;" />
+            </div>
+        </div>
     </form>
 </div>
 <script type="text/javascript">
@@ -138,8 +154,6 @@
                 success: mce_success_cb
             };
             $('#mc-embedded-subscribe-form').ajaxForm(options);
-
-
         });
     }
     function mce_success_cb(resp){
@@ -206,6 +220,5 @@
             }
         }
     }
-
 </script>
 <!--End mc_embed_signup-->
