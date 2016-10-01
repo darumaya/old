@@ -1,0 +1,5 @@
+{% if page.country %}
+    {% include {{page.country}}/form-contact.html %}
+{% else %}
+    {% include jp/form-contact.html %}
+{% endif %}
