@@ -11,8 +11,8 @@
   "homepage": "https://github.com/darumaya/darumaya.github.io",
   "bug": "https://github.com/darumaya/darumaya.github.io/issues",
   "repository": {
-      "type": "git",
-      "url": "https://github.com/darumaya/darumaya.github.io.git"
+    "type": "git",
+    "url": "https://github.com/darumaya/darumaya.github.io.git"
   },
   "license": "MIT",
   "devDependencies": {
